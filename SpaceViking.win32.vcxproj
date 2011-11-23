@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2C8B1298-8EED-4D26-B60C-FF613E17E8C3}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_DEBUG;COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcocos2d.lib;libgles_cm.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>SpaceViking.h</HeaderFileName>
+      <InterfaceIdentifierFileName>SpaceViking_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>SpaceViking_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/SpaceViking.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcocos2d.lib;libgles_cm.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>SpaceViking.h</HeaderFileName>
+      <InterfaceIdentifierFileName>SpaceViking_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>SpaceViking_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/SpaceViking.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Images\.DS_Store" />
+    <None Include="Images\App Launch Images\Default%402x.png" />
+    <None Include="Images\App Launch Images\Default-Landscape.png" />
+    <None Include="Images\App Launch Images\Default-LandscapeLeft.png" />
+    <None Include="Images\App Launch Images\Default-LandscapeRight.png" />
+    <None Include="Images\App Launch Images\Default-Portrait.png" />
+    <None Include="Images\App Launch Images\Default-PortraitUpsideDown.png" />
+    <None Include="Images\App Launch Images\Default.png" />
+    <None Include="Images\Backgrounds\.DS_Store" />
+    <None Include="Images\Backgrounds\iPad Background\background.png" />
+    <None Include="Images\Backgrounds\iPhone (non-retina) Background\backgroundiPhone.png" />
+    <None Include="Images\Backgrounds\iPhone4 (retina) Background\.DS_Store" />
+    <None Include="Images\Backgrounds\iPhone4 (retina) Background\backgroundiPhone-hd.png" />
+    <None Include="Images\Icons\.DS_Store" />
+    <None Include="Images\Icons\Icon%402x.png" />
+    <None Include="Images\Icons\Icon-72.png" />
+    <None Include="Images\Icons\Icon-Small%402x.png" />
+    <None Include="Images\Icons\Icon-Small-50.png" />
+    <None Include="Images\Icons\Icon-Small.png" />
+    <None Include="Images\Icons\Icon.png" />
+    <None Include="Images\Intro\.DS_Store" />
+    <None Include="Images\Intro\intro1.png" />
+    <None Include="Images\Intro\intro2.png" />
+    <None Include="Images\Intro\intro3.png" />
+    <None Include="Images\Intro\intro4.png" />
+    <None Include="Images\Intro\intro5.png" />
+    <None Include="Images\Intro\intro6.png" />
+    <None Include="Images\Intro\intro7.png" />
+    <None Include="Images\Joystick\dpadDown-hd.png" />
+    <None Include="Images\Joystick\dpadDown.png" />
+    <None Include="Images\Joystick\dpadUp.png" />
+    <None Include="Images\Joystick\handDown-hd.png" />
+    <None Include="Images\Joystick\handDown.png" />
+    <None Include="Images\Joystick\handUp-hd.png" />
+    <None Include="Images\Joystick\handUp.png" />
+    <None Include="Images\Joystick\joystickDown-hd.png" />
+    <None Include="Images\Joystick\joystickDown.png" />
+    <None Include="Images\Joystick\joystickUp.png" />
+    <None Include="Images\Joystick\jumpDown-hd.png" />
+    <None Include="Images\Joystick\jumpDown.png" />
+    <None Include="Images\Joystick\jumpUp-hd.png" />
+    <None Include="Images\Joystick\jumpUp.png" />
+    <None Include="Images\scene1atlas.plist" />
+    <None Include="Images\scene1atlas.png" />
+    <None Include="Images\scene1atlasiPhone-hd.plist" />
+    <None Include="Images\scene1atlasiPhone-hd.png" />
+    <None Include="Images\scene1atlasiPhone.plist" />
+    <None Include="Images\scene1atlasiPhone.png" />
+    <None Include="Images\sv_anim_1.png" />
+    <None Include="Resources\backgroundiPhone.png" />
+    <None Include="Resources\CloseNormal.png" />
+    <None Include="Resources\CloseSelected.png" />
+    <None Include="Resources\dpadDown.png" />
+    <None Include="Resources\handDown.png" />
+    <None Include="Resources\handUp.png" />
+    <None Include="Resources\HelloWorld.png" />
+    <None Include="Resources\joystickDown.png" />
+    <None Include="Resources\jumpDown.png" />
+    <None Include="Resources\jumpUp.png" />
+    <None Include="Resources\sv_anim_1.png" />
+    <None Include="win32\res\SpaceViking.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32\SpaceViking.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\AppDelegate.h" />
+    <ClInclude Include="Classes\BackgroundLayer.h" />
+    <ClInclude Include="Classes\GameplayLayer.h" />
+    <ClInclude Include="Classes\GameScene.h" />
+    <ClInclude Include="Classes\HelloWorldScene.h" />
+    <ClInclude Include="Classes\JoystickClasses\SneakyButton.h" />
+    <ClInclude Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.h" />
+    <ClInclude Include="Classes\JoystickClasses\SneakyJoystick.h" />
+    <ClInclude Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.h" />
+    <ClInclude Include="win32\main.h" />
+    <ClInclude Include="win32\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Classes\AppDelegate.cpp" />
+    <ClCompile Include="Classes\BackgroundLayer.cpp" />
+    <ClCompile Include="Classes\GameplayLayer.cpp" />
+    <ClCompile Include="Classes\GameScene.cpp" />
+    <ClCompile Include="Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="Classes\JoystickClasses\SneakyButton.cpp" />
+    <ClCompile Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.cpp" />
+    <ClCompile Include="Classes\JoystickClasses\SneakyJoystick.cpp" />
+    <ClCompile Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp" />
+    <ClCompile Include="win32\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
