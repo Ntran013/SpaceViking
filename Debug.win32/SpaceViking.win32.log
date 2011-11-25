@@ -1,4 +1,4 @@
-﻿Build started 11/25/2011 8:08:53 PM.
+﻿Build started 11/25/2011 9:48:16 PM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -35,4 +35,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.82
+Time Elapsed 00:00:03.26

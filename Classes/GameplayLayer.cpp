@@ -18,13 +18,16 @@ bool GameplayLayer::init()
 		this->addChild(chapter2SpriteBatchNode);
 		vikingSprite->setPosition(ccp(screenSize.width/2, screenSize.height*0.17f));
 
+		/*Listing 3.1 and 3.2*/
+
+		/* Starts here
 		CCSprite *animatingRobot = CCSprite::spriteWithFile("an1_anim1.png");
 		animatingRobot->setPosition(ccp(vikingSprite->getPosition().x + 50.0f, vikingSprite->getPosition().y));
 		this->addChild(animatingRobot);
 
-		//Not using CCSpriteBatchNode
+		//Not using CCSpriteBatchNode - Use either this or the one below
 
-		/*CCAnimation *robotAnim = CCAnimation::animation();
+		CCAnimation *robotAnim = CCAnimation::animation();
 		robotAnim->addFrameWithFileName("an1_anim2.png");
 		robotAnim->addFrameWithFileName("an1_anim3.png");
 		robotAnim->addFrameWithFileName("an1_anim4.png");
@@ -36,9 +39,9 @@ bool GameplayLayer::init()
 		CCActionInterval *robotAnimationAction = CCAnimate::actionWithDuration(0.5f, robotAnim, true);
 		CCActionInterval *repeatRobotAnimation = CCRepeatForever::actionWithAction(robotAnimationAction);
 
-		animatingRobot->runAction(repeatRobotAnimation);*/
+		animatingRobot->runAction(repeatRobotAnimation);
 
-		//Using CCSpriteBatchNode
+		//Using CCSpriteBatchNode- Use either this or the one below
 
 		CCAnimation *robotAnim = CCAnimation::animation();
 		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim2.png"));
@@ -53,6 +56,8 @@ bool GameplayLayer::init()
 		CCActionInterval *repeatRobotAnimation = CCRepeatForever::actionWithAction(robotAnimationAction);
 
 		animatingRobot->runAction(repeatRobotAnimation);
+
+		*/ //Ends here
 
 		//this->addChild(vikingSprite);
 		this->initJoystickAndButtons();
