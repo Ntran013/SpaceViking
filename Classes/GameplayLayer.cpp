@@ -22,7 +22,9 @@ bool GameplayLayer::init()
 		animatingRobot->setPosition(ccp(vikingSprite->getPosition().x + 50.0f, vikingSprite->getPosition().y));
 		this->addChild(animatingRobot);
 
-		CCAnimation *robotAnim = CCAnimation::animation();
+		//Not using CCSpriteBatchNode
+
+		/*CCAnimation *robotAnim = CCAnimation::animation();
 		robotAnim->addFrameWithFileName("an1_anim2.png");
 		robotAnim->addFrameWithFileName("an1_anim3.png");
 		robotAnim->addFrameWithFileName("an1_anim4.png");
@@ -32,6 +34,22 @@ bool GameplayLayer::init()
 		robotAnim->addFrameWithFileName("an1_anim8.png");
 
 		CCActionInterval *robotAnimationAction = CCAnimate::actionWithDuration(0.5f, robotAnim, true);
+		CCActionInterval *repeatRobotAnimation = CCRepeatForever::actionWithAction(robotAnimationAction);
+
+		animatingRobot->runAction(repeatRobotAnimation);*/
+
+		//Using CCSpriteBatchNode
+
+		CCAnimation *robotAnim = CCAnimation::animation();
+		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim2.png"));
+		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim3.png"));
+		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim4.png"));
+		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim5.png"));
+		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim6.png"));
+		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim7.png"));
+		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim8.png"));
+
+		CCActionInterval *robotAnimationAction = CCAnimate::actionWithDuration(0.5f, robotAnim, false);
 		CCActionInterval *repeatRobotAnimation = CCRepeatForever::actionWithAction(robotAnimationAction);
 
 		animatingRobot->runAction(repeatRobotAnimation);
