@@ -13,6 +13,8 @@ public:
 	virtual bool init();
     LAYER_NODE_FUNC(GameplayLayer);
 	void initJoystickAndButtons();
+	void applyJoystick(SneakyJoystick *aJoystick, cocos2d::CCNode *tempNode, float deltaTime);
+	void update(cocos2d::ccTime deltaTime);
 protected:
 	cocos2d::CCSprite *vikingSprite;
 	SneakyJoystick *lefJoystick;
