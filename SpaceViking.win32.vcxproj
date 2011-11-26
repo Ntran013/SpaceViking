@@ -171,6 +171,19 @@
     <None Include="Images\scene1atlasiPhone.plist" />
     <None Include="Images\scene1atlasiPhone.png" />
     <None Include="Images\sv_anim_1.png" />
+    <None Include="Plists\EnemyRobot.plist" />
+    <None Include="Plists\Health.plist" />
+    <None Include="Plists\Mallet.plist" />
+    <None Include="Plists\RadarDish.plist" />
+    <None Include="Plists\Viking.plist" />
+    <None Include="Resources\an1_anim1.png" />
+    <None Include="Resources\an1_anim2.png" />
+    <None Include="Resources\an1_anim3.png" />
+    <None Include="Resources\an1_anim4.png" />
+    <None Include="Resources\an1_anim5.png" />
+    <None Include="Resources\an1_anim6.png" />
+    <None Include="Resources\an1_anim7.png" />
+    <None Include="Resources\an1_anim8.png" />
     <None Include="Resources\backgroundiPhone.png" />
     <None Include="Resources\CloseNormal.png" />
     <None Include="Resources\CloseSelected.png" />
@@ -181,6 +194,12 @@
     <None Include="Resources\joystickDown.png" />
     <None Include="Resources\jumpDown.png" />
     <None Include="Resources\jumpUp.png" />
+    <None Include="Resources\scene1atlas.plist" />
+    <None Include="Resources\scene1atlas.png" />
+    <None Include="Resources\scene1atlasiPhone-hd.plist" />
+    <None Include="Resources\scene1atlasiPhone-hd.png" />
+    <None Include="Resources\scene1atlasiPhone.plist" />
+    <None Include="Resources\scene1atlasiPhone.png" />
     <None Include="Resources\sv_anim_1.png" />
     <None Include="win32\res\SpaceViking.ico" />
   </ItemGroup>
@@ -188,10 +207,15 @@
     <ResourceCompile Include="win32\SpaceViking.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Classes\AppDelegate.h" />
-    <ClInclude Include="Classes\BackgroundLayer.h" />
-    <ClInclude Include="Classes\GameplayLayer.h" />
-    <ClInclude Include="Classes\GameScene.h" />
+    <ClInclude Include="Classes\Constants\CommonProtocols.h" />
+    <ClInclude Include="Classes\Constants\Constants.h" />
+    <ClInclude Include="Classes\Constants\StringSplit.h" />
+    <ClInclude Include="Classes\GameObjects\GameCharacter.h" />
+    <ClInclude Include="Classes\GameObjects\GameObject.h" />
+    <ClInclude Include="Classes\Singletons\AppDelegate.h" />
+    <ClInclude Include="Classes\Layers\BackgroundLayer.h" />
+    <ClInclude Include="Classes\Layers\GameplayLayer.h" />
+    <ClInclude Include="Classes\Scenes\GameScene.h" />
     <ClInclude Include="Classes\HelloWorldScene.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyButton.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.h" />
@@ -201,10 +225,13 @@
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Classes\AppDelegate.cpp" />
-    <ClCompile Include="Classes\BackgroundLayer.cpp" />
-    <ClCompile Include="Classes\GameplayLayer.cpp" />
-    <ClCompile Include="Classes\GameScene.cpp" />
+    <ClCompile Include="Classes\Constants\StringSplit.cpp" />
+    <ClCompile Include="Classes\GameObjects\GameCharacter.cpp" />
+    <ClCompile Include="Classes\GameObjects\GameObject.cpp" />
+    <ClCompile Include="Classes\Singletons\AppDelegate.cpp" />
+    <ClCompile Include="Classes\Layers\BackgroundLayer.cpp" />
+    <ClCompile Include="Classes\Layers\GameplayLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\GameScene.cpp" />
     <ClCompile Include="Classes\HelloWorldScene.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyButton.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.cpp" />

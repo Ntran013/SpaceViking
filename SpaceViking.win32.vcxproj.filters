@@ -182,6 +182,47 @@
     <None Include="Resources\handDown.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="Plists\EnemyRobot.plist" />
+    <None Include="Plists\Viking.plist" />
+    <None Include="Plists\Health.plist" />
+    <None Include="Plists\Mallet.plist" />
+    <None Include="Plists\RadarDish.plist" />
+    <None Include="Resources\an1_anim8.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\an1_anim1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\an1_anim2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\an1_anim3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\an1_anim4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\an1_anim5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\an1_anim6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\an1_anim7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\scene1atlas.plist" />
+    <None Include="Resources\scene1atlasiPhone.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\scene1atlas.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\scene1atlasiPhone-hd.plist" />
+    <None Include="Resources\scene1atlasiPhone-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\scene1atlasiPhone.plist" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\SpaceViking.rc">
@@ -195,19 +236,7 @@
     <ClInclude Include="win32\main.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\AppDelegate.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\HelloWorldScene.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\BackgroundLayer.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\GameplayLayer.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\GameScene.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Classes\JoystickClasses\SneakyButton.h">
@@ -222,24 +251,39 @@
     <ClInclude Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Scenes\GameScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Layers\GameplayLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Layers\BackgroundLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Singletons\AppDelegate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Constants\Constants.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Constants\CommonProtocols.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\GameObject.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Constants\StringSplit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\GameCharacter.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\AppDelegate.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\HelloWorldScene.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\BackgroundLayer.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\GameplayLayer.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\GameScene.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\JoystickClasses\SneakyButton.cpp">
@@ -252,6 +296,27 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\GameScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Layers\GameplayLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Layers\BackgroundLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Singletons\AppDelegate.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\GameObject.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\GameCharacter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Constants\StringSplit.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
