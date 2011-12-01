@@ -10,7 +10,7 @@ class GameCharacter : public GameObject
 
 	//public methods
 	~GameCharacter();
-	void checkAndClampSpritePosition();
+	virtual void checkAndClampSpritePosition();
 	virtual int getWeaponDamage();
 };
 

@@ -6,8 +6,15 @@
 #include "JoystickClasses\SneakyButtonSkinnedBase.h"
 #include "JoystickClasses\SneakyJoystick.h"
 #include "JoystickClasses\SneakyJoystickSkinnedBase.h"
+#include "Constants\Constants.h"
+#include "Constants\CommonProtocols.h"
+#include "EnemyObjects\RadarDish.h"
+#include "GameObjects\Viking.h"
+#include "PowerUps\Mallet.h"
+#include "PowerUps\Health.h"
+#include "GameObjects\SpaceCargoShip.h"
 
-class GameplayLayer : public cocos2d::CCLayer
+class GameplayLayer : public cocos2d::CCLayer, public GameplayLayerDelegate
 {
 public:
 	virtual bool init();
@@ -15,10 +22,12 @@ public:
 	void initJoystickAndButtons();
 	void applyJoystick(SneakyJoystick *aJoystick, cocos2d::CCNode *tempNode, float deltaTime);
 	void update(cocos2d::ccTime deltaTime);
+	virtual void createObjectOfType(GameObjectType objectType, int initialHealth, CCPoint spawnLocation, int zValue);
+	virtual void createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition);
 protected:
-	cocos2d::CCSprite *vikingSprite;
 	SneakyJoystick *lefJoystick;
 	SneakyButton *jumpButton;
 	SneakyButton *attackButton;
+	CCSpriteBatchNode *sceneSpriteBatchNode;
 };
 #endif

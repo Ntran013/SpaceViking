@@ -1,6 +1,6 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/obj/local/armeabi/objs-debug/game/main.o: \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/main.cpp \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/AppDelegate.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\AppDelegate.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCApplication.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/platform/CCApplication_platform.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/platform/CCPlatformConfig.h \
@@ -277,7 +277,7 @@
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/jni.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/android/log.h
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/AppDelegate.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\AppDelegate.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCApplication.h:
 

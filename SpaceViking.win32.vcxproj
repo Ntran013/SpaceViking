@@ -194,6 +194,11 @@
     <None Include="Resources\joystickDown.png" />
     <None Include="Resources\jumpDown.png" />
     <None Include="Resources\jumpUp.png" />
+    <None Include="Resources\Plists\EnemyRobot.plist" />
+    <None Include="Resources\Plists\Health.plist" />
+    <None Include="Resources\Plists\Mallet.plist" />
+    <None Include="Resources\Plists\RadarDish.plist" />
+    <None Include="Resources\Plists\Viking.plist" />
     <None Include="Resources\scene1atlas.plist" />
     <None Include="Resources\scene1atlas.png" />
     <None Include="Resources\scene1atlasiPhone-hd.plist" />
@@ -210,8 +215,13 @@
     <ClInclude Include="Classes\Constants\CommonProtocols.h" />
     <ClInclude Include="Classes\Constants\Constants.h" />
     <ClInclude Include="Classes\Constants\StringSplit.h" />
+    <ClInclude Include="Classes\EnemyObjects\RadarDish.h" />
     <ClInclude Include="Classes\GameObjects\GameCharacter.h" />
     <ClInclude Include="Classes\GameObjects\GameObject.h" />
+    <ClInclude Include="Classes\GameObjects\SpaceCargoShip.h" />
+    <ClInclude Include="Classes\GameObjects\Viking.h" />
+    <ClInclude Include="Classes\PowerUps\Health.h" />
+    <ClInclude Include="Classes\PowerUps\Mallet.h" />
     <ClInclude Include="Classes\Singletons\AppDelegate.h" />
     <ClInclude Include="Classes\Layers\BackgroundLayer.h" />
     <ClInclude Include="Classes\Layers\GameplayLayer.h" />
@@ -226,8 +236,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes\Constants\StringSplit.cpp" />
+    <ClCompile Include="Classes\EnemyObjects\RadarDish.cpp" />
     <ClCompile Include="Classes\GameObjects\GameCharacter.cpp" />
     <ClCompile Include="Classes\GameObjects\GameObject.cpp" />
+    <ClCompile Include="Classes\GameObjects\SpaceCargoShip.cpp" />
+    <ClCompile Include="Classes\GameObjects\Viking.cpp" />
+    <ClCompile Include="Classes\PowerUps\Health.cpp" />
+    <ClCompile Include="Classes\PowerUps\Mallet.cpp" />
     <ClCompile Include="Classes\Singletons\AppDelegate.cpp" />
     <ClCompile Include="Classes\Layers\BackgroundLayer.cpp" />
     <ClCompile Include="Classes\Layers\GameplayLayer.cpp" />

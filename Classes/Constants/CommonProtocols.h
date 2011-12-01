@@ -48,11 +48,11 @@ kDiggerType,
 kGroundType
 };
 
-class GameplayLayerDelegate
+class GameplayLayerDelegate 
 {
 public:
-	virtual void createObjectOfType(GameObjectType objectType, int initialHealth, cocos2d::CCPoint spawnLocation, int ZValue);
-	virtual void createPhaserWithDirection(PhaserDirection phaserDirection, cocos2d::CCPoint spawnPosition);
+	virtual void createObjectOfType(GameObjectType objectType, int initialHealth, cocos2d::CCPoint spawnLocation, int zValue) = 0;
+	virtual void createPhaserWithDirection(PhaserDirection phaserDirection, cocos2d::CCPoint spawnPosition) = 0;
 };
 
 #endif

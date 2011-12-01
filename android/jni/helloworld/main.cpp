@@ -1,4 +1,4 @@
-#include "AppDelegate.h"
+#include "Singletons\AppDelegate.h"
 #include "cocos2d.h"
 #include <jni.h>
 #include <android/log.h>

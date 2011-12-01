@@ -223,6 +223,11 @@
       <Filter>resource</Filter>
     </None>
     <None Include="Resources\scene1atlasiPhone.plist" />
+    <None Include="Resources\Plists\EnemyRobot.plist" />
+    <None Include="Resources\Plists\Viking.plist" />
+    <None Include="Resources\Plists\Health.plist" />
+    <None Include="Resources\Plists\Mallet.plist" />
+    <None Include="Resources\Plists\RadarDish.plist" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\SpaceViking.rc">
@@ -278,6 +283,21 @@
     <ClInclude Include="Classes\GameObjects\GameCharacter.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\EnemyObjects\RadarDish.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Viking.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\PowerUps\Mallet.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\PowerUps\Health.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\SpaceCargoShip.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -317,6 +337,21 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Constants\StringSplit.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\EnemyObjects\RadarDish.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Viking.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\PowerUps\Mallet.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\PowerUps\Health.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\SpaceCargoShip.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

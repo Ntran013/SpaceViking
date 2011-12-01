@@ -3,11 +3,16 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := game
 
 LOCAL_SRC_FILES := main.cpp \
-../../../Classes/AppDelegate.cpp \
+../../../Classes/Singletons/AppDelegate.cpp \
 ../../../Classes/HelloWorldScene.cpp \
-../../../Classes/GameplayLayer.cpp \
-../../../Classes/BackgroundLayer.cpp \
-../../../Classes/GameScene.cpp \
+../../../Classes/Layers/GameplayLayer.cpp \
+../../../Classes/Layers/BackgroundLayer.cpp \
+../../../Classes/Scenes/GameScene.cpp \
+../../../Classes/Constants/StringSplit.cpp \
+../../../Classes/EnemyObjects/RadarDish.cpp \
+../../../Classes/GameObjects/GameCharacter.cpp \
+../../../Classes/GameObjects/GameObject.cpp \
+../../../Classes/GameObjects/Viking.cpp \
 ../../../Classes/JoystickClasses/SneakyButton.cpp \
 ../../../Classes/JoystickClasses/SneakyJoystick.cpp \
 ../../../Classes/JoystickClasses/SneakyButtonSkinnedBase.cpp \

@@ -9,64 +9,28 @@ bool GameplayLayer::init()
 		CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
 		this->setIsTouchEnabled(true);
 
+		srand(time(NULL));
+
 		//vikingSprite = CCSprite::spriteWithFile("sv_anim_1.png");
-		CCSpriteBatchNode *chapter2SpriteBatchNode;
 		CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("scene1atlasiPhone.plist");
-		chapter2SpriteBatchNode = CCSpriteBatchNode::batchNodeWithFile("scene1atlasiPhone.png");
-		vikingSprite = CCSprite::spriteWithSpriteFrameName("sv_anim_1.png");
-		chapter2SpriteBatchNode->addChild(vikingSprite);
-		this->addChild(chapter2SpriteBatchNode);
-		vikingSprite->setPosition(ccp(screenSize.width/2, screenSize.height*0.17f));
+		sceneSpriteBatchNode = CCSpriteBatchNode::batchNodeWithFile("scene1atlasiPhone.png");
 
-		/*Listing 3.1 and 3.2*/
-
-		/* Starts here
-		CCSprite *animatingRobot = CCSprite::spriteWithFile("an1_anim1.png");
-		animatingRobot->setPosition(ccp(vikingSprite->getPosition().x + 50.0f, vikingSprite->getPosition().y));
-		this->addChild(animatingRobot);
-
-		//Not using CCSpriteBatchNode - Use either this or the one below
-
-		CCAnimation *robotAnim = CCAnimation::animation();
-		robotAnim->addFrameWithFileName("an1_anim2.png");
-		robotAnim->addFrameWithFileName("an1_anim3.png");
-		robotAnim->addFrameWithFileName("an1_anim4.png");
-		robotAnim->addFrameWithFileName("an1_anim5.png");
-		robotAnim->addFrameWithFileName("an1_anim6.png");
-		robotAnim->addFrameWithFileName("an1_anim7.png");
-		robotAnim->addFrameWithFileName("an1_anim8.png");
-
-		CCActionInterval *robotAnimationAction = CCAnimate::actionWithDuration(0.5f, robotAnim, true);
-		CCActionInterval *repeatRobotAnimation = CCRepeatForever::actionWithAction(robotAnimationAction);
-
-		animatingRobot->runAction(repeatRobotAnimation);
-
-		//Using CCSpriteBatchNode- Use either this or the one below
-
-		CCAnimation *robotAnim = CCAnimation::animation();
-		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim2.png"));
-		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim3.png"));
-		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim4.png"));
-		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim5.png"));
-		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim6.png"));
-		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim7.png"));
-		robotAnim->addFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim8.png"));
-
-		CCActionInterval *robotAnimationAction = CCAnimate::actionWithDuration(0.5f, robotAnim, false);
-		CCActionInterval *repeatRobotAnimation = CCRepeatForever::actionWithAction(robotAnimationAction);
-
-		animatingRobot->runAction(repeatRobotAnimation);
-
-		*/ //Ends here
-
-		//this->addChild(vikingSprite);
+		this->addChild(sceneSpriteBatchNode, 0);
 		this->initJoystickAndButtons();
+
+		Viking *viking = new Viking();
+		viking->initWithSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("sv_anim_1.png"));
+		viking->setJoystick(lefJoystick);
+		viking->setAttackButton(attackButton);
+		viking->setJumpButton(jumpButton);
+		viking->setPosition(ccp(screenSize.width * 0.35f, screenSize.height * 0.14f));
+		viking->setCharacterHealth(100);
+		sceneSpriteBatchNode->addChild(viking, kVikingSpriteZValue, kVikingSpriteTagValue);
+
+		this->createObjectOfType(kEnemyTypeRadarDish, 100, ccp(screenSize.width * 0.878f, screenSize.height * 0.13f), 10);
+		this->createObjectOfType(kEnemyTypeSpaceCargoShip, 100, ccp(screenSize.width * 0.5f, screenSize.height * 1.5f), 10);
+
 		this->scheduleUpdate();
-
-		//vikingSprite->setScaleX(screenSize.width/1024.0f);
-		//vikingSprite->setScaleY(screenSize.height/768.0f);
-
-
 	}
 	return true;
 }
@@ -146,23 +110,64 @@ void GameplayLayer::initJoystickAndButtons()
 
 }
 
-void GameplayLayer::applyJoystick(SneakyJoystick *aJoystick, CCNode *tempNode, float deltaTime)
-{
-	CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-	CCPoint scaledVelocity = ccpMult(aJoystick->getVelocity(), 1024.0f);
-	//if statement added to stop the viking from moving offscreen - not part of the main chapter
-	if (tempNode->getPosition().x + scaledVelocity.x * deltaTime > 0 && tempNode->getPosition().x + scaledVelocity.x * deltaTime < winSize.width)
-	{
-		CCPoint newPosition = ccp(tempNode->getPosition().x + scaledVelocity.x * deltaTime, tempNode->getPosition().y);  // "+ scaledVelocity.y * deltaTime" - this part was deleted from the second parameter to stop the viking from flying 
-		tempNode->setPosition(newPosition);
-	}
-	if (jumpButton->getActive() == true)
-		CCLOG("Jump Button is pressed.");
-	if (attackButton->getActive() == true)
-		CCLOG("Attack Button is pressed.");
-}
-
 void GameplayLayer::update(ccTime deltaTime)
 {
-	this->applyJoystick(lefJoystick, vikingSprite, deltaTime);
+	CCArray *listOfGameObjects = sceneSpriteBatchNode->getChildren();
+	CCObject *object = NULL;
+	CCARRAY_FOREACH(listOfGameObjects, object)
+	{
+		GameCharacter *tempChar = (GameCharacter *) object; 
+		tempChar->updateStateWithDeltaTime(deltaTime, listOfGameObjects);
+	}
+}
+
+void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHealth, CCPoint spawnLocation, int zValue)
+{
+	if (objectType == kEnemyTypeRadarDish)
+	{
+		CCLOG("Creating the Radar Enemy");
+		RadarDish *radarDish = new RadarDish();
+		radarDish->initWithSpriteFrameName("radar_1.png");
+		radarDish->setCharacterHealth(initialHealth);
+		radarDish->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(radarDish, zValue, kRadarDishTagValue);
+		radarDish->release();
+	}
+
+	if (objectType == kPowerUpTypeMallet)
+	{
+		CCLOG("Creating a Mallet PowerUp");
+		Mallet *mallet = new Mallet();
+		mallet->initWithSpriteFrameName("mallet_1.png");
+		mallet->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(mallet);
+		mallet->release();
+	}
+
+	if (objectType == kPowerUpTypeHealth)
+	{
+		CCLOG("Creating a Health PowerUp");
+		Health *health = new Health();
+		health->initWithSpriteFrameName("sandwich_1.png");
+		health->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(health);
+		health->release();
+	}
+
+	if (objectType == kEnemyTypeSpaceCargoShip)
+	{
+		CCLOG("Creating the Cargo Ship Enemy");
+		SpaceCargoShip *spaceCargoShip = new SpaceCargoShip();
+		spaceCargoShip->setDelegate(this);
+		spaceCargoShip->initWithSpriteFrameName("ship_2.png");
+		spaceCargoShip->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(spaceCargoShip, zValue);
+		spaceCargoShip->release();
+	}
+}
+
+void GameplayLayer::createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition) 
+{
+	CCLOG("Placeholder for Chapter 5, see below");
+	return;
 }
