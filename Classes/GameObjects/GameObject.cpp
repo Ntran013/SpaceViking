@@ -20,17 +20,17 @@ bool GameObject::init()
 
 void GameObject::changeState(CharacterStates newState)
 {
-	CCLOG("GameObject->changeState method should be overridden");
+	//CCLOG("GameObject->changeState method should be overridden");
 }
 
 void GameObject::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameObjects) 
 {
-	CCLOG("updateStateWithDeltaTime method should be overridden");
+	//CCLOG("updateStateWithDeltaTime method should be overridden");
 }
 
 CCRect GameObject::adjustedBoundingBox()
 {
-	CCLOG("GameObject adjustedBoundingBox should be overridden");
+	//CCLOG("GameObject adjustedBoundingBox should be overridden");
 	return this->boundingBox();
 }
 

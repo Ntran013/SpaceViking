@@ -4,7 +4,11 @@ using namespace cocos2d;
 
 Health::~Health()
 {
-	healthAnim->release();
+	if (healthAnim)
+	{
+		healthAnim->release();
+		healthAnim = NULL;
+	}
 }
 
 void Health::changeState(CharacterStates newState)

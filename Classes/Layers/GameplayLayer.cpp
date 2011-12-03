@@ -26,6 +26,10 @@ bool GameplayLayer::init()
 		viking->setPosition(ccp(screenSize.width * 0.35f, screenSize.height * 0.14f));
 		viking->setCharacterHealth(100);
 		sceneSpriteBatchNode->addChild(viking, kVikingSpriteZValue, kVikingSpriteTagValue);
+		// IMPORTANT: release after initXXX(), release() here doesn't mean that the viking is deallocated yet, this simply decreases the reference by 1
+		// delete viking; will cause a crash
+		// the same thing applies for other objects in the createObjectOfType method
+		viking->release();
 
 		this->createObjectOfType(kEnemyTypeRadarDish, 100, ccp(screenSize.width * 0.878f, screenSize.height * 0.13f), 10);
 		this->createObjectOfType(kEnemyTypeSpaceCargoShip, 100, ccp(screenSize.width * 0.5f, screenSize.height * 1.5f), 10);
@@ -56,15 +60,14 @@ void GameplayLayer::initJoystickAndButtons()
 	joystickBase->setBackgroundSprite(CCSprite::spriteWithFile("dpadDown.png"));
 	joystickBase->setThumbSprite(CCSprite::spriteWithFile("joystickDown.png"));
 	SneakyJoystick *aJoystick = new SneakyJoystick();
-	if (aJoystick && aJoystick->initWithRect(joystickBaseDimensions))
-		aJoystick->autorelease();
-	else
-	{
-		delete aJoystick; 
-		aJoystick = NULL;		
-	}
+	aJoystick->initWithRect(joystickBaseDimensions);
+
 	joystickBase->setJoystick(aJoystick);
-	joystickBase->getJoystick()->retain();
+	/* IMPORTANT: do not need to retain here like in the book, because the setJoystick method does retain as well
+	   In the book the setJoystick method is not called, instead the joystick is set directly, which we can't do in cocos2d-x
+	   Same thing applies for the buttons below */
+
+	//joystickBase->getJoystick()->retain();
 	lefJoystick = joystickBase->getJoystick();
 	this->addChild(joystickBase);
 
@@ -75,35 +78,25 @@ void GameplayLayer::initJoystickAndButtons()
 	jumpButtonBase->setActivatedSprite(CCSprite::spriteWithFile("jumpDown.png")); // 15
 	jumpButtonBase->setPressSprite(CCSprite::spriteWithFile("jumpDown.png")); // 16
 	SneakyButton *aButton = new SneakyButton();
-	if (aButton && aButton->initWithRect(jumpButtonDimensions))
-		aButton->autorelease();
-	else
-	{
-		delete aButton; 
-		aButton = NULL;		
-	}
+	aButton->initWithRect(jumpButtonDimensions);
+
 	jumpButtonBase->setButton(aButton); // 17
-	jumpButtonBase->getButton()->retain(); // 18
+	//jumpButtonBase->getButton()->retain(); // 18
 	jumpButton = jumpButtonBase->getButton();
 	jumpButton->setIsToggleable(false); // 19
 	this->addChild(jumpButtonBase); // 20
 
-	//Jump button
+	//Attack button
 	SneakyButtonSkinnedBase *attackButtonBase = SneakyButtonSkinnedBase::node(); 
 	attackButtonBase->setPosition(attackButtonPosition); // 13
 	attackButtonBase->setDefaultSprite(CCSprite::spriteWithFile("handUp.png")); // 14
 	attackButtonBase->setActivatedSprite(CCSprite::spriteWithFile("handDown.png")); // 15
 	attackButtonBase->setPressSprite(CCSprite::spriteWithFile("handDown.png")); // 16
 	SneakyButton *aButton1 = new SneakyButton();
-	if (aButton1 && aButton1->initWithRect(attackButtonDimensions))
-		aButton1->autorelease();
-	else
-	{
-		delete aButton1; 
-		aButton1 = NULL;		
-	}
+	aButton1 && aButton1->initWithRect(attackButtonDimensions);
+
 	attackButtonBase->setButton(aButton1); // 17
-	attackButtonBase->getButton()->retain(); // 18
+	//attackButtonBase->getButton()->retain(); // 18
 	attackButton = attackButtonBase->getButton();
 	attackButton->setIsToggleable(false); // 19
 	this->addChild(attackButtonBase); // 20

@@ -4,10 +4,26 @@ using namespace cocos2d;
 
 RadarDish::~RadarDish()
 {
-	tiltingAnim->release();
-	transmittingAnim->release();
-	takingAHitAnim->release();
-	blowingUpAnim->release();
+	if (tiltingAnim)
+	{
+		tiltingAnim->release();
+		tiltingAnim = NULL;
+	}
+	if (transmittingAnim)
+	{
+		transmittingAnim->release();
+		transmittingAnim = NULL;
+	}
+	if (takingAHitAnim)
+	{
+		takingAHitAnim->release();
+		takingAHitAnim = NULL;
+	}
+	if (blowingUpAnim)
+	{
+		blowingUpAnim->release();
+		blowingUpAnim = NULL;
+	}
 }
 
 void RadarDish::changeState(CharacterStates newState)

@@ -5,27 +5,95 @@ Viking::~Viking()
 	joystick = NULL;
 	jumpButton = NULL;
 	attackButton = NULL;
-
-	breathingAnim->release();
-	breathingMalletAnim->release();
-	walkingAnim->release();
-	walkingMalletAnim->release();
-
-	crouchingAnim->release();
-	crouchingMalletAnim->release();
-	standingUpAnim->release();
-	standingUpMalletAnim->release();
-	jumpingAnim->release();
-	jumpingMalletAnim->release();
-	afterJumpingAnim->release();
-	afterJumpingMalletAnim->release();
-
-	rightPunchAnim->release();
-	leftPunchAnim->release();
-	malletPunchAnim->release();
-
-	phaserShockAnim->release();
-	deathAnim->release();
+	//
+	if (breathingAnim)
+	{
+		breathingAnim->release();
+		breathingAnim = NULL;
+	}
+	if (breathingMalletAnim)
+	{
+		breathingMalletAnim->release();
+		breathingMalletAnim = NULL;
+	}
+	if (walkingAnim)
+	{
+		walkingAnim->release();
+		walkingAnim = NULL;
+	}
+	if (walkingMalletAnim)
+	{
+		walkingMalletAnim->release();
+		walkingMalletAnim = NULL;
+	}
+	//
+	if (crouchingAnim)
+	{
+		crouchingAnim->release();
+		crouchingAnim = NULL;
+	}
+	if (crouchingMalletAnim)
+	{
+		crouchingMalletAnim->release();
+		crouchingMalletAnim = NULL;
+	}
+	if (standingUpAnim)
+	{
+		standingUpAnim->release();
+		standingUpAnim = NULL;
+	}
+	if (standingUpMalletAnim)
+	{
+		standingUpMalletAnim->release();
+		standingUpMalletAnim = NULL;
+	}
+	if (jumpingAnim)
+	{
+		jumpingAnim->release();
+		jumpingAnim = NULL;
+	}
+	if (jumpingMalletAnim)
+	{
+		jumpingMalletAnim->release();
+		jumpingMalletAnim = NULL;
+	}
+	if (afterJumpingAnim)
+	{
+		afterJumpingAnim->release();
+		afterJumpingAnim = NULL;
+	}
+	if (afterJumpingMalletAnim)
+	{
+		afterJumpingMalletAnim->release();
+		afterJumpingMalletAnim = NULL;
+	}
+	//
+	if (rightPunchAnim)
+	{
+		rightPunchAnim->release();
+		rightPunchAnim = NULL;
+	}
+	if (leftPunchAnim)
+	{
+		leftPunchAnim->release();
+		leftPunchAnim = NULL;
+	}
+	if (malletPunchAnim)
+	{
+		malletPunchAnim->release();
+		malletPunchAnim = NULL;
+	}
+	//
+	if (phaserShockAnim)
+	{
+		phaserShockAnim->release();
+		phaserShockAnim = NULL;
+	}
+	if (deathAnim)
+	{
+		deathAnim->release();
+		deathAnim = NULL;
+	}
 }
 
 bool Viking::isCarryingWeapon()

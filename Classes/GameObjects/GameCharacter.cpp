@@ -8,7 +8,7 @@ GameCharacter::~GameCharacter()
 
 int GameCharacter::getWeaponDamage()
 {
-	CCLOG("getWeaponDamage should be overridden");
+	//CCLOG("getWeaponDamage should be overridden");
 	return 0;
 }
 

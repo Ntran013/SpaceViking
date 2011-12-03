@@ -4,7 +4,11 @@ using namespace cocos2d;
 
 Mallet::~Mallet()
 {
-	malletAnim->release();
+	if (malletAnim)
+	{
+		malletAnim->release();
+		malletAnim = NULL;
+	}
 }
 
 void Mallet::changeState(CharacterStates newState)
