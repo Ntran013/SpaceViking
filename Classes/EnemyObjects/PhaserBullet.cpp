@@ -42,8 +42,9 @@ void PhaserBullet::changeState(CharacterStates newState)
 		}
 		this->runAction(CCMoveTo::actionWithDuration(2.0f, endLocation));
 		action = CCRepeatForever::actionWithAction(CCAnimate::actionWithAnimation(travelingAnim, false));
-	}
+		
 		break;
+	}
 	case kStateDead:
 		CCLOG("Phaser->Changed state to dead");
 		// Remove from parent
@@ -51,6 +52,10 @@ void PhaserBullet::changeState(CharacterStates newState)
 		this->removeFromParentAndCleanup(true);
 	default:
 		break;
+	}
+	if (action != NULL)
+	{
+		this->runAction(action);
 	}
 }
 
@@ -101,6 +106,7 @@ bool PhaserBullet::init()
 		CCLOG("### PhaserBullet initialized");
 		this->initAnimations();
 		gameObjectType = kEnemyTypePhaser;
+		changeState(kStateSpawning); //Added to see the spawning animation, otherwise it won't appear
 		pRet = true;
 	}
 	return pRet;

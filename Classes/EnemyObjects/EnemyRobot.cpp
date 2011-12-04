@@ -76,9 +76,9 @@ void EnemyRobot::shootPhaser()
 	} 
 	else 
 	{
-	CCLOG("Facing left, Firing to the left");
-	xPosition = xPosition * -1.0f; // Reverse direction
-	phaserDir = kDirectionLeft;
+		CCLOG("Facing left, Firing to the left");
+		xPosition = position.x - boundingBox.size.width * 0.542f; // Reverse direction, this is the right way of doing it, the book is wrong
+		phaserDir = kDirectionLeft;
 	}
 	phaserFiringPosition = ccp(xPosition, yPosition);
 	this->createPhaserWithDirection(phaserDir, phaserFiringPosition);
@@ -143,9 +143,9 @@ void EnemyRobot::changeState(CharacterStates newState)
 				this->setFlipX(false);
 		}
 		action = CCSpawn::actions(CCAnimate::actionWithAnimation(robotWalkingAnim, false), CCMoveTo::actionWithDuration(2.4f, ccp(this->getPosition().x + xPositionOffSet, this->getPosition().y)), NULL); 
-	}
+	
 		break;
-
+	}
 	case kStateAttacking:
 		CCLOG("EnemyRobot->Changing State to Attacking");
 		action = CCSequence::actions(CCAnimate::actionWithAnimation(raisePhaserAnim, false), CCDelayTime::actionWithDuration(1.0f), CCAnimate::actionWithAnimation(shootPhaserAnim, false), CCCallFunc::actionWithTarget(this, callfunc_selector(EnemyRobot::shootPhaser)), CCAnimate::actionWithAnimation(lowerPhaserAnim, false), CCDelayTime::actionWithDuration(2.0f), NULL);

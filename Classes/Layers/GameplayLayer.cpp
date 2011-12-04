@@ -181,7 +181,8 @@ void GameplayLayer::createPhaserWithDirection(PhaserDirection phaserDirection, C
 	phaserBullet->initWithSpriteFrameName("beam_1.png");
 	phaserBullet->setPosition(spawnPosition);
 	phaserBullet->setMyDirection(phaserDirection);
-	phaserBullet->changeState(kStateSpawning);
+	//Commented out as changeState() is called in the init function, in order to see the spawning animation
+	//phaserBullet->setCharacterState(kStateSpawning);
 	sceneSpriteBatchNode->addChild(phaserBullet);
 	phaserBullet->release();
 }

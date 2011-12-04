@@ -225,6 +225,13 @@ void Viking::changeState(CharacterStates newState)
 
 void Viking::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameObjects)
 {
+	// This if statement is not in the book, but added to make the viking die when health reaches 0 and not just freeze in the takingDamage animation
+	if ((characterState != kStateDead) && (characterHealth <= 0)) 
+	{
+		this->changeState(kStateDead);
+		return;
+	}
+
 	if (this->getCharacterState() == kStateDead)
 		return;
 
