@@ -7,6 +7,7 @@ void SpaceCargoShip::createObjectOfType(GameObjectType objectType, int initialHe
 	mDelegate->createObjectOfType(objectType, initialHealth, spawnLocation, zValue);
 }
 
+// SpaceCargoShip shouldn't use this function
 void SpaceCargoShip::createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition)
 {
 	mDelegate->createPhaserWithDirection(phaserDirection, spawnPosition);

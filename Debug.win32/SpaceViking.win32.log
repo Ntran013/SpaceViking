@@ -1,17 +1,11 @@
-﻿Build started 12/3/2011 5:30:12 PM.
+﻿Build started 12/4/2011 10:44:40 PM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp Classes\Layers\GameplayLayer.cpp Classes\Scenes\GameScene.cpp Classes\Singletons\AppDelegate.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Layers\GameplayLayer.cpp
          GameplayLayer.cpp
      1>c:\cocos2d-x\spaceviking\classes\layers\gameplaylayer.cpp(12): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         SneakyJoystickSkinnedBase.cpp
-         Generating Code...
-         Compiling...
-         AppDelegate.cpp
-         GameScene.cpp
-         Generating Code...
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -20,6 +14,8 @@
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\cocos2d-x\Debug.win32\SpaceViking.win32.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\cocos2d-x\Debug.win32\\" libcocos2d.lib libgles_cm.lib libCocosDenshion.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug.win32\SpaceViking.win32.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\cocos2d-x\Debug.win32\SpaceViking.win32.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\cocos2d-x\Debug.win32\SpaceViking.win32.lib" /MACHINE:X86 Debug.win32\SpaceViking.res
          Debug.win32\SpaceViking.win32.exe.embed.manifest.res
          Debug.win32\StringSplit.obj
+         Debug.win32\EnemyRobot.obj
+         Debug.win32\PhaserBullet.obj
          Debug.win32\RadarDish.obj
          Debug.win32\GameCharacter.obj
          Debug.win32\GameObject.obj
@@ -50,4 +46,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:09.29
+Time Elapsed 00:00:03.92

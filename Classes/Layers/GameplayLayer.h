@@ -13,6 +13,8 @@
 #include "PowerUps\Mallet.h"
 #include "PowerUps\Health.h"
 #include "GameObjects\SpaceCargoShip.h"
+#include "EnemyObjects\EnemyRobot.h"
+#include "EnemyObjects\PhaserBullet.h"
 
 class GameplayLayer : public cocos2d::CCLayer, public GameplayLayerDelegate
 {
@@ -24,6 +26,7 @@ public:
 	void update(cocos2d::ccTime deltaTime);
 	virtual void createObjectOfType(GameObjectType objectType, int initialHealth, CCPoint spawnLocation, int zValue);
 	virtual void createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition);
+	void addEnemy(cocos2d::ccTime deltaTime);
 protected:
 	SneakyJoystick *lefJoystick;
 	SneakyButton *jumpButton;

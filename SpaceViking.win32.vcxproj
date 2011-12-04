@@ -215,6 +215,8 @@
     <ClInclude Include="Classes\Constants\CommonProtocols.h" />
     <ClInclude Include="Classes\Constants\Constants.h" />
     <ClInclude Include="Classes\Constants\StringSplit.h" />
+    <ClInclude Include="Classes\EnemyObjects\EnemyRobot.h" />
+    <ClInclude Include="Classes\EnemyObjects\PhaserBullet.h" />
     <ClInclude Include="Classes\EnemyObjects\RadarDish.h" />
     <ClInclude Include="Classes\GameObjects\GameCharacter.h" />
     <ClInclude Include="Classes\GameObjects\GameObject.h" />
@@ -236,6 +238,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes\Constants\StringSplit.cpp" />
+    <ClCompile Include="Classes\EnemyObjects\EnemyRobot.cpp" />
+    <ClCompile Include="Classes\EnemyObjects\PhaserBullet.cpp" />
     <ClCompile Include="Classes\EnemyObjects\RadarDish.cpp" />
     <ClCompile Include="Classes\GameObjects\GameCharacter.cpp" />
     <ClCompile Include="Classes\GameObjects\GameObject.cpp" />

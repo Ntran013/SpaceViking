@@ -298,6 +298,12 @@
     <ClInclude Include="Classes\GameObjects\SpaceCargoShip.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\EnemyObjects\EnemyRobot.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\EnemyObjects\PhaserBullet.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -352,6 +358,12 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\GameObjects\SpaceCargoShip.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\EnemyObjects\EnemyRobot.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\EnemyObjects\PhaserBullet.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

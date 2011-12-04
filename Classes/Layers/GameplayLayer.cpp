@@ -32,9 +32,12 @@ bool GameplayLayer::init()
 		viking->release();
 
 		this->createObjectOfType(kEnemyTypeRadarDish, 100, ccp(screenSize.width * 0.878f, screenSize.height * 0.13f), 10);
-		this->createObjectOfType(kEnemyTypeSpaceCargoShip, 100, ccp(screenSize.width * 0.5f, screenSize.height * 1.5f), 10);
+		
 
 		this->scheduleUpdate();
+
+		this->schedule(schedule_selector(GameplayLayer::addEnemy), 10.0f);
+		this->createObjectOfType(kEnemyTypeSpaceCargoShip, 100, ccp(screenSize.width * 0.5f, screenSize.height * 1.5f), 10);
 	}
 	return true;
 }
@@ -126,8 +129,20 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 		sceneSpriteBatchNode->addChild(radarDish, zValue, kRadarDishTagValue);
 		radarDish->release();
 	}
+	else if (objectType == kEnemyTypeAlienRobot)
+	{
+		CCLOG("Creating the Alien Robot");
+		EnemyRobot *enemyRobot = new EnemyRobot();
+		enemyRobot->setDelegate(this);
+		enemyRobot->initWithSpriteFrameName("an1_anim1.png");
+		enemyRobot->setCharacterHealth(initialHealth);
+		enemyRobot->setPosition(spawnLocation);
+		enemyRobot->changeState(kStateSpawning);
+		sceneSpriteBatchNode->addChild(enemyRobot);
+		enemyRobot->release();
+	}
 
-	if (objectType == kPowerUpTypeMallet)
+	else if (objectType == kPowerUpTypeMallet)
 	{
 		CCLOG("Creating a Mallet PowerUp");
 		Mallet *mallet = new Mallet();
@@ -137,7 +152,7 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 		mallet->release();
 	}
 
-	if (objectType == kPowerUpTypeHealth)
+	else if (objectType == kPowerUpTypeHealth)
 	{
 		CCLOG("Creating a Health PowerUp");
 		Health *health = new Health();
@@ -147,10 +162,11 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 		health->release();
 	}
 
-	if (objectType == kEnemyTypeSpaceCargoShip)
+	else if (objectType == kEnemyTypeSpaceCargoShip)
 	{
 		CCLOG("Creating the Cargo Ship Enemy");
 		SpaceCargoShip *spaceCargoShip = new SpaceCargoShip();
+		// setDelegate before initing SpaceCargoShip, as the dropCargo function inside init() uses the delegate
 		spaceCargoShip->setDelegate(this);
 		spaceCargoShip->initWithSpriteFrameName("ship_2.png");
 		spaceCargoShip->setPosition(spawnLocation);
@@ -161,6 +177,26 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 
 void GameplayLayer::createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition) 
 {
-	CCLOG("Placeholder for Chapter 5, see below");
-	return;
+	PhaserBullet *phaserBullet = new PhaserBullet(); 
+	phaserBullet->initWithSpriteFrameName("beam_1.png");
+	phaserBullet->setPosition(spawnPosition);
+	phaserBullet->setMyDirection(phaserDirection);
+	phaserBullet->changeState(kStateSpawning);
+	sceneSpriteBatchNode->addChild(phaserBullet);
+	phaserBullet->release();
+}
+
+void GameplayLayer::addEnemy(ccTime deltaTime) 
+{
+	CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
+	RadarDish *radarDish = (RadarDish*) sceneSpriteBatchNode->getChildByTag(kRadarDishTagValue);
+	if (radarDish != NULL) 
+	{
+		if (radarDish->getCharacterState() != kStateDead) 
+		{
+			this->createObjectOfType(kEnemyTypeAlienRobot, 100, ccp(screenSize.width * 0.195f, screenSize.height * 0.1432f), 2);
+		} 
+		else 		
+			this->unschedule(schedule_selector(GameplayLayer::addEnemy));	
+	}
 }
