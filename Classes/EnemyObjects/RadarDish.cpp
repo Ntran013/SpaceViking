@@ -35,17 +35,17 @@ void RadarDish::changeState(CharacterStates newState)
 	switch (newState)
 	{
 	case kStateSpawning:
-		CCLOG("RadarDish->Starting the Spawning Animation");
+		//CCLOG("RadarDish->Starting the Spawning Animation");
 		action = CCAnimate::actionWithAnimation(tiltingAnim, false);
 		break;
 
 	case kStateIdle:
-		CCLOG("RadarDish->Changing State to Idle");
+		//CCLOG("RadarDish->Changing State to Idle");
 		action = CCAnimate::actionWithAnimation(transmittingAnim, false);
 		break;
 
 	case kStateTakingDamage:
-		CCLOG("RadarDish->Changing State to TakingDamage");
+		//CCLOG("RadarDish->Changing State to TakingDamage");
 		characterHealth = characterHealth - vikingCharacter->getWeaponDamage();
 		if (characterHealth <= 0.0f)
 			this->changeState(kStateDead);
@@ -54,12 +54,12 @@ void RadarDish::changeState(CharacterStates newState)
 		break;
 
 	case kStateDead:
-		CCLOG("RadarDish->Changing State to Dead");
+		//CCLOG("RadarDish->Changing State to Dead");
 		action = CCAnimate::actionWithAnimation(blowingUpAnim, false);
 		break;
 
 	default:
-		CCLOG("Unhandled state %d in RadarDish", newState);
+		//CCLOG("Unhandled state %d in RadarDish", newState);
 		break;
 	}
 
@@ -87,7 +87,7 @@ void RadarDish::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameOb
 
 	if (this->numberOfRunningActions() == 0 && this->getCharacterState() != kStateDead)
 	{
-		CCLOG("Going to Idle");
+		//CCLOG("Going to Idle");
 		this->changeState(kStateIdle);
 		return;
 	}
@@ -110,7 +110,7 @@ bool RadarDish::init()
 	bool pRet = false; 
 	if (GameObject::init())
 	{
-		CCLOG("### RadarDish initialized");
+		//CCLOG("### RadarDish initialized");
 		this->initAnimations();
 		characterHealth = 100.0f;
 		this->setGameObjectType(kEnemyTypeRadarDish);

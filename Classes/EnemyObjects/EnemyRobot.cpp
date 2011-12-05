@@ -71,12 +71,12 @@ void EnemyRobot::shootPhaser()
 
 	if (this->isFlipX()) 
 	{
-		CCLOG("Facing right, Firing to the right");
+		//CCLOG("Facing right, Firing to the right");
 		phaserDir = kDirectionRight;
 	} 
 	else 
 	{
-		CCLOG("Facing left, Firing to the left");
+		//CCLOG("Facing left, Firing to the left");
 		xPosition = position.x - boundingBox.size.width * 0.542f; // Reverse direction, this is the right way of doing it, the book is wrong
 		phaserDir = kDirectionLeft;
 	}
@@ -114,13 +114,13 @@ void EnemyRobot::changeState(CharacterStates newState)
 		break;
 	
 	case kStateIdle:
-		CCLOG("EnemyRobot->Changing State to Idle");
+		//CCLOG("EnemyRobot->Changing State to Idle");
 		this->setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("an1_anim1.png"));
 		break;
 
 	case kStateWalking:
 	{
-		CCLOG("EnemyRobot->Changing State to Walking");
+		//CCLOG("EnemyRobot->Changing State to Walking");
 		if (isVikingWithinBoundingBox)
 			break; // AI will change to Attacking on next frame
 
@@ -147,12 +147,12 @@ void EnemyRobot::changeState(CharacterStates newState)
 		break;
 	}
 	case kStateAttacking:
-		CCLOG("EnemyRobot->Changing State to Attacking");
+		//CCLOG("EnemyRobot->Changing State to Attacking");
 		action = CCSequence::actions(CCAnimate::actionWithAnimation(raisePhaserAnim, false), CCDelayTime::actionWithDuration(1.0f), CCAnimate::actionWithAnimation(shootPhaserAnim, false), CCCallFunc::actionWithTarget(this, callfunc_selector(EnemyRobot::shootPhaser)), CCAnimate::actionWithAnimation(lowerPhaserAnim, false), CCDelayTime::actionWithDuration(2.0f), NULL);
 		break;
 
 	case kStateTakingDamage:
-		CCLOG("EnemyRobot->Changing State to TakingDamage");
+		//CCLOG("EnemyRobot->Changing State to TakingDamage");
 		if (vikingCharacter->getWeaponDamage() > kVikingFistDamage)
 		{
 		// If the viking has the mallet, then
@@ -166,12 +166,12 @@ void EnemyRobot::changeState(CharacterStates newState)
 		break;
 
 	case kStateDead:
-		CCLOG("EnemyRobot -> Going to Dead State");
+		//CCLOG("EnemyRobot -> Going to Dead State");
 		action = CCSequence::actions(CCAnimate::actionWithAnimation(robotDeathAnim, false), CCDelayTime::actionWithDuration(2.0f), CCFadeOut::actionWithDuration(2.0f), NULL);
 		break;
 
 	default:
-		CCLOG("Enemy Robot -> Unknown CharState %d", characterState);
+		//CCLOG("Enemy Robot -> Unknown CharState %d", characterState);
 		break;
 	}
 
@@ -209,6 +209,14 @@ void EnemyRobot::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameO
 
 			return; // Nothing to update further, stop and show damage
 		}
+	}
+
+	// This if statement is not in the book, but added so that the enemy robot starts shooting as soon as the viking is within sight
+	// and not until the enemy robot finishes walking
+	if (isVikingWithinSight && !isVikingWithinBoundingBox && vikingCharacter->getCharacterState() != kStateDead)
+	{	
+		if (characterState != kStateAttacking)
+			this->changeState(kStateAttacking);
 	}
 
 	if (this->numberOfRunningActions() == 0) 

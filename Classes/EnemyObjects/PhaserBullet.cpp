@@ -23,21 +23,21 @@ void PhaserBullet::changeState(CharacterStates newState)
 	switch (newState)
 	{
 	case kStateSpawning:
-		CCLOG("Phaser->Changed state to Spawning");
+		//CCLOG("Phaser->Changed state to Spawning");
 		action = CCAnimate::actionWithAnimation(firingAnim, false);
 		break;
 	case kStateTraveling:
 	{
-		CCLOG("Phaser->Changed state to Traveling");
+		//CCLOG("Phaser->Changed state to Traveling");
 		CCPoint endLocation;
 		if (myDirection == kDirectionLeft) 
 		{
-			CCLOG("Phaser direction LEFT");
+			//CCLOG("Phaser direction LEFT");
 			endLocation = ccp(-10.0f, this->getPosition().y);
 		} 
 		else 
 		{
-			CCLOG("Phaser direction RIGHT");
+			//CCLOG("Phaser direction RIGHT");
 			endLocation = ccp(screenSize.width+24.0f, this->getPosition().y);
 		}
 		this->runAction(CCMoveTo::actionWithDuration(2.0f, endLocation));
@@ -46,7 +46,7 @@ void PhaserBullet::changeState(CharacterStates newState)
 		break;
 	}
 	case kStateDead:
-		CCLOG("Phaser->Changed state to dead");
+		//CCLOG("Phaser->Changed state to dead");
 		// Remove from parent
 		this->setIsVisible(false);
 		this->removeFromParentAndCleanup(true);
@@ -103,7 +103,7 @@ bool PhaserBullet::init()
 	bool pRet = false;
 	if (GameObject::init())
 	{
-		CCLOG("### PhaserBullet initialized");
+		//CCLOG("### PhaserBullet initialized");
 		this->initAnimations();
 		gameObjectType = kEnemyTypePhaser;
 		changeState(kStateSpawning); //Added to see the spawning animation, otherwise it won't appear

@@ -121,7 +121,7 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 {
 	if (objectType == kEnemyTypeRadarDish)
 	{
-		CCLOG("Creating the Radar Enemy");
+		//CCLOG("Creating the Radar Enemy");
 		RadarDish *radarDish = new RadarDish();
 		radarDish->initWithSpriteFrameName("radar_1.png");
 		radarDish->setCharacterHealth(initialHealth);
@@ -131,7 +131,7 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 	}
 	else if (objectType == kEnemyTypeAlienRobot)
 	{
-		CCLOG("Creating the Alien Robot");
+		//CCLOG("Creating the Alien Robot");
 		EnemyRobot *enemyRobot = new EnemyRobot();
 		enemyRobot->setDelegate(this);
 		enemyRobot->initWithSpriteFrameName("an1_anim1.png");
@@ -144,7 +144,7 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 
 	else if (objectType == kPowerUpTypeMallet)
 	{
-		CCLOG("Creating a Mallet PowerUp");
+		//CCLOG("Creating a Mallet PowerUp");
 		Mallet *mallet = new Mallet();
 		mallet->initWithSpriteFrameName("mallet_1.png");
 		mallet->setPosition(spawnLocation);
@@ -154,7 +154,7 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 
 	else if (objectType == kPowerUpTypeHealth)
 	{
-		CCLOG("Creating a Health PowerUp");
+		//CCLOG("Creating a Health PowerUp");
 		Health *health = new Health();
 		health->initWithSpriteFrameName("sandwich_1.png");
 		health->setPosition(spawnLocation);
@@ -164,7 +164,7 @@ void GameplayLayer::createObjectOfType(GameObjectType objectType, int initialHea
 
 	else if (objectType == kEnemyTypeSpaceCargoShip)
 	{
-		CCLOG("Creating the Cargo Ship Enemy");
+		//CCLOG("Creating the Cargo Ship Enemy");
 		SpaceCargoShip *spaceCargoShip = new SpaceCargoShip();
 		// setDelegate before initing SpaceCargoShip, as the dropCargo function inside init() uses the delegate
 		spaceCargoShip->setDelegate(this);
