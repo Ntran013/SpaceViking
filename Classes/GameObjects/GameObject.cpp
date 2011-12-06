@@ -96,4 +96,10 @@ void GameObject::setObjectScale()
 		this->setScaleY(W320Scale);
 		this->setScaleX(W320Scale);
 	}
+
+	else if (SCREEN_HEIGHT == 720)
+	{
+		this->setScaleY(1.5);
+		this->setScaleX(1.5);
+	}
 }

@@ -20,4 +20,9 @@
 #define W480Scale 0.75
 #define W320Scale 0.5
 
+// SCreen Resolutions for AppDelegate
+#define WVGA 480,800
+#define HVGA 320,480
+#define RETINA 640,960
+#define GALAXYNEXUS 720,1280
 #endif

@@ -110,7 +110,8 @@ int Viking::getWeaponDamage()
 
 void  Viking::applyJoystick(SneakyJoystick *aJoystick, float deltaTime)
 {
-	CCPoint scaledVelocity = ccpMult(aJoystick->getVelocity(), 128.0f);
+	// Change the scale factor to SCREEN_HEIGHT/2.5 to make the viking move at the same pace across all different resolutions
+	CCPoint scaledVelocity = ccpMult(aJoystick->getVelocity(), SCREEN_HEIGHT/2.5f);
 	CCPoint oldPosition = this->getPosition();
 	CCPoint newPosition = ccp(oldPosition.x + scaledVelocity.x * deltaTime, oldPosition.y);
 	this->setPosition(newPosition);
