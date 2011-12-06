@@ -169,6 +169,9 @@
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glext.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCStdC.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccConfig.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c \
@@ -516,6 +519,12 @@
 /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glext.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCStdC.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccConfig.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector:
 

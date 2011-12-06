@@ -12,6 +12,8 @@ bool GameObject::init()
 		screenSize = CCDirector::sharedDirector()->getWinSize();
 		isActive = true;
 		gameObjectType = kObjectTypeNone;
+		//added to set scale
+		this->setObjectScale();
 		pRet = true;
 	}
 
@@ -78,4 +80,20 @@ CCAnimation * GameObject::loadPlistForAnimationWithName(const char *animationNam
 	}
 
 	return animationToReturn;
+}
+
+// Scale down the object depending on different screen resolution
+void GameObject::setObjectScale()
+{
+	if (SCREEN_HEIGHT == 480)
+	{
+		this->setScaleY(W480Scale);
+		this->setScaleX(W480Scale);
+	}
+
+	else if (SCREEN_HEIGHT == 320)
+	{
+		this->setScaleY(W320Scale);
+		this->setScaleX(W320Scale);
+	}
 }

@@ -11,4 +11,13 @@
 #define kVikingMalletDamage 40
 #define kRadarDishTagValue 10
 
+// Screen size marcros
+#define SCREEN_SIZE cocos2d::CCDirector::sharedDirector()->getWinSize()
+#define SCREEN_WIDTH cocos2d::CCDirector::sharedDirector()->getWinSize().width
+#define SCREEN_HEIGHT cocos2d::CCDirector::sharedDirector()->getWinSize().height
+
+// Screen Resolution Scales
+#define W480Scale 0.75
+#define W320Scale 0.5
+
 #endif

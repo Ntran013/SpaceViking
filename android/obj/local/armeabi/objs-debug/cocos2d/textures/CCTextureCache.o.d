@@ -147,6 +147,13 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cctype.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/ctype.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/../include/ctype.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/queue \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_queue.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_heap.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_heap.c \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTextureCache.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCCommon.h \
@@ -162,17 +169,13 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_tree.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_tree.c \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCStdC.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccConfig.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTexture2D.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGeometry.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGL.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCGL.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h \
@@ -185,8 +188,7 @@
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glplatform.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glext.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTexture2D.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/selector_protocol.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCImage.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/list \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_list.h \
@@ -196,11 +198,18 @@
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCData.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/platform.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCThread.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCFileUtils.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableDictionary.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/ccUtils.h
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/ccUtils.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCScheduler.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/data_support/uthash.h \
+ /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/inttypes.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCThread.h \
+ /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/semaphore.h
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stack:
 
@@ -496,6 +505,20 @@
 
 /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/../include/ctype.h:
 
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/queue:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_queue.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_heap.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_heap.c:
+
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTextureCache.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h:
@@ -526,12 +549,6 @@
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector:
 
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h:
-
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h:
@@ -540,13 +557,11 @@
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccConfig.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTexture2D.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGeometry.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGL.h:
 
@@ -572,9 +587,7 @@
 
 /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glext.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTexture2D.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/selector_protocol.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCImage.h:
 
@@ -594,6 +607,10 @@
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h:
 
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h:
+
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/platform.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCThread.h:
@@ -603,3 +620,13 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableDictionary.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/ccUtils.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCScheduler.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/data_support/uthash.h:
+
+/cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/inttypes.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCThread.h:
+
+/cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/semaphore.h:

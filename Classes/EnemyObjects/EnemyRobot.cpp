@@ -195,8 +195,8 @@ void EnemyRobot::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameO
 
 	isVikingWithinBoundingBox = CCRect::CCRectIntersectsRect(vikingBoundingBox, robotBoundingBox) ? true : false;
 	isVikingWithinSight = CCRect::CCRectIntersectsRect(vikingBoundingBox, robotSightBoundingBox)? true : false;
-
-	if ((isVikingWithinBoundingBox) && (vikingCharacter->getCharacterState() == kStateAttacking)) 
+	// != kStateSpawning, so the enemy robot can't get hit while spawning
+	if ((isVikingWithinBoundingBox) && (vikingCharacter->getCharacterState() == kStateAttacking && characterState != kStateSpawning)) 
 	{
 		// Viking is attacking this robot
 		if ((characterState != kStateTakingDamage) && (characterState != kStateDead)) 
@@ -213,7 +213,7 @@ void EnemyRobot::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameO
 
 	// This if statement is not in the book, but added so that the enemy robot starts shooting as soon as the viking is within sight
 	// and not until the enemy robot finishes walking
-	if (isVikingWithinSight && !isVikingWithinBoundingBox && vikingCharacter->getCharacterState() != kStateDead)
+	if (isVikingWithinSight && !isVikingWithinBoundingBox && vikingCharacter->getCharacterState() != kStateDead && characterState != kStateSpawning)
 	{	
 		if (characterState != kStateAttacking)
 			this->changeState(kStateAttacking);

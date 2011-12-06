@@ -65,11 +65,16 @@
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/asm/siginfo.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccConfig.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/effects/CCGrid.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCNode.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCAffineTransform.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGeometry.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCArray.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/data_support/ccCArray.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/selector_protocol.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGL.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCGL.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h \
@@ -82,17 +87,20 @@
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glplatform.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glext.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCCamera.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/string \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_prolog.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/debug/_debug.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_algobase.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_alloc.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstddef.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstring.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/using/cstring \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/climits \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstdlib.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cmath.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstring.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/using/cstring \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_algobase.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/climits \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_pair.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/type_traits.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/type_manips.h \
@@ -102,8 +110,6 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_algobase.c \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_function_base.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_iterator.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_alloc.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_new.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/../../system/include/new \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/cstddef \
@@ -111,29 +117,13 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstdio.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_construct.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_alloc.c \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_uninitialized.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_range_errors.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_relops_cont.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/effects/CCGrid.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCNode.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCAffineTransform.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCArray.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/data_support/ccCArray.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/selector_protocol.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCCamera.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/string \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_iosfwd.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/char_traits.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cwchar.h \
  /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/../include/wchar.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_mbstate_t.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_uninitialized.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_base.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_npos.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_operators.h \
@@ -141,6 +131,7 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_ctraits_fns.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_function.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_function_adaptors.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_range_errors.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_hash.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_hash_fun.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_io.h \
@@ -184,6 +175,14 @@
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTexture2D.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h \
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_relops_cont.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/effects/CCGrabber.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/CCConfiguration.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGL.h \
@@ -320,15 +319,25 @@
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccConfig.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/effects/CCGrid.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCNode.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCAffineTransform.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGeometry.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCArray.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/data_support/ccCArray.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/selector_protocol.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccTypes.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCGL.h:
 
@@ -354,27 +363,33 @@
 
 /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/GLES/glext.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h:
 
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCCamera.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/string:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_prolog.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/debug/_debug.h:
 
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_algobase.h:
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_alloc.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstddef.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstdlib.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cmath.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstring.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/using/cstring:
 
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_algobase.h:
+
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/climits:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cstdlib.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_cmath.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_pair.h:
 
@@ -394,10 +409,6 @@
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_iterator.h:
 
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_alloc.h:
-
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_new.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/../../system/include/new:
@@ -412,40 +423,6 @@
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_alloc.c:
 
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_uninitialized.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_range_errors.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_relops_cont.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/effects/CCGrid.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCObject.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCNode.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/ccMacros.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCAffineTransform.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCArray.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/support/data_support/ccCArray.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/selector_protocol.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCCamera.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/string:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string.h:
-
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_iosfwd.h:
@@ -457,6 +434,8 @@
 /cygdrive/c/android-ndk-r6b/platforms/android-9/arch-arm/usr/include/../include/wchar.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_mbstate_t.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_uninitialized.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_base.h:
 
@@ -471,6 +450,8 @@
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_function.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_function_adaptors.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_range_errors.h:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_string_hash.h:
 
@@ -557,6 +538,22 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCTexture2D.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCDirector.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/platform/CCPlatformMacros.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCMutableArray.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/vector:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_vector.c:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_bvector.h:
+
+/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_relops_cont.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/include/CCEGLView.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/../../../cocos2dx/effects/CCGrabber.h:
 

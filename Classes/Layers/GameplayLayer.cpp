@@ -12,8 +12,8 @@ bool GameplayLayer::init()
 		srand(time(NULL));
 
 		//vikingSprite = CCSprite::spriteWithFile("sv_anim_1.png");
-		CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("scene1atlasiPhone.plist");
-		sceneSpriteBatchNode = CCSpriteBatchNode::batchNodeWithFile("scene1atlasiPhone.png");
+		CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("scene1atlasiPhone-hd.plist");
+		sceneSpriteBatchNode = CCSpriteBatchNode::batchNodeWithFile("scene1atlasiPhone-hd.png");
 
 		this->addChild(sceneSpriteBatchNode, 0);
 		this->initJoystickAndButtons();
@@ -55,7 +55,9 @@ void GameplayLayer::initJoystickAndButtons()
 
 	joystickBasePosition = ccp(screenSize.width*0.07f, screenSize.height*0.11f);
 	jumpButtonPosition = ccp(screenSize.width*0.93f, screenSize.height*0.11f);
-	attackButtonPosition = ccp(screenSize.width*0.93f, screenSize.height*0.35f);
+	// Set the attackButtonPosition to be 80 points above the jump button
+	// So that their positions are fixed and do not change because of different screen resolutions
+	attackButtonPosition = ccp(screenSize.width*0.93f, screenSize.height*0.11f + 80.0f);
 
 	//Joystick
 	SneakyJoystickSkinnedBase *joystickBase = SneakyJoystickSkinnedBase::node(); 

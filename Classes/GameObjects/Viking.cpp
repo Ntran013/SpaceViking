@@ -387,7 +387,6 @@ bool Viking::init()
 		millisecondsStayingIdle = 0.0f;
 		isCarryingMallet = false;
 		this->initAnimations();
-		//this->setScreenSize(CCDirector::sharedDirector()->getWinSize()); //set screen size, not in the book but needed
 		pRet = true;
 	}
 	return pRet;

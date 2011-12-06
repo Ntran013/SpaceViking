@@ -13,6 +13,11 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/GameObjects/GameCharacter.cpp \
 ../../../Classes/GameObjects/GameObject.cpp \
 ../../../Classes/GameObjects/Viking.cpp \
+../../../Classes/GameObjects/SpaceCargoShip.cpp \
+../../../Classes/EnemyObjects/EnemyRobot.cpp \
+../../../Classes/EnemyObjects/PhaserBullet.cpp \
+../../../Classes/PowerUPs/Health.cpp \
+../../../Classes/PowerUPs/Mallet.cpp \
 ../../../Classes/JoystickClasses/SneakyButton.cpp \
 ../../../Classes/JoystickClasses/SneakyJoystick.cpp \
 ../../../Classes/JoystickClasses/SneakyButtonSkinnedBase.cpp \

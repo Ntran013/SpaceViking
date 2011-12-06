@@ -19,6 +19,7 @@ class GameObject : public cocos2d::CCSprite
 	virtual void updateStateWithDeltaTime(cocos2d::ccTime deltaTime, cocos2d::CCArray *listOfGameObjects);
 	virtual cocos2d::CCRect adjustedBoundingBox();
 	cocos2d::CCAnimation *loadPlistForAnimationWithName(const char *animationName, const char *className);
+	void setObjectScale();
 };
 
 #endif
