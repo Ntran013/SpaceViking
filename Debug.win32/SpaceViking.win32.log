@@ -1,10 +1,10 @@
-﻿Build started 12/6/2011 4:52:21 PM.
+﻿Build started 12/8/2011 10:06:25 PM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Singletons\AppDelegate.cpp
-         AppDelegate.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Options\OptionsLayer.cpp
+         OptionsLayer.cpp
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -22,6 +22,14 @@
          Debug.win32\Viking.obj
          Debug.win32\Health.obj
          Debug.win32\Mallet.obj
+         Debug.win32\IntroLayer.obj
+         Debug.win32\IntroScene.obj
+         Debug.win32\LevelCompleteLayer.obj
+         Debug.win32\LevelCompleteScene.obj
+         Debug.win32\MainMenuLayer.obj
+         Debug.win32\MainMenuScene.obj
+         Debug.win32\OptionsLayer.obj
+         Debug.win32\OptionsScene.obj
          Debug.win32\AppDelegate.obj
          Debug.win32\BackgroundLayer.obj
          Debug.win32\GameplayLayer.obj
@@ -31,6 +39,7 @@
          Debug.win32\SneakyButtonSkinnedBase.obj
          Debug.win32\SneakyJoystick.obj
          Debug.win32\SneakyJoystickSkinnedBase.obj
+         Debug.win32\GameManager.obj
          Debug.win32\main.obj
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug.win32\SpaceViking.win32.exe.embed.manifest" /manifest Debug.win32\SpaceViking.win32.exe.intermediate.manifest
@@ -38,6 +47,52 @@
        LinkEmbedManifest:
          All outputs are up-to-date.
          SpaceViking.win32.vcxproj -> C:\cocos2d-x\Debug.win32\SpaceViking.win32.exe
+       PostBuildEvent:
+         xcopy /Y /E .\Resources\*.* C:\cocos2d-x\Debug.win32\
+         :VCEnd
+         .\Resources\backgroundiPhone-hd.png
+         .\Resources\CloseNormal.png
+         .\Resources\CloseSelected.png
+         .\Resources\dpadDown.png
+         .\Resources\handDown.png
+         .\Resources\handUp.png
+         .\Resources\HelloWorld.png
+         .\Resources\joystickDown.png
+         .\Resources\jumpDown.png
+         .\Resources\jumpUp.png
+         .\Resources\scene1atlasiPhone-hd.plist
+         .\Resources\scene1atlasiPhone-hd.png
+         .\Resources\Fonts\SpaceVikingFont.fnt
+         .\Resources\Fonts\SpaceVikingFont.png
+         .\Resources\Fonts\VikingSpeechFont64.fnt
+         .\Resources\Fonts\VikingSpeechFont64.png
+         .\Resources\Menus\.DS_Store
+         .\Resources\Menus\Credits\GenericMenuBackground.png
+         .\Resources\Menus\Intro\intro1.png
+         .\Resources\Menus\Intro\intro2.png
+         .\Resources\Menus\Intro\intro3.png
+         .\Resources\Menus\Intro\intro4.png
+         .\Resources\Menus\Intro\intro5.png
+         .\Resources\Menus\Intro\intro6.png
+         .\Resources\Menus\Intro\intro7.png
+         .\Resources\Menus\LevelComplete\LevelCompleteAlive.png
+         .\Resources\Menus\LevelComplete\LevelCompleteDead.png
+         .\Resources\Menus\Main\BuyBookButtonNormal.png
+         .\Resources\Menus\Main\BuyBookButtonSelected.png
+         .\Resources\Menus\Main\MainMenuBackground.png
+         .\Resources\Menus\Main\menu.png
+         .\Resources\Menus\Main\OptionsButtonNormal.png
+         .\Resources\Menus\Main\OptionsButtonSelected.png
+         .\Resources\Menus\Main\PlayGameButtonNormal.png
+         .\Resources\Menus\Main\PlayGameButtonSelected.png
+         .\Resources\Menus\Main\VikingFloating.png
+         .\Resources\Plists\EnemyRobot.plist
+         .\Resources\Plists\Health.plist
+         .\Resources\Plists\Mallet.plist
+         .\Resources\Plists\PhaserBullet.plist
+         .\Resources\Plists\RadarDish.plist
+         .\Resources\Plists\Viking.plist
+         42 File(s) copied
        FinalizeBuildStatus:
          Deleting file "Debug.win32\SpaceViking.win32.unsuccessfulbuild".
          Touching "Debug.win32\SpaceViking.win32.lastbuildstate".
@@ -45,4 +100,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.94
+Time Elapsed 00:00:03.81

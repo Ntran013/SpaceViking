@@ -3,7 +3,7 @@
 
 #include "GameObject.h"
 
-class SpaceCargoShip : public GameObject, public GameplayLayerDelegate
+class SpaceCargoShip : public GameObject
 {
 protected:
 	bool hasDroppedMallet;
@@ -14,7 +14,5 @@ public:
 	void dropCargo();
 	bool init();
 	void setDelegate(GameplayLayerDelegate *pDelegate);
-	virtual void createObjectOfType(GameObjectType objectType, int initialHealth, cocos2d::CCPoint spawnLocation, int zValue);
-	virtual void createPhaserWithDirection(PhaserDirection phaserDirection, cocos2d::CCPoint spawnPosition);
 };
 #endif

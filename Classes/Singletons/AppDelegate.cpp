@@ -7,6 +7,7 @@ using namespace CocosDenshion;
 
 #include "HelloWorldScene.h"
 #include "Scenes\GameScene.h"
+#include "Singletons\GameManager.h"
 
 using namespace cocos2d;
 
@@ -82,10 +83,12 @@ bool AppDelegate::applicationDidFinishLaunching()
     pDirector->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    CCScene *pScene = GameScene::node();
+    //CCScene *pScene = GameScene::node();
 
     // run
-    pDirector->runWithScene(pScene);
+    //pDirector->runWithScene(pScene);
+
+	GameManager::sharedGameManager()->runSceneWithID(kMainMenuScene);
     return true;
 }
 

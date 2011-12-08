@@ -41,17 +41,14 @@ EnemyRobot::~EnemyRobot()
 		robotDeathAnim->release();
 		robotDeathAnim = NULL;
 	}
-}
 
-void EnemyRobot::createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition)
-{
-	mDelegate->createPhaserWithDirection(phaserDirection, spawnPosition);
-}
-
-// EnemyRobot shouldn't use this function
-void EnemyRobot::createObjectOfType(GameObjectType objectType, int initialHealth, CCPoint spawnLocation, int zValue)
-{
-	mDelegate->createObjectOfType(objectType, initialHealth, spawnLocation, zValue);
+#if ENEMY_STATE_DEBUG == 1
+	if (myDebugLabel)
+	{
+		myDebugLabel->release();
+		myDebugLabel = NULL;
+	}
+#endif
 }
 
 void EnemyRobot::setDelegate(GameplayLayerDelegate *pDelegate)
@@ -81,7 +78,7 @@ void EnemyRobot::shootPhaser()
 		phaserDir = kDirectionLeft;
 	}
 	phaserFiringPosition = ccp(xPosition, yPosition);
-	this->createPhaserWithDirection(phaserDir, phaserFiringPosition);
+	mDelegate->createPhaserWithDirection(phaserDir, phaserFiringPosition);
 }
 
 CCRect EnemyRobot::eyesightBoundingBox()
@@ -182,6 +179,11 @@ void EnemyRobot::changeState(CharacterStates newState)
 void EnemyRobot::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameObjects)
 {
 	this->checkAndClampSpritePosition();
+	
+#if ENEMY_STATE_DEBUG == 1
+	this->setDebugLabelTextAndPosition();
+#endif
+
 	if ((characterState != kStateDead) && (characterHealth <= 0)) 
 	{
 		this->changeState(kStateDead);
@@ -205,7 +207,10 @@ void EnemyRobot::updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameO
 			if (characterHealth > 0)
 				this->changeState(kStateTakingDamage);
 			else 
+			{
 				this->changeState(kStateDead);
+				GameManager::sharedGameManager()->setKillCount(GameManager::sharedGameManager()->getKillCount() + 1);
+			}
 
 			return; // Nothing to update further, stop and show damage
 		}
@@ -289,3 +294,43 @@ bool EnemyRobot::init()
 	}
 	return pRet;
 }
+
+#if ENEMY_STATE_DEBUG == 1
+void EnemyRobot::setDebugLabelTextAndPosition()
+{
+	CCPoint newPosition = this->getPosition();
+	char labelString[100] = {0};
+	sprintf(labelString, "X: %.2f \nY:%.2f \n", newPosition.x, newPosition.y);
+
+	switch (characterState)
+	{
+		case kStateSpawning:
+			myDebugLabel->setString(strcat(labelString, "Spawning"));
+			break;
+		case kStateIdle:
+			myDebugLabel->setString(strcat(labelString, "Idle"));
+			break;
+		case kStateWalking:
+			myDebugLabel->setString(strcat(labelString, "Walking"));
+			break;
+		case kStateAttacking:
+			myDebugLabel->setString(strcat(labelString, "Attacking"));
+			break;
+		case kStateTakingDamage:
+			myDebugLabel->setString(strcat(labelString, "Taking Damage"));
+			break;
+		case kStateDead:
+			myDebugLabel->setString(strcat(labelString, "Dead"));
+			break;
+		default:
+			myDebugLabel->setString(strcat(labelString, "Unknown State"));
+			break;
+	}
+
+	//Retain otherwise it will cause an Access Violating Reading Location
+	myDebugLabel->retain();
+	float yOffset = SCREEN_HEIGHT * 0.195f;
+	newPosition = ccp(newPosition.x, newPosition.y + yOffset);
+	myDebugLabel->setPosition(newPosition);
+}
+#endif

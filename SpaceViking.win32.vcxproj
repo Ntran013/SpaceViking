@@ -82,6 +82,9 @@
       <DllDataFileName>
       </DllDataFileName>
     </Midl>
+    <PostBuildEvent>
+      <Command>xcopy /Y /E .\Resources\*.* $(OutDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -122,55 +125,6 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Images\.DS_Store" />
-    <None Include="Images\App Launch Images\Default%402x.png" />
-    <None Include="Images\App Launch Images\Default-Landscape.png" />
-    <None Include="Images\App Launch Images\Default-LandscapeLeft.png" />
-    <None Include="Images\App Launch Images\Default-LandscapeRight.png" />
-    <None Include="Images\App Launch Images\Default-Portrait.png" />
-    <None Include="Images\App Launch Images\Default-PortraitUpsideDown.png" />
-    <None Include="Images\App Launch Images\Default.png" />
-    <None Include="Images\Backgrounds\.DS_Store" />
-    <None Include="Images\Backgrounds\iPad Background\background.png" />
-    <None Include="Images\Backgrounds\iPhone (non-retina) Background\backgroundiPhone.png" />
-    <None Include="Images\Backgrounds\iPhone4 (retina) Background\.DS_Store" />
-    <None Include="Images\Backgrounds\iPhone4 (retina) Background\backgroundiPhone-hd.png" />
-    <None Include="Images\Icons\.DS_Store" />
-    <None Include="Images\Icons\Icon%402x.png" />
-    <None Include="Images\Icons\Icon-72.png" />
-    <None Include="Images\Icons\Icon-Small%402x.png" />
-    <None Include="Images\Icons\Icon-Small-50.png" />
-    <None Include="Images\Icons\Icon-Small.png" />
-    <None Include="Images\Icons\Icon.png" />
-    <None Include="Images\Intro\.DS_Store" />
-    <None Include="Images\Intro\intro1.png" />
-    <None Include="Images\Intro\intro2.png" />
-    <None Include="Images\Intro\intro3.png" />
-    <None Include="Images\Intro\intro4.png" />
-    <None Include="Images\Intro\intro5.png" />
-    <None Include="Images\Intro\intro6.png" />
-    <None Include="Images\Intro\intro7.png" />
-    <None Include="Images\Joystick\dpadDown-hd.png" />
-    <None Include="Images\Joystick\dpadDown.png" />
-    <None Include="Images\Joystick\dpadUp.png" />
-    <None Include="Images\Joystick\handDown-hd.png" />
-    <None Include="Images\Joystick\handDown.png" />
-    <None Include="Images\Joystick\handUp-hd.png" />
-    <None Include="Images\Joystick\handUp.png" />
-    <None Include="Images\Joystick\joystickDown-hd.png" />
-    <None Include="Images\Joystick\joystickDown.png" />
-    <None Include="Images\Joystick\joystickUp.png" />
-    <None Include="Images\Joystick\jumpDown-hd.png" />
-    <None Include="Images\Joystick\jumpDown.png" />
-    <None Include="Images\Joystick\jumpUp-hd.png" />
-    <None Include="Images\Joystick\jumpUp.png" />
-    <None Include="Images\scene1atlas.plist" />
-    <None Include="Images\scene1atlas.png" />
-    <None Include="Images\scene1atlasiPhone-hd.plist" />
-    <None Include="Images\scene1atlasiPhone-hd.png" />
-    <None Include="Images\scene1atlasiPhone.plist" />
-    <None Include="Images\scene1atlasiPhone.png" />
-    <None Include="Images\sv_anim_1.png" />
     <None Include="Plists\EnemyRobot.plist" />
     <None Include="Plists\Health.plist" />
     <None Include="Plists\Mallet.plist" />
@@ -184,19 +138,45 @@
     <None Include="Resources\an1_anim6.png" />
     <None Include="Resources\an1_anim7.png" />
     <None Include="Resources\an1_anim8.png" />
+    <None Include="Resources\backgroundiPhone-hd.png" />
     <None Include="Resources\backgroundiPhone.png" />
     <None Include="Resources\CloseNormal.png" />
     <None Include="Resources\CloseSelected.png" />
     <None Include="Resources\dpadDown.png" />
+    <None Include="Resources\Fonts\SpaceVikingFont.fnt" />
+    <None Include="Resources\Fonts\SpaceVikingFont.png" />
+    <None Include="Resources\Fonts\VikingSpeechFont64.fnt" />
+    <None Include="Resources\Fonts\VikingSpeechFont64.png" />
     <None Include="Resources\handDown.png" />
     <None Include="Resources\handUp.png" />
     <None Include="Resources\HelloWorld.png" />
     <None Include="Resources\joystickDown.png" />
     <None Include="Resources\jumpDown.png" />
     <None Include="Resources\jumpUp.png" />
+    <None Include="Resources\Menus\.DS_Store" />
+    <None Include="Resources\Menus\Credits\GenericMenuBackground.png" />
+    <None Include="Resources\Menus\Intro\intro1.png" />
+    <None Include="Resources\Menus\Intro\intro2.png" />
+    <None Include="Resources\Menus\Intro\intro3.png" />
+    <None Include="Resources\Menus\Intro\intro4.png" />
+    <None Include="Resources\Menus\Intro\intro5.png" />
+    <None Include="Resources\Menus\Intro\intro6.png" />
+    <None Include="Resources\Menus\Intro\intro7.png" />
+    <None Include="Resources\Menus\LevelComplete\LevelCompleteAlive.png" />
+    <None Include="Resources\Menus\LevelComplete\LevelCompleteDead.png" />
+    <None Include="Resources\Menus\Main\BuyBookButtonNormal.png" />
+    <None Include="Resources\Menus\Main\BuyBookButtonSelected.png" />
+    <None Include="Resources\Menus\Main\MainMenuBackground.png" />
+    <None Include="Resources\Menus\Main\menu.png" />
+    <None Include="Resources\Menus\Main\OptionsButtonNormal.png" />
+    <None Include="Resources\Menus\Main\OptionsButtonSelected.png" />
+    <None Include="Resources\Menus\Main\PlayGameButtonNormal.png" />
+    <None Include="Resources\Menus\Main\PlayGameButtonSelected.png" />
+    <None Include="Resources\Menus\Main\VikingFloating.png" />
     <None Include="Resources\Plists\EnemyRobot.plist" />
     <None Include="Resources\Plists\Health.plist" />
     <None Include="Resources\Plists\Mallet.plist" />
+    <None Include="Resources\Plists\PhaserBullet.plist" />
     <None Include="Resources\Plists\RadarDish.plist" />
     <None Include="Resources\Plists\Viking.plist" />
     <None Include="Resources\scene1atlas.plist" />
@@ -205,6 +185,8 @@
     <None Include="Resources\scene1atlasiPhone-hd.png" />
     <None Include="Resources\scene1atlasiPhone.plist" />
     <None Include="Resources\scene1atlasiPhone.png" />
+    <None Include="Resources\SpaceVikingFont.fnt" />
+    <None Include="Resources\SpaceVikingFont.png" />
     <None Include="Resources\sv_anim_1.png" />
     <None Include="win32\res\SpaceViking.ico" />
   </ItemGroup>
@@ -224,15 +206,25 @@
     <ClInclude Include="Classes\GameObjects\Viking.h" />
     <ClInclude Include="Classes\PowerUps\Health.h" />
     <ClInclude Include="Classes\PowerUps\Mallet.h" />
+    <ClInclude Include="Classes\Scenes\CreditsScene.h" />
+    <ClInclude Include="Classes\Scenes\Intro\IntroLayer.h" />
+    <ClInclude Include="Classes\Scenes\Intro\IntroScene.h" />
+    <ClInclude Include="Classes\Scenes\LevelComplete\LevelCompleteScene.h" />
+    <ClInclude Include="Classes\Scenes\LevelComplete\LevelCompleteLayer.h" />
+    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuLayer.h" />
+    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuScene.h" />
+    <ClInclude Include="Classes\Scenes\Options\OptionsLayer.h" />
+    <ClInclude Include="Classes\Scenes\Options\OptionsScene.h" />
     <ClInclude Include="Classes\Singletons\AppDelegate.h" />
-    <ClInclude Include="Classes\Layers\BackgroundLayer.h" />
-    <ClInclude Include="Classes\Layers\GameplayLayer.h" />
+    <ClInclude Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.h" />
+    <ClInclude Include="Classes\Scenes\Scene1\Layers\GameplayLayer.h" />
     <ClInclude Include="Classes\Scenes\GameScene.h" />
     <ClInclude Include="Classes\HelloWorldScene.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyButton.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyJoystick.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.h" />
+    <ClInclude Include="Classes\Singletons\GameManager.h" />
     <ClInclude Include="win32\main.h" />
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
@@ -247,15 +239,24 @@
     <ClCompile Include="Classes\GameObjects\Viking.cpp" />
     <ClCompile Include="Classes\PowerUps\Health.cpp" />
     <ClCompile Include="Classes\PowerUps\Mallet.cpp" />
+    <ClCompile Include="Classes\Scenes\Intro\IntroLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\Intro\IntroScene.cpp" />
+    <ClCompile Include="Classes\Scenes\LevelComplete\LevelCompleteLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\LevelComplete\LevelCompleteScene.cpp" />
+    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuScene.cpp" />
+    <ClCompile Include="Classes\Scenes\Options\OptionsLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\Options\OptionsScene.cpp" />
     <ClCompile Include="Classes\Singletons\AppDelegate.cpp" />
-    <ClCompile Include="Classes\Layers\BackgroundLayer.cpp" />
-    <ClCompile Include="Classes\Layers\GameplayLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\Scene1\Layers\GameplayLayer.cpp" />
     <ClCompile Include="Classes\Scenes\GameScene.cpp" />
     <ClCompile Include="Classes\HelloWorldScene.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyButton.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystick.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp" />
+    <ClCompile Include="Classes\Singletons\GameManager.cpp" />
     <ClCompile Include="win32\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

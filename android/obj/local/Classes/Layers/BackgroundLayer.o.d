@@ -273,7 +273,8 @@
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometer.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/platform/CCAccelerometer_platform.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/platform/android/CCAccelerometer_android.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometerDelegate.h
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometerDelegate.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Layers/BackgroundLayer.h:
 
@@ -822,3 +823,5 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/platform/android/CCAccelerometer_android.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometerDelegate.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h:

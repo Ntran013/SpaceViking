@@ -27,137 +27,6 @@
     <None Include="Resources\HelloWorld.png">
       <Filter>resource</Filter>
     </None>
-    <None Include="Images\App Launch Images\Default-Landscape.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\App Launch Images\Default-LandscapeLeft.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\App Launch Images\Default-LandscapeRight.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\App Launch Images\Default%402x.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\App Launch Images\Default-Portrait.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\App Launch Images\Default-PortraitUpsideDown.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\App Launch Images\Default.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Backgrounds\.DS_Store" />
-    <None Include="Images\Backgrounds\iPad Background\background.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Backgrounds\iPhone4 (retina) Background\backgroundiPhone-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Backgrounds\iPhone (non-retina) Background\backgroundiPhone.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Backgrounds\iPhone4 (retina) Background\.DS_Store" />
-    <None Include="Images\Icons\.DS_Store" />
-    <None Include="Images\Icons\Icon%402x.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Icons\Icon-72.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Icons\Icon-Small-50.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Icons\Icon-Small.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Icons\Icon-Small%402x.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Icons\Icon.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\sv_anim_1.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Intro\.DS_Store" />
-    <None Include="Images\Intro\intro1.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Intro\intro2.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Intro\intro3.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Intro\intro4.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Intro\intro5.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Intro\intro6.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Intro\intro7.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\dpadDown-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\dpadDown.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\dpadUp.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\handDown-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\handDown.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\handUp-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\handUp.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\joystickDown-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\joystickDown.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\joystickUp.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\jumpDown-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\jumpDown.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\jumpUp-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\Joystick\jumpUp.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\.DS_Store" />
-    <None Include="Images\scene1atlas.plist" />
-    <None Include="Images\scene1atlas.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\scene1atlasiPhone-hd.plist" />
-    <None Include="Images\scene1atlasiPhone-hd.png">
-      <Filter>resource</Filter>
-    </None>
-    <None Include="Images\scene1atlasiPhone.plist" />
-    <None Include="Images\scene1atlasiPhone.png">
-      <Filter>resource</Filter>
-    </None>
     <None Include="Resources\backgroundiPhone.png">
       <Filter>resource</Filter>
     </None>
@@ -228,6 +97,80 @@
     <None Include="Resources\Plists\Health.plist" />
     <None Include="Resources\Plists\Mallet.plist" />
     <None Include="Resources\Plists\RadarDish.plist" />
+    <None Include="Resources\SpaceVikingFont.fnt" />
+    <None Include="Resources\SpaceVikingFont.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\backgroundiPhone-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Plists\PhaserBullet.plist" />
+    <None Include="Resources\Menus\.DS_Store" />
+    <None Include="Resources\Menus\Credits\GenericMenuBackground.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Intro\intro1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Intro\intro2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Intro\intro3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Intro\intro4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Intro\intro5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Intro\intro6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Intro\intro7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\BuyBookButtonNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\BuyBookButtonSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\MainMenuBackground.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\menu.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\OptionsButtonNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\OptionsButtonSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\PlayGameButtonNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\PlayGameButtonSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\Main\VikingFloating.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Fonts\SpaceVikingFont.fnt" />
+    <None Include="Resources\Fonts\VikingSpeechFont64.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Fonts\SpaceVikingFont.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Fonts\VikingSpeechFont64.fnt" />
+    <None Include="Resources\Menus\LevelComplete\LevelCompleteAlive.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\Menus\LevelComplete\LevelCompleteDead.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\SpaceViking.rc">
@@ -257,12 +200,6 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Scenes\GameScene.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Layers\GameplayLayer.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Layers\BackgroundLayer.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Singletons\AppDelegate.h">
@@ -304,6 +241,42 @@
     <ClInclude Include="Classes\EnemyObjects\PhaserBullet.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Singletons\GameManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\CreditsScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene1\Layers\GameplayLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Intro\IntroScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Intro\IntroLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Options\OptionsScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Options\OptionsLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\LevelComplete\LevelCompleteLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\LevelComplete\LevelCompleteScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -325,12 +298,6 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Scenes\GameScene.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Layers\GameplayLayer.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Layers\BackgroundLayer.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Singletons\AppDelegate.cpp">
@@ -364,6 +331,39 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\EnemyObjects\PhaserBullet.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Singletons\GameManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene1\Layers\GameplayLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Intro\IntroScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Intro\IntroLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Options\OptionsScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Options\OptionsLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\LevelComplete\LevelCompleteLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\LevelComplete\LevelCompleteScene.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

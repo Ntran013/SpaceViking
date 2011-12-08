@@ -2,17 +2,6 @@
 
 using namespace cocos2d;
 
-void SpaceCargoShip::createObjectOfType(GameObjectType objectType, int initialHealth, CCPoint spawnLocation, int zValue)
-{
-	mDelegate->createObjectOfType(objectType, initialHealth, spawnLocation, zValue);
-}
-
-// SpaceCargoShip shouldn't use this function
-void SpaceCargoShip::createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition)
-{
-	mDelegate->createPhaserWithDirection(phaserDirection, spawnPosition);
-}
-
 void SpaceCargoShip::setDelegate(GameplayLayerDelegate *pDelegate)
 {
 	mDelegate = pDelegate;
@@ -25,12 +14,12 @@ void SpaceCargoShip::dropCargo()
 	{
 		CCLOG("SpaceCargoShip --> Mallet Powerup was created!");
 		hasDroppedMallet = true;
-		this->createObjectOfType(kPowerUpTypeMallet, 0.0f, cargoDropPosition, 50);
+		mDelegate->createObjectOfType(kPowerUpTypeMallet, 0.0f, cargoDropPosition, 50);
 	}
 	else
 	{
 		CCLOG("SpaceCargoShip --> Mallet Powerup was created!");
-		this->createObjectOfType(kPowerUpTypeMallet, 0.0f, cargoDropPosition, 50);	
+		mDelegate->createObjectOfType(kPowerUpTypeMallet, 0.0f, cargoDropPosition, 50);	
 	}
 }
 

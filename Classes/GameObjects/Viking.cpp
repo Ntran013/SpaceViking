@@ -182,7 +182,8 @@ void Viking::changeState(CharacterStates newState)
 		newPosition = ccp(screenSize.width * 0.2f, 0.0f);
 		if (this->isFlipX() == true)
 			newPosition = ccp(newPosition.x * -1.0f, 0.0f);
-		movementAction = CCJumpBy::actionWithDuration(0.5f, newPosition, 160.0f, 1);
+		// Change the jump height to be consistent across different resolutions
+		movementAction = CCJumpBy::actionWithDuration(0.5f, newPosition, SCREEN_HEIGHT/2.0f, 1);
 		if (isCarryingMallet)
 			action = CCSequence::actions(CCAnimate::actionWithAnimation(crouchingMalletAnim, false), CCSpawn::actions(CCAnimate::actionWithAnimation(jumpingMalletAnim, true), movementAction, NULL), CCAnimate::actionWithAnimation(afterJumpingMalletAnim, false), NULL); 
 		else

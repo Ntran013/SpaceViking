@@ -1,6 +1,6 @@
-/cygdrive/c/cocos2d-x/SpaceViking/android/obj/local/armeabi/objs-debug/game/../../../Classes/PowerUPs/Health.o: \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUPs/Health.cpp \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUPs/Health.h \
+/cygdrive/c/cocos2d-x/SpaceViking/android/obj/local/armeabi/objs-debug/game/../../../Classes/PowerUps/Health.o: \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps/Health.cpp \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps/Health.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameObject.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/cocos2d.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/ccConfig.h \
@@ -286,7 +286,7 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iterator \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUPs/Health.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps/Health.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameObject.h:
 

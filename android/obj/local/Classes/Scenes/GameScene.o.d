@@ -274,15 +274,15 @@
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/platform/CCAccelerometer_platform.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/platform/android/CCAccelerometer_android.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometerDelegate.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Layers\BackgroundLayer.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Layers\GameplayLayer.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes/Scene1\Layers\BackgroundLayer.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes/Scene1\Layers\GameplayLayer.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyButton.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyButtonSkinnedBase.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\/SneakyButton.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyJoystick.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyJoystickSkinnedBase.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\/SneakyJoystick.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\CommonProtocols.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\RadarDish.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameCharacter.h \
@@ -302,6 +302,7 @@
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\SpaceCargoShip.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\EnemyRobot.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\PhaserBullet.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/HelloWorldScene.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h
@@ -854,9 +855,11 @@
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometerDelegate.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Layers\BackgroundLayer.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes/Scene1\Layers\BackgroundLayer.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Layers\GameplayLayer.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes/Scene1\Layers\GameplayLayer.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyButton.h:
 
@@ -869,8 +872,6 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyJoystickSkinnedBase.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\/SneakyJoystick.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\CommonProtocols.h:
 
@@ -909,6 +910,8 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\EnemyRobot.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\PhaserBullet.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/HelloWorldScene.h:
 
