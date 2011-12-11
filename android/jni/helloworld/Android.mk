@@ -5,7 +5,6 @@ LOCAL_MODULE := game
 LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/Singletons/AppDelegate.cpp \
 ../../../Classes/Singletons/GameManager.cpp \
-../../../Classes/HelloWorldScene.cpp \
 ../../../Classes/Scenes/Scene1/Layers/GameplayLayer.cpp \
 ../../../Classes/Scenes/Scene1/Layers/BackgroundLayer.cpp \
 ../../../Classes/Scenes/GameScene.cpp \

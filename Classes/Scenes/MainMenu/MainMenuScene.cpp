@@ -9,8 +9,10 @@ bool MainMenuScene::init()
 	{
 		mainMenuLayer = MainMenuLayer::node();
 		this->addChild(mainMenuLayer);
+
 		pRet = true;
 	}
 
 	return pRet;
 }
+

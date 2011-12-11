@@ -17,11 +17,13 @@ void OptionsLayer::musicTogglePressed(CCObject* pSender)
 	if (GameManager::sharedGameManager()->getIsMusicON()) 
 	{
 		CCLOG("OptionsLayer-> Turning Game Music OFF");
+		CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
 		GameManager::sharedGameManager()->setIsMusicON(false);
 	} 
 	else 
 	{
 		CCLOG("OptionsLayer-> Turning Game Music ON");
+		CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Sounds/Music/VikingPreludeV1.mp3");
 		GameManager::sharedGameManager()->setIsMusicON(true);
 	}	
 }
@@ -32,11 +34,13 @@ void OptionsLayer::SFXTogglePressed(CCObject* pSender)
 	{
 		CCLOG("OptionsLayer-> Turning Sound Effects OFF");
 		GameManager::sharedGameManager()->setIsSoundEffectsON(false);
+		CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseAllEffects();
 	} 
 	else 
 	{
 		CCLOG("OptionsLayer-> Turning Sound Effects ON");
 		GameManager::sharedGameManager()->setIsSoundEffectsON(true);
+		CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeAllEffects();
 	}	
 }
 

@@ -46,6 +46,8 @@ bool GameplayLayer::init()
 
 		this->schedule(schedule_selector(GameplayLayer::addEnemy), 10.0f);
 		this->createObjectOfType(kEnemyTypeSpaceCargoShip, 0, ccp(screenSize.width * -0.5f, screenSize.height * 0.74f), 50);
+
+		GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_OLE_AWAKES);
 	}
 	return true;
 }

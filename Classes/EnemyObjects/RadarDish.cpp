@@ -50,11 +50,16 @@ void RadarDish::changeState(CharacterStates newState)
 		if (characterHealth <= 0.0f)
 			this->changeState(kStateDead);
 		else 
+		{
+			PLAYSOUNDEFFECT(VIKING_HAMMERHIT1);
 			action = CCAnimate::actionWithAnimation(takingAHitAnim, false);
+		}
 		break;
 
 	case kStateDead:
 		//CCLOG("RadarDish->Changing State to Dead");
+		PLAYSOUNDEFFECT(VIKING_HAMMERHIT2);
+		PLAYSOUNDEFFECT(ENEMYROBOT_DYING);
 		action = CCAnimate::actionWithAnimation(blowingUpAnim, false);
 		break;
 

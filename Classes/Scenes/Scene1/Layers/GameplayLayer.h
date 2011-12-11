@@ -16,6 +16,7 @@
 #include "EnemyObjects\EnemyRobot.h"
 #include "EnemyObjects\PhaserBullet.h"
 #include "Singletons\GameManager.h"
+#include "SimpleAudioEngine.h"   
 
 class GameplayLayer : public cocos2d::CCLayer, public GameplayLayerDelegate
 {
@@ -29,7 +30,7 @@ public:
 	virtual void createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition);
 	void addEnemy(cocos2d::ccTime deltaTime);
 	void displayLevelCleared();
-	void GameplayLayer::showLevelComplete();
+	void showLevelComplete();
 protected:
 	SneakyJoystick *lefJoystick;
 	SneakyButton *jumpButton;

@@ -4,7 +4,6 @@
 #include "cocos2d.h"
 #include "Scene1\Layers\BackgroundLayer.h"
 #include "Scene1\Layers\GameplayLayer.h"
-#include "HelloWorldScene.h"
 
 class GameScene : public cocos2d::CCScene
 {

@@ -139,6 +139,7 @@ void Viking::changeState(CharacterStates newState)
 	CCFiniteTimeAction *action = NULL;
 	CCFiniteTimeAction *movementAction = NULL;
 	CCPoint newPosition;
+	STOPSOUNDEFFECT(walkingSound);
 	this->setCharacterState(newState);
 
 	switch (newState)
@@ -151,6 +152,7 @@ void Viking::changeState(CharacterStates newState)
 		break;
 
 	case kStateWalking:
+		PLAYSOUNDEFFECT(VIKING_WALKING_1);
 		if (isCarryingMallet)
 			action = CCAnimate::actionWithAnimation(walkingMalletAnim, false);
 		else
@@ -158,6 +160,7 @@ void Viking::changeState(CharacterStates newState)
 		break;
 
 	case kStateCrouching:
+		this->playCrouchingSound();
 		if (isCarryingMallet)
 			action = CCAnimate::actionWithAnimation(crouchingMalletAnim, false);
 		else
@@ -172,6 +175,7 @@ void Viking::changeState(CharacterStates newState)
 		break;
 
 	case kStateBreathing:
+		this->playBreathingSound();
 		if (isCarryingMallet)
 			action = CCAnimate::actionWithAnimation(breathingMalletAnim, false);
 		else
@@ -179,6 +183,7 @@ void Viking::changeState(CharacterStates newState)
 		break;
 
 	case kStateJumping:
+		this->playJumpingSound();
 		newPosition = ccp(screenSize.width * 0.2f, 0.0f);
 		if (this->isFlipX() == true)
 			newPosition = ccp(newPosition.x * -1.0f, 0.0f);
@@ -192,9 +197,13 @@ void Viking::changeState(CharacterStates newState)
 
 	case kStateAttacking:
 		if (isCarryingMallet)
+		{
 			action = CCAnimate::actionWithAnimation(malletPunchAnim, true);
+			this->playSwingingSound();
+		}
 		else
 		{
+			PLAYSOUNDEFFECT(VIKING_PUNCHING);
 			if (kLeftHook == myLastPunch)
 			{
 				myLastPunch = kRightHook;
@@ -209,11 +218,13 @@ void Viking::changeState(CharacterStates newState)
 		break;
 
 	case kStateTakingDamage:
+		this->playTakingDamageSound();
 		this->setCharacterHealth(this->getCharacterHealth() - 10.0f);
 		action = CCAnimate::actionWithAnimation(phaserShockAnim, true);
 		break;
 
 	case kStateDead:
+		this->playDyingSound();
 		action = CCAnimate::actionWithAnimation(deathAnim, false);
 		break;
 
@@ -374,6 +385,110 @@ void Viking::initAnimations()
 	phaserShockAnim->retain();
 	this->setDeathAnim(this->loadPlistForAnimationWithName("vikingDeathAnim", "Plists/Viking.plist"));
 	deathAnim->retain();
+}
+
+void Viking::playJumpingSound() 
+{
+	int soundToPlay = rand() % 4;
+	if (soundToPlay == 0) 
+		PLAYSOUNDEFFECT(VIKING_JUMPING_1);
+	else if (soundToPlay == 1) 
+		PLAYSOUNDEFFECT(VIKING_JUMPING_2);
+	else if (soundToPlay == 2) 
+		PLAYSOUNDEFFECT(VIKING_JUMPING_3);
+	else 
+		PLAYSOUNDEFFECT(VIKING_JUMPING_4);
+}
+
+void Viking::playSwingingSound() 
+{
+	int soundToPlay = rand() % 8;
+	switch (soundToPlay) 
+	{
+	case 0:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_1);
+		break;
+	case 1:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_2);
+		break;
+	case 2:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_3);
+		break;
+	case 3:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_4);
+		break;
+	case 4:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_5);
+		break;
+	case 5:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_6);
+		break;
+	case 6:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_7);
+		break;
+	case 7:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_8);
+		break;
+	default:
+		PLAYSOUNDEFFECT(VIKING_SWINGING_9);
+		break;
+	}
+}
+
+void Viking::playBreathingSound() 
+{
+	int soundToPlay = rand() % 4;
+	if (soundToPlay == 0) 
+		PLAYSOUNDEFFECT(VIKING_GRUMBLING_1);
+	else if (soundToPlay == 1) 
+		PLAYSOUNDEFFECT(VIKING_GRUMBLING_2);
+	else if (soundToPlay == 2) 
+		PLAYSOUNDEFFECT(VIKING_CURSING_1);
+	else 
+		PLAYSOUNDEFFECT(VIKING_CURSING_2);
+}
+
+void Viking::playTakingDamageSound() 
+{
+	int soundToPlay = rand() % 5;
+	if (soundToPlay == 0) 
+		PLAYSOUNDEFFECT(VIKING_HIT_1);
+	else if (soundToPlay == 1) 
+		PLAYSOUNDEFFECT(VIKING_HIT_2);
+	else if (soundToPlay == 2) 
+		PLAYSOUNDEFFECT(VIKING_HIT_3);
+	else if (soundToPlay == 3) 
+		PLAYSOUNDEFFECT(VIKING_HIT_4);
+	else 
+		PLAYSOUNDEFFECT(VIKING_HIT_5);
+}
+
+void Viking::playDyingSound() 
+{
+	int soundToPlay = rand() % 5;
+	if (soundToPlay == 0) 
+		PLAYSOUNDEFFECT(VIKING_DYING_1);
+	else if (soundToPlay == 1) 
+		PLAYSOUNDEFFECT(VIKING_DYING_2);
+	else if (soundToPlay == 2) 
+		PLAYSOUNDEFFECT(VIKING_DYING_3);
+	else if (soundToPlay == 3) 
+		PLAYSOUNDEFFECT(VIKING_DYING_4);
+	else 
+		PLAYSOUNDEFFECT(VIKING_DYING_5);
+}
+
+void Viking::playCrouchingSound() 
+{
+	int soundToPlay = rand() % 4;
+	if (soundToPlay == 0) 
+		PLAYSOUNDEFFECT(VIKING_CROUCHING_1);
+	else if (soundToPlay == 1) 
+		PLAYSOUNDEFFECT(VIKING_CROUCHING_2);
+	else if (soundToPlay == 2) 
+		PLAYSOUNDEFFECT(VIKING_CROUCHING_3);
+	else 
+		PLAYSOUNDEFFECT(VIKING_CROUCHING_4);
 }
 
 bool Viking::init()

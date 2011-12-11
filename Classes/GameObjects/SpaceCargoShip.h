@@ -8,11 +8,13 @@ class SpaceCargoShip : public GameObject
 protected:
 	bool hasDroppedMallet;
 	GameplayLayerDelegate *mDelegate;
+	int soundNumberToPlay;
 
 public:
 	//Public methods
 	void dropCargo();
 	bool init();
 	void setDelegate(GameplayLayerDelegate *pDelegate);
+	void playSpaceCargoShipSound();
 };
 #endif

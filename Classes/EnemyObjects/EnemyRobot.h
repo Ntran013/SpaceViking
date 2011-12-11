@@ -12,6 +12,7 @@ protected:
 	bool isVikingWithinSight;
 	GameCharacter *vikingCharacter;
 	GameplayLayerDelegate *mDelegate;
+	int walkingSound;
 
 	CC_SYNTHESIZE(CCAnimation *, robotWalkingAnim, RobotWalkingAnim);
 	CC_SYNTHESIZE(CCAnimation *, raisePhaserAnim, RaisePhaserAnim);
@@ -34,6 +35,8 @@ protected:
 	void changeState(CharacterStates newState);
 	void updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameObjects);
 	CCRect adjustedBoundingBox();
+	void playPhaserFireSound();
+	void playWalkingSound();
 	bool init();
 #if ENEMY_STATE_DEBUG == 1
 	void setDebugLabelTextAndPosition();

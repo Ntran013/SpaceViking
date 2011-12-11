@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\CocosDenshion\Include;..\cocos2dx\platform\third_party\win32\pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -206,7 +206,6 @@
     <ClInclude Include="Classes\GameObjects\Viking.h" />
     <ClInclude Include="Classes\PowerUps\Health.h" />
     <ClInclude Include="Classes\PowerUps\Mallet.h" />
-    <ClInclude Include="Classes\Scenes\CreditsScene.h" />
     <ClInclude Include="Classes\Scenes\Intro\IntroLayer.h" />
     <ClInclude Include="Classes\Scenes\Intro\IntroScene.h" />
     <ClInclude Include="Classes\Scenes\LevelComplete\LevelCompleteScene.h" />
@@ -219,7 +218,6 @@
     <ClInclude Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.h" />
     <ClInclude Include="Classes\Scenes\Scene1\Layers\GameplayLayer.h" />
     <ClInclude Include="Classes\Scenes\GameScene.h" />
-    <ClInclude Include="Classes\HelloWorldScene.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyButton.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyJoystick.h" />
@@ -251,7 +249,6 @@
     <ClCompile Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.cpp" />
     <ClCompile Include="Classes\Scenes\Scene1\Layers\GameplayLayer.cpp" />
     <ClCompile Include="Classes\Scenes\GameScene.cpp" />
-    <ClCompile Include="Classes\HelloWorldScene.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyButton.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyButtonSkinnedBase.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystick.cpp" />

@@ -98,12 +98,14 @@ void EnemyRobot::changeState(CharacterStates newState)
 	if (characterState == kStateDead)
 		return; // No need to change state further once I am dead
 	this->stopAllActions();
+	STOPSOUNDEFFECT(walkingSound);
 	CCFiniteTimeAction *action = NULL;
 	characterState = newState;
 
 	switch(newState)
 	{
 	case kStateSpawning:
+		PLAYSOUNDEFFECT(ENEMYROBOT_TELEPORT);
 		this->runAction(CCFadeOut::actionWithDuration(0.0f));
 		// Fades out the sprite if it was visible before
 		this->setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("teleport.png"));
@@ -120,6 +122,8 @@ void EnemyRobot::changeState(CharacterStates newState)
 		//CCLOG("EnemyRobot->Changing State to Walking");
 		if (isVikingWithinBoundingBox)
 			break; // AI will change to Attacking on next frame
+
+		this->playWalkingSound();
 
 		float xPositionOffSet = 150.0f;
 		if (isVikingWithinSight) 
@@ -145,11 +149,18 @@ void EnemyRobot::changeState(CharacterStates newState)
 	}
 	case kStateAttacking:
 		//CCLOG("EnemyRobot->Changing State to Attacking");
-		action = CCSequence::actions(CCAnimate::actionWithAnimation(raisePhaserAnim, false), CCDelayTime::actionWithDuration(1.0f), CCAnimate::actionWithAnimation(shootPhaserAnim, false), CCCallFunc::actionWithTarget(this, callfunc_selector(EnemyRobot::shootPhaser)), CCAnimate::actionWithAnimation(lowerPhaserAnim, false), CCDelayTime::actionWithDuration(2.0f), NULL);
+		action = CCSequence::actions(CCAnimate::actionWithAnimation(raisePhaserAnim, false), 
+									CCDelayTime::actionWithDuration(1.0f), 
+									CCAnimate::actionWithAnimation(shootPhaserAnim, false), 
+									CCCallFunc::actionWithTarget(this, callfunc_selector(EnemyRobot::shootPhaser)), 
+									CCCallFunc::actionWithTarget(this, callfunc_selector(EnemyRobot::playPhaserFireSound)),
+									CCAnimate::actionWithAnimation(lowerPhaserAnim, false), CCDelayTime::actionWithDuration(2.0f), 
+									NULL);
 		break;
 
 	case kStateTakingDamage:
 		//CCLOG("EnemyRobot->Changing State to TakingDamage");
+		PLAYSOUNDEFFECT(ENEMYROBOT_DAMAGE);
 		if (vikingCharacter->getWeaponDamage() > kVikingFistDamage)
 		{
 		// If the viking has the mallet, then
@@ -164,6 +175,7 @@ void EnemyRobot::changeState(CharacterStates newState)
 
 	case kStateDead:
 		//CCLOG("EnemyRobot -> Going to Dead State");
+		PLAYSOUNDEFFECT(ENEMYROBOT_DYING);
 		action = CCSequence::actions(CCAnimate::actionWithAnimation(robotDeathAnim, false), CCDelayTime::actionWithDuration(2.0f), CCFadeOut::actionWithDuration(2.0f), NULL);
 		break;
 
@@ -278,6 +290,27 @@ void EnemyRobot::initAnimations()
 	headHitAnim->retain();	
 	this->setRobotDeathAnim(this->loadPlistForAnimationWithName("robotDeathAnim", "Plists/EnemyRobot.plist"));
 	robotDeathAnim->retain();
+}
+
+void EnemyRobot::playPhaserFireSound()
+{
+	int soundToPlay = rand() % 2;
+
+	if (soundToPlay == 0) 
+		PLAYSOUNDEFFECT(ENEMYROBOT_PHASERFIRE_1);
+	else 
+		PLAYSOUNDEFFECT(ENEMYROBOT_PHASERFIRE_2);
+}
+
+void EnemyRobot::playWalkingSound() 
+{
+	int soundToPlay = rand() % 2;
+
+	if (soundToPlay == 0) {
+		walkingSound = PLAYSOUNDEFFECT(ENEMYROBOT_WALKING_1);
+	} else {
+		walkingSound = PLAYSOUNDEFFECT(ENEMYROBOT_WALKING_2);
+	}
 }
 
 bool EnemyRobot::init()

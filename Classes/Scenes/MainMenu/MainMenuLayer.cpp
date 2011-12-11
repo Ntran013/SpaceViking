@@ -62,7 +62,7 @@ void MainMenuLayer::displayMainMenu(CCObject* pSender)
 	mainMenu->alignItemsVerticallyWithPadding(SCREEN_HEIGHT * 0.059f);
 	mainMenu->setPosition(ccp(SCREEN_WIDTH * 2, SCREEN_HEIGHT/2));
 
-	CCActionInterval *moveAction = CCMoveTo::actionWithDuration(1.2f, ccp(SCREEN_WIDTH * 0.85f, SCREEN_HEIGHT/2));
+	CCActionInterval *moveAction = CCMoveTo::actionWithDuration(0.5f, ccp(SCREEN_WIDTH * 0.85f, SCREEN_HEIGHT/2));
 	CCEaseIn *moveEffect = CCEaseIn::actionWithAction(moveAction, 1.0f);
 
 	mainMenu->runAction(moveEffect);
@@ -111,6 +111,23 @@ void MainMenuLayer::displaySceneSelection(CCObject* pSender)
 	this->addChild(sceneSelectMenu, 1, kSceneMenuTagValue);
 }
 
+// IMPORTANT: Fix up this function
+void MainMenuLayer::loadResourcesAync()
+{
+	if (GameManager::sharedGameManager()->getHasFinishedLoading() == false)
+	{
+		CCTextureCache::sharedTextureCache()->addImageAsync("scene1atlasiPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
+		GameManager::sharedGameManager()->setHasFinishedLoading(true);
+	}
+	if (GameManager::sharedGameManager()->getHasFinishedLoading() == true)
+		m_pLabelLoading->setString("Done Loading");
+}
+
+void MainMenuLayer::loadingCallBack(CCObject *psender)
+{
+
+}
+
 bool MainMenuLayer::init()
 {
 	bool pRet = false;
@@ -132,6 +149,15 @@ bool MainMenuLayer::init()
 		viking->runAction(CCRepeatForever::actionWithAction((CCActionInterval *) CCSequence::actions(scaleUp, scaleDown, NULL)));
 		viking->runAction(CCRepeatForever::actionWithAction(rotateAction));
 		*/
+
+		m_pLabelLoading = CCLabelTTF::labelWithString("Loading...", "Arial", 20);
+		m_pLabelLoading->setPosition(ccp(SCREEN_WIDTH * 0.1, SCREEN_HEIGHT / 2));
+		this->addChild(m_pLabelLoading);
+
+		this->loadResourcesAync();
+
+		GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_MAIN_MENU);
+
 		pRet = true;
 	}
 

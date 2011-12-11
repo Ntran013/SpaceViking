@@ -5,7 +5,6 @@
 using namespace CocosDenshion;
 
 
-#include "HelloWorldScene.h"
 #include "Scenes\GameScene.h"
 #include "Singletons\GameManager.h"
 

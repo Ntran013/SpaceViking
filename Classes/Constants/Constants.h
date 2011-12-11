@@ -58,4 +58,37 @@ kLinkTypeMusicianSite
 // Debug Enemy States with Labels
 // 0 for OFF, 1 for ON
 #define ENEMY_STATE_DEBUG 0
+
+#define AUDIO_MAX_WAITTIME 150
+
+enum GameManagerSoundState{
+	kAudioManagerUninitialized=0,
+	kAudioManagerFailed=1,
+	kAudioManagerInitializing=2,
+	kAudioManagerInitialized=100,
+	kAudioManagerLoading=200,
+	kAudioManagerReady=300
+};
+
+// Not sure??
+#define SFX_NOTLOADED false
+#define SFX_LOADED true
+
+#define PLAYSOUNDEFFECT(...) \
+	GameManager::sharedGameManager()->playSoundEffect(#__VA_ARGS__)
+
+#define STOPSOUNDEFFECT(...) \
+	GameManager::sharedGameManager()->stopSoundEffect(__VA_ARGS__)
+
+// Background Music
+// Menu Scenes
+#define BACKGROUND_TRACK_MAIN_MENU "VikingPreludeV1.mp3"
+// GameLevel1 (Ole Awakens)
+#define BACKGROUND_TRACK_OLE_AWAKES "SpaceDesertV2.mp3"
+// Physics Puzzle Level
+#define BACKGROUND_TRACK_PUZZLE "VikingPreludeV1.mp3"
+// Physics MineCart Level
+#define BACKGROUND_TRACK_MINECART "DrillBitV2.mp3"
+// Physics Escape Level
+#define BACKGROUND_TRACK_ESCAPE "EscapeTheFutureV3.mp3"
 #endif

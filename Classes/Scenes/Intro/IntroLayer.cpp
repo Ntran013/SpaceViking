@@ -10,8 +10,12 @@ void IntroLayer::startGamePlay()
 
 void IntroLayer::ccTouchesBegan(cocos2d::CCSet *touches, cocos2d::CCEvent *event)
 {
-	CCLOG("Touches received, skipping intro");
-	this->startGamePlay();
+	if (hasBeenSkipped == false)
+	{
+		CCLOG("Touches received, skipping intro");
+		this->startGamePlay();
+		hasBeenSkipped = true;
+	}
 }
 
 bool IntroLayer::init()
@@ -21,6 +25,8 @@ bool IntroLayer::init()
 	{
 		// Accept touch input
 		this->setIsTouchEnabled(true);
+		
+		hasBeenSkipped = false;
 
 		// Create the intro image
 		CCSprite *introImage = CCSprite::spriteWithFile("Menus/Intro/intro1.png");

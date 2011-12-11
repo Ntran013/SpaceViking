@@ -1,10 +1,20 @@
-﻿Build started 12/8/2011 10:06:25 PM.
+﻿Build started 12/11/2011 2:41:17 PM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Options\OptionsLayer.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Options\OptionsLayer.cpp Classes\Singletons\GameManager.cpp
+         GameManager.cpp
+     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(325): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(362): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(377): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(402): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
          OptionsLayer.cpp
+         Generating Code...
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -34,7 +44,6 @@
          Debug.win32\BackgroundLayer.obj
          Debug.win32\GameplayLayer.obj
          Debug.win32\GameScene.obj
-         Debug.win32\HelloWorldScene.obj
          Debug.win32\SneakyButton.obj
          Debug.win32\SneakyButtonSkinnedBase.obj
          Debug.win32\SneakyJoystick.obj
@@ -51,12 +60,9 @@
          xcopy /Y /E .\Resources\*.* C:\cocos2d-x\Debug.win32\
          :VCEnd
          .\Resources\backgroundiPhone-hd.png
-         .\Resources\CloseNormal.png
-         .\Resources\CloseSelected.png
          .\Resources\dpadDown.png
          .\Resources\handDown.png
          .\Resources\handUp.png
-         .\Resources\HelloWorld.png
          .\Resources\joystickDown.png
          .\Resources\jumpDown.png
          .\Resources\jumpUp.png
@@ -80,7 +86,6 @@
          .\Resources\Menus\Main\BuyBookButtonNormal.png
          .\Resources\Menus\Main\BuyBookButtonSelected.png
          .\Resources\Menus\Main\MainMenuBackground.png
-         .\Resources\Menus\Main\menu.png
          .\Resources\Menus\Main\OptionsButtonNormal.png
          .\Resources\Menus\Main\OptionsButtonSelected.png
          .\Resources\Menus\Main\PlayGameButtonNormal.png
@@ -91,8 +96,81 @@
          .\Resources\Plists\Mallet.plist
          .\Resources\Plists\PhaserBullet.plist
          .\Resources\Plists\RadarDish.plist
+         .\Resources\Plists\SoundEffects.plist
          .\Resources\Plists\Viking.plist
-         42 File(s) copied
+         .\Resources\Sounds\22k_SFX\22k_cargo_space_freighter_closeV1.wav
+         .\Resources\Sounds\22k_SFX\22k_cargo_space_freighter_closeV2.wav
+         .\Resources\Sounds\22k_SFX\22k_cargo_space_freighter_closeV3.wav
+         .\Resources\Sounds\22k_SFX\22k_cargo_space_freighter_farV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_onV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_power_downV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_robot_dyingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_robot_movingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_robot_roarV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_robot_roarV2.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_robot_roarV3.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_robot_taking_damageV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_drill_runningV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_mumbleV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_mumbleV2.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_phaser_fireV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_phaser_fireV2.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_robot_dyingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_robot_taking_damageV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_teleportV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_walkingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_enemy_walkingV2.wav
+         .\Resources\Sounds\22k_SFX\22k_flame_soundV1.wav
+         .\Resources\Sounds\22k_SFX\22k_mine_cart_drill_damageV1.wav
+         .\Resources\Sounds\22k_SFX\22k_mine_cart_hits_wallV1.wav
+         .\Resources\Sounds\22k_SFX\22k_space_viking_chorusV1.wav
+         .\Resources\Sounds\22k_SFX\22k_space_viking_chorusV2.wav
+         .\Resources\Sounds\22k_SFX\22k_tap_move_meteorV1.wav
+         .\Resources\Sounds\22k_SFX\22k_tap_move_rockV1.wav
+         .\Resources\Sounds\22k_SFX\22k_tap_move_rockV2.wav
+         .\Resources\Sounds\22k_SFX\22k_tap_move_skullV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_crouchingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_crouchingV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_crouchingV3.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_crouchingV4.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_cursingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_cursingV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_dyingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_dyingV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_dyingV3.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_dyingV4.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_dyingV5.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_grumblingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_grumblingV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_hammer_hitV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_hammer_hitV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_hitV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_hitV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_hitV3.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_hitV4.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_hitV5.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_jumpingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_jumpingV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_jumpingV3.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_jumpingV4.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_powerupV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_powerupV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_punchingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV1.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV2.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV3.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV4.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV5.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV6.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV7.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV8.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_swingingV9.wav
+         .\Resources\Sounds\22k_SFX\22k_viking_walkingV1.wav
+         .\Resources\Sounds\Music\DrillBitV2.mp3
+         .\Resources\Sounds\Music\EscapeTheFutureV3.mp3
+         .\Resources\Sounds\Music\SpaceDesertV2.mp3
+         .\Resources\Sounds\Music\VikingPreludeV1.mp3
+         111 File(s) copied
        FinalizeBuildStatus:
          Deleting file "Debug.win32\SpaceViking.win32.unsuccessfulbuild".
          Touching "Debug.win32\SpaceViking.win32.lastbuildstate".
@@ -100,4 +178,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.81
+Time Elapsed 00:00:05.69

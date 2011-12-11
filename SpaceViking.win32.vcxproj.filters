@@ -184,9 +184,6 @@
     <ClInclude Include="win32\main.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\HelloWorldScene.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\JoystickClasses\SneakyButton.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -244,9 +241,6 @@
     <ClInclude Include="Classes\Singletons\GameManager.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Scenes\CreditsScene.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -280,9 +274,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\HelloWorldScene.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\JoystickClasses\SneakyButton.cpp">

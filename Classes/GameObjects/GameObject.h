@@ -5,6 +5,7 @@
 #include "Constants\Constants.h"
 #include "Constants\CommonProtocols.h"
 #include "Constants\StringSplit.h"
+#include "Singletons\GameManager.h"
 
 class GameObject : public cocos2d::CCSprite 
 {

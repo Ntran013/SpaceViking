@@ -7,6 +7,8 @@
 
 class LevelCompleteLayer : public cocos2d::CCLayer
 {
+protected:
+	bool hasBeenSkipped;
 public:
 	LAYER_NODE_FUNC(LevelCompleteLayer);
 	void ccTouchesBegan(cocos2d::CCSet *touches, cocos2d::CCEvent *event);

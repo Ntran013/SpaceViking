@@ -4,9 +4,14 @@ using namespace cocos2d;
 
 void LevelCompleteLayer::ccTouchesBegan(cocos2d::CCSet *touches, cocos2d::CCEvent *event)
 {
-	CCLOG("Touches received, returning to the Main Menu");
-	GameManager::sharedGameManager()->setHasPlayerDied(false); // Reset this for the next level
-	GameManager::sharedGameManager()->runSceneWithID(kMainMenuScene);
+	if (hasBeenSkipped == false)
+	{
+		CCLOG("Touches received, returning to the Main Menu");
+		GameManager::sharedGameManager()->setHasPlayerDied(false); // Reset this for the next level
+		GameManager::sharedGameManager()->runSceneWithID(kMainMenuScene);
+		hasBeenSkipped == true;
+	}
+
 }
 
 bool LevelCompleteLayer::init()
@@ -16,6 +21,8 @@ bool LevelCompleteLayer::init()
 	{
 		// Accept touch input
 		this->setIsTouchEnabled(true);
+
+		hasBeenSkipped = false;
 
 		// If Viking is dead, reset him and show the tombstone,
 		// Any touch gets you back to the main menu
@@ -40,6 +47,7 @@ bool LevelCompleteLayer::init()
 		CCLabelBMFont *killCountText = CCLabelBMFont::labelWithString(killNumber, "Fonts/VikingSpeechFont64.fnt");
 		killCountText->setPosition(ccp(SCREEN_WIDTH/2, SCREEN_HEIGHT * 0.6f));
 		this->addChild(killCountText);
+		GameManager::sharedGameManager()->setKillCount(0);
 		pRet = true;
 	}
 

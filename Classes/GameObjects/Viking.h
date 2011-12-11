@@ -15,9 +15,12 @@ enum LastPunchType
 
 class Viking : public GameCharacter
 {
+protected:
 	LastPunchType myLastPunch;
 	bool isCarryingMallet;
 	CCSpriteFrame *standingFrame;
+	float millisecondsStayingIdle;
+	int walkingSound;
 
 	// Standing, breathing, and walking
 	CC_SYNTHESIZE(CCAnimation *, breathingAnim, BreathingAnim);
@@ -48,8 +51,6 @@ class Viking : public GameCharacter
 	CC_SYNTHESIZE(SneakyButton *, jumpButton, JumpButton);
 	CC_SYNTHESIZE(SneakyButton *, attackButton, AttackButton);
 
-	float millisecondsStayingIdle;
-
 	//Public methods
 	~Viking();
 	bool isCarryingWeapon();
@@ -60,6 +61,12 @@ class Viking : public GameCharacter
 	void updateStateWithDeltaTime(ccTime deltaTime, CCArray *listOfGameObjects);
 	CCRect adjustedBoundingBox();
 	void initAnimations();
+	void playJumpingSound();
+	void playSwingingSound();
+	void playBreathingSound();
+	void playTakingDamageSound();
+	void playDyingSound();
+	void playCrouchingSound();
 	bool init();
 };
 #endif 
