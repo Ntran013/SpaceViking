@@ -152,7 +152,7 @@ void Viking::changeState(CharacterStates newState)
 		break;
 
 	case kStateWalking:
-		PLAYSOUNDEFFECT(VIKING_WALKING_1);
+		walkingSound = PLAYSOUNDEFFECT(VIKING_WALKING_1);
 		if (isCarryingMallet)
 			action = CCAnimate::actionWithAnimation(walkingMalletAnim, false);
 		else
@@ -502,6 +502,7 @@ bool Viking::init()
 		this->setGameObjectType(kVikingType);
 		myLastPunch = kRightHook;
 		millisecondsStayingIdle = 0.0f;
+		walkingSound = 0;
 		isCarryingMallet = false;
 		this->initAnimations();
 		pRet = true;

@@ -1,20 +1,12 @@
-﻿Build started 12/11/2011 2:41:17 PM.
+﻿Build started 12/11/2011 3:03:42 PM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Options\OptionsLayer.cpp Classes\Singletons\GameManager.cpp
-         GameManager.cpp
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(325): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(362): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(377): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(402): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         OptionsLayer.cpp
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\GameObjects\Viking.cpp
+         Viking.cpp
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\viking.cpp(222): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\viking.cpp(281): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -178,4 +170,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.69
+Time Elapsed 00:00:03.84
