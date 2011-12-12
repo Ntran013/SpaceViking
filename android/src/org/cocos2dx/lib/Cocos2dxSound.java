@@ -153,12 +153,12 @@ public class Cocos2dxSound {
         }
 	}
 	
-	public void pauseAllEffect(){
+	public void pauseAllEffects(){
 		// autoPause() is available since level 8
 		pauseOrResumeAllEffect(true);
 	}
 	
-	public void resumeAllEffect(){
+	public void resumeAllEffects(){
 		// autoResume is available since level 8
 		pauseOrResumeAllEffect(false);
 	}

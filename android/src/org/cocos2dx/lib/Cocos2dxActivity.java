@@ -167,6 +167,16 @@ public class Cocos2dxActivity extends Activity{
     	soundPlayer.unloadEffect(path);
     }
     
+    public static void pauseAllEffects()
+    {
+    	soundPlayer.pauseAllEffects();
+    }
+    
+    public static void resumeAllEffects()
+    {
+    	soundPlayer.resumeAllEffects();
+    }
+    
     public static void end(){
     	backgroundMusicPlayer.end();
     	soundPlayer.end();
@@ -190,7 +200,7 @@ public class Cocos2dxActivity extends Activity{
     	// resume background music
     	resumeBackgroundMusic();
     	
-    	soundPlayer.resumeAllEffect();
+    	soundPlayer.resumeAllEffects();
     }
 
     @Override
@@ -203,7 +213,7 @@ public class Cocos2dxActivity extends Activity{
     	// pause background music
     	pauseBackgroundMusic();
   
-    	soundPlayer.pauseAllEffect();
+    	soundPlayer.pauseAllEffects();
     }
 
     protected void setPackageName(String packageName) {

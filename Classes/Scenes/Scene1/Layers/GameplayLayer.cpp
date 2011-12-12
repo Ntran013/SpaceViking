@@ -153,6 +153,8 @@ void GameplayLayer::displayLevelCleared()
 
 void GameplayLayer::showLevelComplete()
 {
+	// purge the frame cache to prevent assertion error when switching scenes
+	CCSpriteFrameCache::purgeSharedSpriteFrameCache();
 	GameManager::sharedGameManager()->runSceneWithID(kLevelCompleteScene);
 }
 

@@ -285,7 +285,10 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_sstream.h \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_sstream.c \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iterator \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h
+ /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects/EnemyRobot.h:
 
@@ -858,3 +861,9 @@
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iterator:
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h:

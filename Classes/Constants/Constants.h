@@ -27,6 +27,7 @@
 #define HVGA 320,480
 #define RETINA 640,960
 #define GALAXYNEXUS 720,1280
+#define IPAD 768,1024
 
 // Game Manager
 #define kMainMenuTagValue 10
@@ -92,3 +93,7 @@ enum GameManagerSoundState{
 // Physics Escape Level
 #define BACKGROUND_TRACK_ESCAPE "EscapeTheFutureV3.mp3"
 #endif
+
+// Defines for Cloud Scrolling Scene
+#define kMaxCloudMoveDuration 10
+#define kMinCloudMoveDuration 1

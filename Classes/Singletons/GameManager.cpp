@@ -1,9 +1,11 @@
 #include "GameManager.h"
-#include "Scenes\GameScene.h"
+#include "Scenes\Scene1\GameScene.h"
 #include "Scenes\MainMenu\MainMenuScene.h"
 #include "Scenes\Options\OptionsScene.h"
 #include "Scenes\Intro\IntroScene.h"
 #include "Scenes\LevelComplete\LevelCompleteScene.h"
+#include "Scenes\Scene2\GameScene2.h"
+#include "Scenes\CutSceneForLevel2\PlatformScene.h";
 
 using namespace cocos2d;
 using namespace std;
@@ -82,7 +84,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 		sceneToRun = GameScene::node();
 		break;
 	case kGameLevel2:
-		// Placeholder for Level 2
+		sceneToRun = GameScene2::node();
 		break;
 	case kGameLevel3:
 		// Placeholder for Level 3
@@ -94,7 +96,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 		// Placeholder for Level 5
 		break;
 	case kCutSceneForLevel2:
-		// Placeholder for Platform Level
+		sceneToRun = PlatformScene::node();
 		break;
 	default:
 		CCLOG("Unknown ID, cannot switch scenes");
@@ -408,3 +410,29 @@ int GameManager::playSoundEffect(const char *soundEffectKey)
 	}
 	return soundID;
 }
+
+CCSize GameManager::getDimensionsOfCurrentScene()
+{
+	CCSize levelSize = SCREEN_SIZE;
+	switch (currentScene)
+	{
+	case kMainMenuScene:
+	case kOptionsScene:
+	case kLevelCompleteScene:
+	case kIntroScene:
+	case kCreditsScene:
+	case kGameLevel1:
+		levelSize = SCREEN_SIZE;
+		break;
+	case kGameLevel2:
+		levelSize = CCSizeMake(SCREEN_WIDTH * 2.0f, SCREEN_HEIGHT);
+		break;
+	default:
+		CCLOG("Unknown Scene ID, returning default size");
+		levelSize = SCREEN_SIZE;
+		break;
+	}
+
+	return levelSize;
+}
+

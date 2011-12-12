@@ -293,14 +293,16 @@
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_sstream.c \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iterator \
  /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\Viking.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps\Mallet.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameObject.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps\Health.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\SpaceCargoShip.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\EnemyRobot.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\PhaserBullet.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\PhaserBullet.h
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes/Scene1/Layers/GameplayLayer.h:
 
@@ -888,6 +890,12 @@
 
 /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h:
 
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h:
+
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\Viking.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps\Mallet.h:
@@ -901,5 +909,3 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\EnemyRobot.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\PhaserBullet.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h:

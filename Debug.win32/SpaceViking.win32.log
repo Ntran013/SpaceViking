@@ -1,12 +1,10 @@
-﻿Build started 12/11/2011 3:03:42 PM.
+﻿Build started 12/13/2011 4:11:30 AM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\GameObjects\Viking.cpp
-         Viking.cpp
-     1>c:\cocos2d-x\spaceviking\classes\gameobjects\viking.cpp(222): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\gameobjects\viking.cpp(281): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Scene2\GameplayScrollingLayer.cpp
+         GameplayScrollingLayer.cpp
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -24,6 +22,8 @@
          Debug.win32\Viking.obj
          Debug.win32\Health.obj
          Debug.win32\Mallet.obj
+         Debug.win32\PlatformScene.obj
+         Debug.win32\PlatformScrollingLayer.obj
          Debug.win32\IntroLayer.obj
          Debug.win32\IntroScene.obj
          Debug.win32\LevelCompleteLayer.obj
@@ -32,6 +32,10 @@
          Debug.win32\MainMenuScene.obj
          Debug.win32\OptionsLayer.obj
          Debug.win32\OptionsScene.obj
+         Debug.win32\GameControlLayer.obj
+         Debug.win32\GameplayScrollingLayer.obj
+         Debug.win32\GameScene2.obj
+         Debug.win32\StaticBackgroundLayer.obj
          Debug.win32\AppDelegate.obj
          Debug.win32\BackgroundLayer.obj
          Debug.win32\GameplayLayer.obj
@@ -83,6 +87,31 @@
          .\Resources\Menus\Main\PlayGameButtonNormal.png
          .\Resources\Menus\Main\PlayGameButtonSelected.png
          .\Resources\Menus\Main\VikingFloating.png
+         .\Resources\ParallaxBackgrounds\.DS_Store
+         .\Resources\ParallaxBackgrounds\chap9_scrolling1.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling1iPhone-hd.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling1iPhone.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling2.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling2iPhone-hd.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling2iPhone.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling3.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling3iPhone-hd.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling3iPhone.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling4.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling4iPhone-hd.png
+         .\Resources\ParallaxBackgrounds\chap9_scrolling4iPhone.png
+         .\Resources\ParallaxBackgrounds\FlatScrollingLayer.png
+         .\Resources\ParallaxBackgrounds\FlatScrollingLayeriPhone-hd.png
+         .\Resources\ParallaxBackgrounds\FlatScrollingLayeriPhone.png
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsBackgrounds\tiles_grad_bkgrnd.png
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsBackgrounds\tiles_grad_bkgrndiPhone-hd.png
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsBackgrounds\tiles_grad_bkgrndiPhone.png
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlas.plist
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlas.png
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlasiPhone-hd.plist
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlasiPhone-hd.png
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlasiPhone.plist
+         .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlasiPhone.png
          .\Resources\Plists\EnemyRobot.plist
          .\Resources\Plists\Health.plist
          .\Resources\Plists\Mallet.plist
@@ -162,7 +191,11 @@
          .\Resources\Sounds\Music\EscapeTheFutureV3.mp3
          .\Resources\Sounds\Music\SpaceDesertV2.mp3
          .\Resources\Sounds\Music\VikingPreludeV1.mp3
-         111 File(s) copied
+         .\Resources\TileMaps\Level2TileMap.tmx
+         .\Resources\TileMaps\Level2TileMapiPhone-hd.tmx
+         .\Resources\TileMaps\Level2TileMapiPhone.tmx
+         .\Resources\TileMaps\TilesTextureAtlas.png
+         140 File(s) copied
        FinalizeBuildStatus:
          Deleting file "Debug.win32\SpaceViking.win32.unsuccessfulbuild".
          Touching "Debug.win32\SpaceViking.win32.lastbuildstate".
@@ -170,4 +203,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.84
+Time Elapsed 00:00:04.54

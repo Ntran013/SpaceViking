@@ -27,10 +27,29 @@ void MainMenuLayer::playScene(CCObject *pSender)
 		CCLOG("Tag 1 found, Scene 1");
 		GameManager::sharedGameManager()->runSceneWithID(kIntroScene);
 	} 
-	else 
+	else if (itemPassedIn->getTag() == 2) 
 	{
-		CCLOG("Tag was: %d", itemPassedIn->getTag());
-		CCLOG("Placeholder for next chapters");
+		CCLOG("Tag 2 found, Scene 2");
+		GameManager::sharedGameManager()->runSceneWithID(kCutSceneForLevel2);
+	}
+	else if (itemPassedIn->getTag() == 3) 
+	{
+		CCLOG("Tag 3 found, Scene 3");
+		GameManager::sharedGameManager()->runSceneWithID(kGameLevel3);
+	}
+	else if (itemPassedIn->getTag() == 4) 
+	{
+		CCLOG("Tag 4 found, Scene 4");
+		GameManager::sharedGameManager()->runSceneWithID(kGameLevel4);
+	}
+	else if (itemPassedIn->getTag() == 5) 
+	{
+		CCLOG("Tag 5 found, Scene 5");
+		GameManager::sharedGameManager()->runSceneWithID(kGameLevel5);
+	}
+	else
+	{
+		CCLOG("Unexpected item. Tag was: %d", itemPassedIn->getTag());
 	}
 }
 
@@ -117,6 +136,11 @@ void MainMenuLayer::loadResourcesAync()
 	if (GameManager::sharedGameManager()->getHasFinishedLoading() == false)
 	{
 		CCTextureCache::sharedTextureCache()->addImageAsync("scene1atlasiPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
+		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/ScrollingCloudsTextureAtlases/ScrollingCloudsTextureAtlasiPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
+		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
+		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
+		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
+
 		GameManager::sharedGameManager()->setHasFinishedLoading(true);
 	}
 	if (GameManager::sharedGameManager()->getHasFinishedLoading() == true)

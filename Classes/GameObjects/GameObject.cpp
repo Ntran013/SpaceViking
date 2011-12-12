@@ -85,15 +85,7 @@ CCAnimation * GameObject::loadPlistForAnimationWithName(const char *animationNam
 // Scale down the object depending on different screen resolution
 void GameObject::setObjectScale()
 {
-	if (SCREEN_SIZE_PX.height < 720)
-	{
-		this->setScaleY(SCREEN_SIZE_PX.height/640);
-		this->setScaleX(SCREEN_SIZE_PX.height/640);
-	}
 
-	else if (SCREEN_SIZE_PX.height == 720)
-	{
-		this->setScaleY(1.5);
-		this->setScaleX(1.5);
-	}
+	this->setScaleY(SCREEN_SIZE_PX.height/640);
+	this->setScaleX(SCREEN_SIZE_PX.height/640);
 }

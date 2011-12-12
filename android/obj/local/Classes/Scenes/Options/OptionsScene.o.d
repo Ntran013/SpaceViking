@@ -276,7 +276,9 @@
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometerDelegate.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes/Options/OptionsLayer.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes/Options/OptionsScene.h:
 
@@ -831,3 +833,7 @@
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h:
+
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h:

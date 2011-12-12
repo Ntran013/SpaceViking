@@ -15,8 +15,12 @@ int GameCharacter::getWeaponDamage()
 void GameCharacter::checkAndClampSpritePosition()
 {
 	CCPoint	currentSpritePosition = this->getPosition();
-	if (currentSpritePosition.x < 24.0f)
-		this->setPosition(ccp(24.0f, currentSpritePosition.y));
-	else if (currentSpritePosition.x > (SCREEN_WIDTH - 24.0f))
-		this->setPosition(ccp((SCREEN_WIDTH - 24.0f), currentSpritePosition.y));
+	CCSize levelSize = GameManager::sharedGameManager()->getDimensionsOfCurrentScene();
+	float xOffset;
+	xOffset = 24.0f;
+
+	if (currentSpritePosition.x < xOffset)
+		this->setPosition(ccp(xOffset, currentSpritePosition.y));
+	else if (currentSpritePosition.x > (levelSize.width - xOffset))
+		this->setPosition(ccp((levelSize.width - xOffset), currentSpritePosition.y));
 }

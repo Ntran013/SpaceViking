@@ -276,37 +276,8 @@
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../cocos2dx/include/CCAccelerometerDelegate.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/SimpleAudioEngine.h \
  /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/HelloWorldScene.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes\GameScene.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes\/Scene1\Layers\BackgroundLayer.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes\/Scene1\Layers\GameplayLayer.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyButton.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyButtonSkinnedBase.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\/SneakyButton.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyJoystick.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyJoystickSkinnedBase.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\/SneakyJoystick.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\CommonProtocols.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\RadarDish.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameCharacter.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\/GameObject.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\StringSplit.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iostream \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_ioserr.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/sstream \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_sstream.h \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_sstream.c \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iterator \
- /cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\Viking.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps\Mallet.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameObject.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps\Health.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\SpaceCargoShip.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\EnemyRobot.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\PhaserBullet.h \
- /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h \
+ /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons/AppDelegate.h:
 
@@ -860,64 +831,6 @@
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../../CocosDenshion/include/Export.h:
 
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/HelloWorldScene.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes\GameScene.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes\/Scene1\Layers\BackgroundLayer.h:
+/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h:
 
 /cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\Constants.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Scenes\/Scene1\Layers\GameplayLayer.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyButton.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyButtonSkinnedBase.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\/SneakyButton.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyJoystick.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\SneakyJoystickSkinnedBase.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/JoystickClasses\/SneakyJoystick.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\CommonProtocols.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\RadarDish.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameCharacter.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\/GameObject.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Constants\StringSplit.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iostream:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_ioserr.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/sstream:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_sstream.h:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_sstream.c:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/iterator:
-
-/cygdrive/c/android-ndk-r6b/sources/cxx-stl/stlport/stlport/stl/_stream_iterator.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\Viking.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps\Mallet.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\GameObject.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/PowerUps\Health.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/GameObjects\SpaceCargoShip.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\EnemyRobot.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/EnemyObjects\PhaserBullet.h:
-
-/cygdrive/c/cocos2d-x/SpaceViking/android/jni/helloworld/../../../Classes/Singletons\GameManager.h:

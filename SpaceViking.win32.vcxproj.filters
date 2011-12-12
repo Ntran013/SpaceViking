@@ -196,9 +196,6 @@
     <ClInclude Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Scenes\GameScene.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Singletons\AppDelegate.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -271,6 +268,27 @@
     <ClInclude Include="Classes\Scenes\LevelComplete\LevelCompleteScene.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene1\GameScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene2\GameScene2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene2\StaticBackgroundLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene2\GameControlLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene2\GameplayScrollingLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\CutSceneForLevel2\PlatformScrollingLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\CutSceneForLevel2\PlatformScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -286,9 +304,6 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Scenes\GameScene.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Singletons\AppDelegate.cpp">
@@ -355,6 +370,27 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Scenes\LevelComplete\LevelCompleteScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene1\GameScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene2\GameScene2.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene2\StaticBackgroundLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene2\GameControlLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene2\GameplayScrollingLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\CutSceneForLevel2\PlatformScrollingLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\CutSceneForLevel2\PlatformScene.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

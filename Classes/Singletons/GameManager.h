@@ -19,14 +19,16 @@ protected:
 	bool hasAudioBeenInitialized;
 	CocosDenshion::SimpleAudioEngine *soundEngine;
 
-	CC_SYNTHESIZE(GameManagerSoundState, managerSoundState, ManagerSoundState);
 	// retain these 2
 	cocos2d::CCDictionary<std::string, cocos2d::CCString *> *listOfSoundEffectFiles;
 	map<std::string, bool> *soundEffectsState;
 
+	SceneTypes currentScene;
+
+	CC_SYNTHESIZE(GameManagerSoundState, managerSoundState, ManagerSoundState);
 	// check if loading has finished
 	CC_SYNTHESIZE(bool, hasFinishedLoading, HasFinishedLoading);
-	SceneTypes currentScene;
+
 
 	//public methods
 	GameManager();
@@ -46,5 +48,6 @@ protected:
 	cocos2d::CCDictionary<std::string, cocos2d::CCString*> *getSoundEffectsListForSceneWithID(SceneTypes sceneID);
 	void loadAudioForSceneWithID(SceneTypes sceneID);
 	void unloadAudioForSceneWithID(SceneTypes sceneID);
+	cocos2d::CCSize getDimensionsOfCurrentScene();
 };
 #endif

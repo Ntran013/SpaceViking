@@ -7,7 +7,7 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/Singletons/GameManager.cpp \
 ../../../Classes/Scenes/Scene1/Layers/GameplayLayer.cpp \
 ../../../Classes/Scenes/Scene1/Layers/BackgroundLayer.cpp \
-../../../Classes/Scenes/GameScene.cpp \
+../../../Classes/Scenes/Scene1/GameScene.cpp \
 ../../../Classes/Constants/StringSplit.cpp \
 ../../../Classes/EnemyObjects/RadarDish.cpp \
 ../../../Classes/GameObjects/GameCharacter.cpp \
@@ -26,6 +26,10 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/Scenes/MainMenu/MainMenuScene.cpp \
 ../../../Classes/Scenes/Options/OptionsLayer.cpp \
 ../../../Classes/Scenes/Options/OptionsScene.cpp \
+../../../Classes/Scenes/Scene2/GameControlLayer.cpp \
+../../../Classes/Scenes/Scene2/GameplayScrollingLayer.cpp \
+../../../Classes/Scenes/Scene2/GameScene2.cpp \
+../../../Classes/Scenes/Scene2/StaticBackgroundLayer.cpp \
 ../../../Classes/JoystickClasses/SneakyButton.cpp \
 ../../../Classes/JoystickClasses/SneakyJoystick.cpp \
 ../../../Classes/JoystickClasses/SneakyButtonSkinnedBase.cpp \

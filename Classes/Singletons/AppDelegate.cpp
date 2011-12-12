@@ -4,8 +4,6 @@
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
-
-#include "Scenes\GameScene.h"
 #include "Singletons\GameManager.h"
 
 using namespace cocos2d;
