@@ -6,6 +6,7 @@
 #include "SimpleAudioEngine.h"
 #include <string>
 #include <map>
+#include "eplibs\EPResourceManager.h"
 
 class GameManager :	public cocos2d::CCObject 
 {
@@ -37,6 +38,7 @@ protected:
 	void runSceneWithID(SceneTypes sceneID);
 	void openSiteWithLinkType(LinkTypes linkTypeToOpen);
 	bool init();
+	void GameManager::purgeSharedGameManager();
 	
 	// Added for Audio
 	void initAudioAsync();

@@ -135,11 +135,20 @@ void MainMenuLayer::loadResourcesAync()
 {
 	if (GameManager::sharedGameManager()->getHasFinishedLoading() == false)
 	{
+		/*
 		CCTextureCache::sharedTextureCache()->addImageAsync("scene1atlasiPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
 		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/ScrollingCloudsTextureAtlases/ScrollingCloudsTextureAtlasiPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
 		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
 		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
 		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
+		*/
+
+		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/ScrollingCloudsTextureAtlases/ScrollingCloudsTextureAtlasiPhone-hd",false);
+		EPResourceManager::sharedResourceManager()->addPngResourceAsync("scene1atlasiPhone-hd",false);
+		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd",false);
+		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd",false);
+		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd",false);
+		EPResourceManager::sharedResourceManager()->loadResourceAsync();    
 
 		GameManager::sharedGameManager()->setHasFinishedLoading(true);
 	}

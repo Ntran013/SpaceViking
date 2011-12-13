@@ -289,6 +289,42 @@
     <ClInclude Include="Classes\Scenes\CutSceneForLevel2\PlatformScene.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\eplibs\GestureRecognizer\GestureRecognizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\GestureRecognizer\LongPressGestureRecognizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\GestureRecognizer\PanGestureRecognizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\GestureRecognizer\PinchGestureRecognizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\GestureRecognizer\RotationGestureRecognizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\GestureRecognizer\TapGestureRecognizer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\EPGestureRecognizerLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\EPMacros.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\EPNotificationCenter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\EPResourceManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\EPScrollListLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\eplibs\EPSpriteButton.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -391,6 +427,39 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Scenes\CutSceneForLevel2\PlatformScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\GestureRecognizer\GestureRecognizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\GestureRecognizer\LongPressGestureRecognizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\GestureRecognizer\PanGestureRecognizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\GestureRecognizer\PinchGestureRecognizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\GestureRecognizer\RotationGestureRecognizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\GestureRecognizer\TapGestureRecognizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\EPGestureRecognizerLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\EPNotificationCenter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\EPResourceManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\EPScrollListLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\eplibs\EPSpriteButton.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

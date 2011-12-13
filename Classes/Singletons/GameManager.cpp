@@ -21,6 +21,12 @@ GameManager::~GameManager()
 	CC_SAFE_DELETE(soundEffectsState);
 }
 
+void GameManager::purgeSharedGameManager()
+{
+	// safe release for sharedGameManager
+	CC_SAFE_RELEASE_NULL(_sharedGameManager);
+}
+
 GameManager::GameManager()
 {
 	listOfSoundEffectFiles = NULL;
@@ -170,6 +176,34 @@ void GameManager::openSiteWithLinkType(LinkTypes linkTypeToOpen)
 	}
 }
 
+CCSize GameManager::getDimensionsOfCurrentScene()
+{
+	CCSize levelSize = SCREEN_SIZE;
+	switch (currentScene)
+	{
+	case kMainMenuScene:
+	case kOptionsScene:
+	case kLevelCompleteScene:
+	case kIntroScene:
+	case kCreditsScene:
+	case kGameLevel1:
+		levelSize = SCREEN_SIZE;
+		break;
+	case kGameLevel2:
+		levelSize = CCSizeMake(SCREEN_WIDTH * 2.0f, SCREEN_HEIGHT);
+		break;
+	default:
+		CCLOG("Unknown Scene ID, returning default size");
+		levelSize = SCREEN_SIZE;
+		break;
+	}
+
+	return levelSize;
+}
+
+/*
+AUDIO HANDLING
+*/
 void GameManager::setUpAudioEngine()
 {
 	if (hasAudioBeenInitialized == true)
@@ -410,29 +444,3 @@ int GameManager::playSoundEffect(const char *soundEffectKey)
 	}
 	return soundID;
 }
-
-CCSize GameManager::getDimensionsOfCurrentScene()
-{
-	CCSize levelSize = SCREEN_SIZE;
-	switch (currentScene)
-	{
-	case kMainMenuScene:
-	case kOptionsScene:
-	case kLevelCompleteScene:
-	case kIntroScene:
-	case kCreditsScene:
-	case kGameLevel1:
-		levelSize = SCREEN_SIZE;
-		break;
-	case kGameLevel2:
-		levelSize = CCSizeMake(SCREEN_WIDTH * 2.0f, SCREEN_HEIGHT);
-		break;
-	default:
-		CCLOG("Unknown Scene ID, returning default size");
-		levelSize = SCREEN_SIZE;
-		break;
-	}
-
-	return levelSize;
-}
-
