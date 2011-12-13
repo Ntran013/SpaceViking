@@ -19,6 +19,9 @@ using namespace cocos2d;
 const char *kResourceLoadedNotif = "ResourceLoadedNotif";
 const char *kResourceLoadedTimeoutNotif = "ResourceLoadedTimeoutNotif";
 static cocos2d::CCArray *m_resources;
+static int m_asyncLoadCount;
+static int m_asyncTotalCount;
+static long long m_loadingTime;
 static EPResourceManager *_sharedResourceManager = NULL;
 static bool s_bFirstRun = true;
 
@@ -35,7 +38,7 @@ EPResourceManager * EPResourceManager::sharedResourceManager()
 	{
 		if (!_sharedResourceManager)
 		{
-			_sharedResourceManager = new EPResourceManager;
+			_sharedResourceManager = new EPResourceManager();
 		}
 		s_bFirstRun = false;
 	}

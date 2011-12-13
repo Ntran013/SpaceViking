@@ -1,4 +1,5 @@
 #include "MainMenuLayer.h"
+#include "EPlibs\EPNotificationCenter.h"
 
 using namespace cocos2d;
 
@@ -17,6 +18,7 @@ void MainMenuLayer::showOptions(CCObject* pSender)
 {
 	CCLOG("Show the Options screen");
 	GameManager::sharedGameManager()->runSceneWithID(kOptionsScene);
+	EPNotificationCenter::sharedNotifCenter()->removeObserver(this, kResourceLoadedNotif);
 }
 
 void MainMenuLayer::playScene(CCObject *pSender)
@@ -51,6 +53,8 @@ void MainMenuLayer::playScene(CCObject *pSender)
 	{
 		CCLOG("Unexpected item. Tag was: %d", itemPassedIn->getTag());
 	}
+
+	EPNotificationCenter::sharedNotifCenter()->removeObserver(this, kResourceLoadedNotif);
 }
 
 void MainMenuLayer::displayMainMenu(CCObject* pSender)
@@ -152,13 +156,11 @@ void MainMenuLayer::loadResourcesAync()
 
 		GameManager::sharedGameManager()->setHasFinishedLoading(true);
 	}
-	if (GameManager::sharedGameManager()->getHasFinishedLoading() == true)
-		m_pLabelLoading->setString("Done Loading");
 }
 
 void MainMenuLayer::loadingCallBack(CCObject *psender)
 {
-
+	m_pLabelLoading->setString("Loading Done!");
 }
 
 bool MainMenuLayer::init()
@@ -182,10 +184,16 @@ bool MainMenuLayer::init()
 		viking->runAction(CCRepeatForever::actionWithAction((CCActionInterval *) CCSequence::actions(scaleUp, scaleDown, NULL)));
 		viking->runAction(CCRepeatForever::actionWithAction(rotateAction));
 		*/
+		
+		m_pLabelLoading = CCLabelTTF::labelWithString("", "Arial", 20);
 
-		m_pLabelLoading = CCLabelTTF::labelWithString("Loading...", "Arial", 20);
+		if (GameManager::sharedGameManager()->getHasFinishedLoading() == false)
+			m_pLabelLoading->setString("Loading...");
+		
 		m_pLabelLoading->setPosition(ccp(SCREEN_WIDTH * 0.1, SCREEN_HEIGHT / 2));
 		this->addChild(m_pLabelLoading);
+
+		EPNotificationCenter::sharedNotifCenter()->addObserver(this, callfuncO_selector(MainMenuLayer::loadingCallBack), kResourceLoadedNotif, NULL);
 
 		this->loadResourcesAync();
 

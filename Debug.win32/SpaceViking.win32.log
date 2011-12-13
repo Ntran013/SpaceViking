@@ -1,138 +1,10 @@
-﻿Build started 12/14/2011 1:01:45 AM.
+﻿Build started 12/14/2011 5:11:19 AM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\EnemyObjects\EnemyRobot.cpp Classes\EnemyObjects\PhaserBullet.cpp Classes\EnemyObjects\RadarDish.cpp Classes\GameObjects\GameCharacter.cpp Classes\GameObjects\GameObject.cpp Classes\GameObjects\SpaceCargoShip.cpp Classes\GameObjects\Viking.cpp Classes\JoystickClasses\SneakyButton.cpp Classes\JoystickClasses\SneakyButtonSkinnedBase.cpp Classes\JoystickClasses\SneakyJoystick.cpp Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp Classes\PowerUps\Health.cpp Classes\PowerUps\Mallet.cpp Classes\Scenes\CutSceneForLevel2\PlatformScene.cpp Classes\Scenes\CutSceneForLevel2\PlatformScrollingLayer.cpp Classes\Scenes\Intro\IntroLayer.cpp Classes\Scenes\Intro\IntroScene.cpp Classes\Scenes\LevelComplete\LevelCompleteLayer.cpp Classes\Scenes\LevelComplete\LevelCompleteScene.cpp Classes\Scenes\MainMenu\MainMenuLayer.cpp Classes\Scenes\MainMenu\MainMenuScene.cpp Classes\Scenes\Options\OptionsLayer.cpp Classes\Scenes\Options\OptionsScene.cpp Classes\Scenes\Scene1\GameScene.cpp Classes\Scenes\Scene1\Layers\BackgroundLayer.cpp Classes\Scenes\Scene1\Layers\GameplayLayer.cpp Classes\Scenes\Scene2\GameControlLayer.cpp Classes\Scenes\Scene2\GameScene2.cpp Classes\Scenes\Scene2\GameplayScrollingLayer.cpp Classes\Scenes\Scene2\StaticBackgroundLayer.cpp Classes\Singletons\AppDelegate.cpp Classes\Singletons\GameManager.cpp Classes\eplibs\EPGestureRecognizerLayer.cpp Classes\eplibs\EPNotificationCenter.cpp Classes\eplibs\EPResourceManager.cpp Classes\eplibs\EPScrollListLayer.cpp Classes\eplibs\EPSpriteButton.cpp Classes\eplibs\GestureRecognizer\GestureRecognizer.cpp Classes\eplibs\GestureRecognizer\LongPressGestureRecognizer.cpp Classes\eplibs\GestureRecognizer\PanGestureRecognizer.cpp Classes\eplibs\GestureRecognizer\PinchGestureRecognizer.cpp Classes\eplibs\GestureRecognizer\RotationGestureRecognizer.cpp Classes\eplibs\GestureRecognizer\TapGestureRecognizer.cpp win32\main.cpp
-         EnemyRobot.cpp
-     1>c:\cocos2d-x\spaceviking\classes\enemyobjects\enemyrobot.cpp(325): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Generating Code...
-         Compiling...
-         main.cpp
-         TapGestureRecognizer.cpp
-         RotationGestureRecognizer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\gesturerecognizer\rotationgesturerecognizer.cpp(86): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-         PinchGestureRecognizer.cpp
-         PanGestureRecognizer.cpp
-         LongPressGestureRecognizer.cpp
-         GestureRecognizer.cpp
-         EPSpriteButton.cpp
-         EPScrollListLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(86): warning C4244: '+=' : conversion from 'const float' to 'int', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(89): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(105): warning C4244: '-=' : conversion from 'const float' to 'int', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(196): warning C4305: 'argument' : truncation from 'double' to 'cocos2d::ccTime'
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(197): warning C4305: 'argument' : truncation from 'double' to 'cocos2d::ccTime'
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(220): warning C4305: 'argument' : truncation from 'double' to 'cocos2d::ccTime'
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(221): warning C4305: 'argument' : truncation from 'double' to 'cocos2d::ccTime'
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(259): warning C4244: 'argument' : conversion from 'float' to 'GLsizei', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(259): warning C4244: 'argument' : conversion from 'float' to 'GLsizei', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(259): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epscrolllistlayer.cpp(259): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
-         EPResourceManager.cpp
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epresourcemanager.cpp(162): warning C4407: cast between different pointer to member representations, compiler may generate incorrect code
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epresourcemanager.cpp(174): warning C4407: cast between different pointer to member representations, compiler may generate incorrect code
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epresourcemanager.cpp(283): warning C4407: cast between different pointer to member representations, compiler may generate incorrect code
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epresourcemanager.cpp(298): warning C4407: cast between different pointer to member representations, compiler may generate incorrect code
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epresourcemanager.cpp(341): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epresourcemanager.cpp(348): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         EPNotificationCenter.cpp
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epnotificationcenter.cpp(126): warning C4996: 'std::basic_string<_Elem,_Traits,_Ax>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>,
-                     _Ax=std::allocator<char>
-                 ]
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\xstring(1556) : see declaration of 'std::basic_string<_Elem,_Traits,_Ax>::copy'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>,
-                     _Ax=std::allocator<char>
-                 ]
-         EPGestureRecognizerLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(157): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(158): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(226): warning C4018: '>' : signed/unsigned mismatch
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(308): warning C4018: '>' : signed/unsigned mismatch
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(424): warning C4018: '>' : signed/unsigned mismatch
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(624): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(625): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(689): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(690): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(708): warning C4305: 'argument' : truncation from 'double' to 'cocos2d::ccTime'
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(747): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(748): warning C4068: unknown pragma
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(753): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(753): warning C4305: 'argument' : truncation from 'double' to 'cocos2d::ccTime'
-     1>c:\cocos2d-x\spaceviking\classes\eplibs\epgesturerecognizerlayer.cpp(754): warning C4305: 'argument' : truncation from 'double' to 'cocos2d::ccTime'
-         GameManager.cpp
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(355): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(392): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(407): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(432): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         AppDelegate.cpp
-         StaticBackgroundLayer.cpp
-         GameplayScrollingLayer.cpp
-         GameScene2.cpp
-         GameControlLayer.cpp
-         GameplayLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\scenes\scene1\layers\gameplaylayer.cpp(12): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         BackgroundLayer.cpp
-         Generating Code...
-         Compiling...
-         GameScene.cpp
-         OptionsScene.cpp
-         OptionsLayer.cpp
-         MainMenuScene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\MainMenu\MainMenuLayer.cpp
          MainMenuLayer.cpp
-         LevelCompleteScene.cpp
-         LevelCompleteLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\scenes\levelcomplete\levelcompletelayer.cpp(12): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\cocos2d-x\spaceviking\classes\scenes\levelcomplete\levelcompletelayer.cpp(46): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         IntroScene.cpp
-         IntroLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\scenes\intro\introlayer.cpp(45): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         PlatformScrollingLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\scenes\cutsceneforlevel2\platformscrollinglayer.cpp(10): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\scenes\cutsceneforlevel2\platformscrollinglayer.cpp(48): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\scenes\cutsceneforlevel2\platformscrollinglayer.cpp(62): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\scenes\cutsceneforlevel2\platformscrollinglayer.cpp(71): warning C4244: 'argument' : conversion from 'int' to 'cocos2d::ccTime', possible loss of data
-         PlatformScene.cpp
-         Mallet.cpp
-         Health.cpp
-         SneakyJoystickSkinnedBase.cpp
-         SneakyJoystick.cpp
-     1>c:\cocos2d-x\spaceviking\classes\joystickclasses\sneakyjoystick.cpp(48): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
-         SneakyButtonSkinnedBase.cpp
-         SneakyButton.cpp
-         Viking.cpp
-     1>c:\cocos2d-x\spaceviking\classes\gameobjects\viking.cpp(222): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\gameobjects\viking.cpp(281): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-         SpaceCargoShip.cpp
-     1>c:\cocos2d-x\spaceviking\classes\gameobjects\spacecargoship.cpp(17): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\cocos2d-x\spaceviking\classes\gameobjects\spacecargoship.cpp(22): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-         GameObject.cpp
-     1>c:\cocos2d-x\spaceviking\classes\gameobjects\gameobject.cpp(78): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         Generating Code...
-         Compiling...
-         GameCharacter.cpp
-         RadarDish.cpp
-     1>c:\cocos2d-x\spaceviking\classes\enemyobjects\radardish.cpp(120): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-         PhaserBullet.cpp
-         Generating Code...
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -326,4 +198,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:01:40.75
+Time Elapsed 00:00:04.55

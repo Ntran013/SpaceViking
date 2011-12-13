@@ -62,10 +62,6 @@ private:
         
     // keep all resources
     //cocos2d::CCArray *m_resources;
-    
-    int m_asyncLoadCount;
-    int m_asyncTotalCount;
-    long long m_loadingTime;
 };
 
 class EPResourceManagerUnit : public cocos2d::CCObject
