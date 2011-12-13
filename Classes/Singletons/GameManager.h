@@ -10,6 +10,7 @@
 
 class GameManager :	public cocos2d::CCObject 
 {
+public:
 	CC_SYNTHESIZE(bool, isMusicON, IsMusicON);
 	CC_SYNTHESIZE(bool, isSoundEffectsON, IsSoundEffectsON);
 	CC_SYNTHESIZE(bool, hasPlayerDied, HasPlayerDied);
@@ -29,7 +30,8 @@ protected:
 	CC_SYNTHESIZE(GameManagerSoundState, managerSoundState, ManagerSoundState);
 	// check if loading has finished
 	CC_SYNTHESIZE(bool, hasFinishedLoading, HasFinishedLoading);
-
+	// loading label
+	CC_SYNTHESIZE(cocos2d::CCLabelTTF *, loadingLabel, LoadingLabel);
 
 	//public methods
 	GameManager();

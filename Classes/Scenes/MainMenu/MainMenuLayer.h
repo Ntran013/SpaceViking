@@ -10,7 +10,7 @@ class MainMenuLayer : public cocos2d::CCLayer
 protected:
 	cocos2d::CCMenu *mainMenu;
 	cocos2d::CCMenu *sceneSelectMenu;
-	cocos2d::CCLabelTTF *m_pLabelLoading;
+
 public:
 	LAYER_NODE_FUNC(MainMenuLayer);
 	void buyBook(cocos2d::CCObject* pSender);

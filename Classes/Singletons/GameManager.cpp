@@ -15,10 +15,9 @@ static bool s_bFirstRun = true;
 
 GameManager::~GameManager()
 {
-	// safe release for sharedGameManager
-	CC_SAFE_RELEASE_NULL(_sharedGameManager);
 	CC_SAFE_RELEASE_NULL(listOfSoundEffectFiles);
 	CC_SAFE_DELETE(soundEffectsState);
+	CC_SAFE_RELEASE_NULL(loadingLabel);
 }
 
 void GameManager::purgeSharedGameManager()
@@ -59,6 +58,9 @@ bool GameManager::init()
 	hasAudioBeenInitialized = false;
 	soundEngine = NULL;
 	managerSoundState = kAudioManagerUninitialized;
+	loadingLabel = CCLabelTTF::labelWithString("", "Arial", 20);
+	// Retain the loadingLabel so it doesn't autorelease when changing scenes
+	loadingLabel->retain();
 
 	return true;
 }

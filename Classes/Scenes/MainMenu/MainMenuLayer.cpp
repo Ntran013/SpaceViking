@@ -18,43 +18,46 @@ void MainMenuLayer::showOptions(CCObject* pSender)
 {
 	CCLOG("Show the Options screen");
 	GameManager::sharedGameManager()->runSceneWithID(kOptionsScene);
-	EPNotificationCenter::sharedNotifCenter()->removeObserver(this, kResourceLoadedNotif);
 }
 
 void MainMenuLayer::playScene(CCObject *pSender)
 {
-	CCMenuItemFont * itemPassedIn = (CCMenuItemFont *) pSender;
-	if (itemPassedIn->getTag() == 1) 
+	if (GameManager::sharedGameManager()->getHasFinishedLoading() == true)
 	{
-		CCLOG("Tag 1 found, Scene 1");
-		GameManager::sharedGameManager()->runSceneWithID(kIntroScene);
-	} 
-	else if (itemPassedIn->getTag() == 2) 
-	{
-		CCLOG("Tag 2 found, Scene 2");
-		GameManager::sharedGameManager()->runSceneWithID(kCutSceneForLevel2);
-	}
-	else if (itemPassedIn->getTag() == 3) 
-	{
-		CCLOG("Tag 3 found, Scene 3");
-		GameManager::sharedGameManager()->runSceneWithID(kGameLevel3);
-	}
-	else if (itemPassedIn->getTag() == 4) 
-	{
-		CCLOG("Tag 4 found, Scene 4");
-		GameManager::sharedGameManager()->runSceneWithID(kGameLevel4);
-	}
-	else if (itemPassedIn->getTag() == 5) 
-	{
-		CCLOG("Tag 5 found, Scene 5");
-		GameManager::sharedGameManager()->runSceneWithID(kGameLevel5);
-	}
-	else
-	{
-		CCLOG("Unexpected item. Tag was: %d", itemPassedIn->getTag());
-	}
+		CCMenuItemFont * itemPassedIn = (CCMenuItemFont *) pSender;
+		if (itemPassedIn->getTag() == 1) 
+		{
+			CCLOG("Tag 1 found, Scene 1");
+			GameManager::sharedGameManager()->runSceneWithID(kIntroScene);
+		} 
+		else if (itemPassedIn->getTag() == 2) 
+		{
+			CCLOG("Tag 2 found, Scene 2");
+			GameManager::sharedGameManager()->runSceneWithID(kCutSceneForLevel2);
+		}
+		else if (itemPassedIn->getTag() == 3) 
+		{
+			CCLOG("Tag 3 found, Scene 3");
+			GameManager::sharedGameManager()->runSceneWithID(kGameLevel3);
+		}
+		else if (itemPassedIn->getTag() == 4) 
+		{
+			CCLOG("Tag 4 found, Scene 4");
+			GameManager::sharedGameManager()->runSceneWithID(kGameLevel4);
+		}
+		else if (itemPassedIn->getTag() == 5) 
+		{
+			CCLOG("Tag 5 found, Scene 5");
+			GameManager::sharedGameManager()->runSceneWithID(kGameLevel5);
+		}
+		else
+		{
+			CCLOG("Unexpected item. Tag was: %d", itemPassedIn->getTag());
+		}
 
-	EPNotificationCenter::sharedNotifCenter()->removeObserver(this, kResourceLoadedNotif);
+		// IMPORTANT: removeObserver when changing scene. What about when quitting without playing? Need to implement that?
+		EPNotificationCenter::sharedNotifCenter()->removeObserver(this, kResourceLoadedNotif);
+	}
 }
 
 void MainMenuLayer::displayMainMenu(CCObject* pSender)
@@ -153,14 +156,13 @@ void MainMenuLayer::loadResourcesAync()
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->loadResourceAsync();    
-
-		GameManager::sharedGameManager()->setHasFinishedLoading(true);
 	}
 }
 
 void MainMenuLayer::loadingCallBack(CCObject *psender)
 {
-	m_pLabelLoading->setString("Loading Done!");
+	GameManager::sharedGameManager()->getLoadingLabel()->setString("Loading Done!");
+	GameManager::sharedGameManager()->setHasFinishedLoading(true);
 }
 
 bool MainMenuLayer::init()
@@ -184,14 +186,15 @@ bool MainMenuLayer::init()
 		viking->runAction(CCRepeatForever::actionWithAction((CCActionInterval *) CCSequence::actions(scaleUp, scaleDown, NULL)));
 		viking->runAction(CCRepeatForever::actionWithAction(rotateAction));
 		*/
-		
-		m_pLabelLoading = CCLabelTTF::labelWithString("", "Arial", 20);
 
+		// So that the Loading Done! label is only shown the first time the loading is finished
 		if (GameManager::sharedGameManager()->getHasFinishedLoading() == false)
-			m_pLabelLoading->setString("Loading...");
-		
-		m_pLabelLoading->setPosition(ccp(SCREEN_WIDTH * 0.1, SCREEN_HEIGHT / 2));
-		this->addChild(m_pLabelLoading);
+			GameManager::sharedGameManager()->getLoadingLabel()->setString("Loading...");
+		else
+			GameManager::sharedGameManager()->getLoadingLabel()->setString("");
+
+		GameManager::sharedGameManager()->getLoadingLabel()->setPosition(ccp(SCREEN_WIDTH * 0.1, SCREEN_HEIGHT / 2));
+		this->addChild(GameManager::sharedGameManager()->getLoadingLabel());
 
 		EPNotificationCenter::sharedNotifCenter()->addObserver(this, callfuncO_selector(MainMenuLayer::loadingCallBack), kResourceLoadedNotif, NULL);
 
