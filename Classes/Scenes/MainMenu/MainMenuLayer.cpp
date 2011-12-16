@@ -102,23 +102,23 @@ void MainMenuLayer::displaySceneSelection(CCObject* pSender)
 		mainMenu->removeFromParentAndCleanup(true);
 	}
 
-	CCLabelBMFont *playScene1Label = CCLabelBMFont::labelWithString("Ole Awakes!", "Fonts/VikingSpeechFont64.fnt");
+	CCLabelBMFont *playScene1Label = CCLabelBMFont::labelWithString("Level 1", "Fonts/VikingSpeechFont64.fnt");
 	CCMenuItemLabel *playScene1 = CCMenuItemLabel::itemWithLabel(playScene1Label, this, menu_selector(MainMenuLayer::playScene));
 	playScene1->setTag(1);
 
-	CCLabelBMFont *playScene2Label = CCLabelBMFont::labelWithString("Dogs of Loki!", "Fonts/VikingSpeechFont64.fnt");
+	CCLabelBMFont *playScene2Label = CCLabelBMFont::labelWithString("Level 2", "Fonts/VikingSpeechFont64.fnt");
 	CCMenuItemLabel *playScene2 = CCMenuItemLabel::itemWithLabel(playScene2Label, this, menu_selector(MainMenuLayer::playScene));
 	playScene2->setTag(2);
 
-	CCLabelBMFont *playScene3Label = CCLabelBMFont::labelWithString("Descent Into Hades!", "Fonts/VikingSpeechFont64.fnt");
+	CCLabelBMFont *playScene3Label = CCLabelBMFont::labelWithString("Level 3", "Fonts/VikingSpeechFont64.fnt");
 	CCMenuItemLabel *playScene3 = CCMenuItemLabel::itemWithLabel(playScene3Label, this, menu_selector(MainMenuLayer::playScene));
 	playScene3->setTag(3);
 
-	CCLabelBMFont *playScene4Label = CCLabelBMFont::labelWithString("Descent Into Hades!", "Fonts/VikingSpeechFont64.fnt");
+	CCLabelBMFont *playScene4Label = CCLabelBMFont::labelWithString("Level 4", "Fonts/VikingSpeechFont64.fnt");
 	CCMenuItemLabel *playScene4 = CCMenuItemLabel::itemWithLabel(playScene4Label, this, menu_selector(MainMenuLayer::playScene));
 	playScene4->setTag(4);
 
-	CCLabelBMFont *playScene5Label = CCLabelBMFont::labelWithString("Escape!", "Fonts/VikingSpeechFont64.fnt");
+	CCLabelBMFont *playScene5Label = CCLabelBMFont::labelWithString("Level 5", "Fonts/VikingSpeechFont64.fnt");
 	CCMenuItemLabel *playScene5 = CCMenuItemLabel::itemWithLabel(playScene5Label, this, menu_selector(MainMenuLayer::playScene));
 	playScene5->setTag(5);
 
@@ -148,14 +148,15 @@ void MainMenuLayer::loadResourcesAync()
 		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
 		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
 		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
-		*/
-
+			*/	
+		
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/ScrollingCloudsTextureAtlases/ScrollingCloudsTextureAtlasiPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("scene1atlasiPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->loadResourceAsync();    
+		
 	}
 }
 
@@ -175,18 +176,6 @@ bool MainMenuLayer::init()
 		this->addChild(background);
 		this->displayMainMenu(NULL);
 
-		/*CCSprite *viking = CCSprite::spriteWithFile("Menus/Main/VikingFloating.png");
-		viking->setPosition(ccp(SCREEN_WIDTH * 0.35f, SCREEN_HEIGHT * 0.45f));
-		this->addChild(viking);
-
-		CCActionInterval *rotateAction = CCEaseElasticInOut::actionWithAction(CCRotateBy::actionWithDuration(5.5f, 360));
-		CCFiniteTimeAction *scaleUp = CCScaleTo::actionWithDuration(2.0f, 1.5f);
-		CCFiniteTimeAction *scaleDown = CCScaleTo::actionWithDuration(2.0f, 0.5f);
-
-		viking->runAction(CCRepeatForever::actionWithAction((CCActionInterval *) CCSequence::actions(scaleUp, scaleDown, NULL)));
-		viking->runAction(CCRepeatForever::actionWithAction(rotateAction));
-		*/
-
 		// So that the Loading Done! label is only shown the first time the loading is finished
 		if (GameManager::sharedGameManager()->getHasFinishedLoading() == false)
 			GameManager::sharedGameManager()->getLoadingLabel()->setString("Loading...");
@@ -200,7 +189,7 @@ bool MainMenuLayer::init()
 
 		this->loadResourcesAync();
 
-		GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_MAIN_MENU);
+		//GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_MAIN_MENU);
 
 		pRet = true;
 	}

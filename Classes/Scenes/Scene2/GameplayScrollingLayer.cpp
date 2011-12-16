@@ -26,6 +26,9 @@ bool GameplayScrollingLayer::init()
 	bool pRet = false;
 	if (CCLayer::init()) 
 	{
+		srand(time(NULL));
+
+		CCSize levelSize = GameManager::sharedGameManager()->getDimensionsOfCurrentScene();
 
 		CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("scene1atlasiPhone-hd.plist");
 		sceneSpriteBatchNode = CCSpriteBatchNode::batchNodeWithFile("scene1atlasiPhone-hd.png");	
@@ -45,6 +48,12 @@ bool GameplayScrollingLayer::init()
 		//this->addScrollingBackgroundWithParallax();
 		//this->addScrollingBackgroundWithTileMap();
 		this->addScrollingBackgroundWithTileMapInsideParallax();
+
+		this->createObjectOfType(kEnemyTypeRadarDish, 100, ccp(SCREEN_WIDTH * 0.878f, SCREEN_HEIGHT * 0.13f), 10);
+		this->createObjectOfType(kPowerUpTypeMallet, 0, ccp(levelSize.width * 0.2f, levelSize.height * 0.14f), 10);
+		this->createObjectOfType(kPowerUpTypeHealth, 0, ccp(levelSize.width * 0.8f, levelSize.height * 0.14f), 10);
+
+		this->schedule(schedule_selector(GameplayScrollingLayer::addEnemy), 6.0f);
 
 		this->scheduleUpdate();
 		pRet = true;
@@ -85,11 +94,10 @@ void GameplayScrollingLayer::update(ccTime deltaTime)
 		GameManager::sharedGameManager()->setHasPlayerDied(true);
 		GameManager::sharedGameManager()->runSceneWithID(kLevelCompleteScene);
 	}
-	/*
+
 	tempChar = (GameCharacter*) sceneSpriteBatchNode->getChildByTag(kRadarDishTagValue);
 	if ((tempChar->getCharacterState() == kStateDead) && (tempChar->numberOfRunningActions() == 0))
-		GameManager::sharedGameManager()->runSceneWithID(kLevelCompleteScene);
-	*/
+		this->runAction(CCSequence::actions(CCCallFunc::actionWithTarget(this, callfunc_selector(GameplayScrollingLayer::displayLevelCleared)), CCDelayTime::actionWithDuration(0.6f), CCCallFunc::actionWithTarget(this, callfunc_selector(GameplayScrollingLayer::showLevelComplete)), NULL));
 }
 
 void GameplayScrollingLayer::addScrollingBackgroundWithParallax()
@@ -172,4 +180,113 @@ void GameplayScrollingLayer::addScrollingBackgroundWithTileMapInsideParallax()
 	parallaxNode->setScaleX(SCREEN_SIZE_PX.width/960);
 
 	this->addChild(parallaxNode, 1);
+}
+
+void GameplayScrollingLayer::displayLevelCleared()
+{
+
+}
+
+void GameplayScrollingLayer::showLevelComplete()
+{
+	// purge the frame cache to prevent assertion error when switching scenes
+	CCSpriteFrameCache::purgeSharedSpriteFrameCache();
+	GameManager::sharedGameManager()->runSceneWithID(kLevelCompleteScene);
+}
+
+void GameplayScrollingLayer::createObjectOfType(GameObjectType objectType, int initialHealth, CCPoint spawnLocation, int zValue)
+{
+	if (objectType == kEnemyTypeRadarDish)
+	{
+		//CCLOG("Creating the Radar Enemy");
+		RadarDish *radarDish = new RadarDish();
+		radarDish->initWithSpriteFrameName("radar_1.png");
+		radarDish->setCharacterHealth(initialHealth);
+		radarDish->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(radarDish, zValue, kRadarDishTagValue);
+		radarDish->release();
+	}
+	else if (objectType == kEnemyTypeAlienRobot)
+	{
+		//CCLOG("Creating the Alien Robot");
+		EnemyRobot *enemyRobot = new EnemyRobot();
+		enemyRobot->setDelegate(this);
+		enemyRobot->initWithSpriteFrameName("an1_anim1.png");
+		enemyRobot->setCharacterHealth(initialHealth);
+		enemyRobot->setPosition(spawnLocation);
+		enemyRobot->changeState(kStateSpawning);
+		sceneSpriteBatchNode->addChild(enemyRobot, zValue);
+#if ENEMY_STATE_DEBUG == 1
+		CCLabelBMFont *debugLabel = CCLabelBMFont::labelWithString("NoneNone", "Fonts/SpaceVikingFont.fnt");
+		this->addChild(debugLabel);
+		enemyRobot->setMyDebugLabel(debugLabel);
+#endif
+		enemyRobot->release();
+	}
+
+	else if (objectType == kPowerUpTypeMallet)
+	{
+		//CCLOG("Creating a Mallet PowerUp");
+		Mallet *mallet = new Mallet();
+		mallet->initWithSpriteFrameName("mallet_1.png");
+		mallet->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(mallet);
+		mallet->release();
+	}
+
+	else if (objectType == kPowerUpTypeHealth)
+	{
+		//CCLOG("Creating a Health PowerUp");
+		Health *health = new Health();
+		health->initWithSpriteFrameName("sandwich_1.png");
+		health->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(health);
+		health->release();
+	}
+
+	else if (objectType == kEnemyTypeSpaceCargoShip)
+	{
+		//CCLOG("Creating the Cargo Ship Enemy");
+		SpaceCargoShip *spaceCargoShip = new SpaceCargoShip();
+		// setDelegate before initing SpaceCargoShip, as the dropCargo function inside init() uses the delegate
+		spaceCargoShip->setDelegate(this);
+		spaceCargoShip->initWithSpriteFrameName("ship_2.png");
+		spaceCargoShip->setPosition(spawnLocation);
+		sceneSpriteBatchNode->addChild(spaceCargoShip, zValue);
+		spaceCargoShip->release();
+	}
+}
+
+void GameplayScrollingLayer::createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition) 
+{
+	PhaserBullet *phaserBullet = new PhaserBullet(); 
+	phaserBullet->initWithSpriteFrameName("beam_1.png");
+	phaserBullet->setPosition(spawnPosition);
+	phaserBullet->setMyDirection(phaserDirection);
+	//Commented out as changeState() is called in the init function, in order to see the spawning animation
+	//phaserBullet->setCharacterState(kStateSpawning);
+	sceneSpriteBatchNode->addChild(phaserBullet);
+	phaserBullet->release();
+}
+
+void GameplayScrollingLayer::addEnemy(ccTime deltaTime) 
+{
+	CCSize levelSize = GameManager::sharedGameManager()->getDimensionsOfCurrentScene();
+
+	int randNumber = rand() % 2;
+
+	CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
+	RadarDish *radarDish = (RadarDish*) sceneSpriteBatchNode->getChildByTag(kRadarDishTagValue);
+	if (radarDish != NULL) 
+	{
+		if (radarDish->getCharacterState() != kStateDead) 
+		{
+			if (randNumber == 0)
+				this->createObjectOfType(kEnemyTypeAlienRobot, 100, ccp(levelSize.width * 0.195f, levelSize.height * 0.1432f), 2);
+			else if (randNumber == 1)
+				this->createObjectOfType(kEnemyTypeAlienRobot, 100, ccp(levelSize.width * 0.795f, levelSize.height * 0.1432f), 2);
+		} 
+		else 		
+			this->unschedule(schedule_selector(GameplayScrollingLayer::addEnemy));	
+	}
 }

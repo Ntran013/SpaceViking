@@ -5,7 +5,7 @@
 #include "Scenes\Intro\IntroScene.h"
 #include "Scenes\LevelComplete\LevelCompleteScene.h"
 #include "Scenes\Scene2\GameScene2.h"
-#include "Scenes\CutSceneForLevel2\PlatformScene.h";
+#include "Scenes\CutSceneForLevel2\PlatformScene.h"
 
 using namespace cocos2d;
 using namespace std;
@@ -126,7 +126,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 	}
 
 	//Load audio
-	this->loadAudioForSceneWithID(currentScene);
+	//this->loadAudioForSceneWithID(currentScene);
 
 	if (CCDirector::sharedDirector()->getRunningScene() == NULL)
 		CCDirector::sharedDirector()->runWithScene(sceneToRun);
@@ -134,7 +134,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 		CCDirector::sharedDirector()->replaceScene(sceneToRun);
 
 	//Unload old scene's audio
-	this->unloadAudioForSceneWithID(oldScene);
+	//this->unloadAudioForSceneWithID(oldScene);
 
 	currentScene = sceneID;
 }

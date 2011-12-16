@@ -48,7 +48,7 @@ public class Cocos2dxActivity extends Activity{
     private final static int HANDLER_SHOW_DIALOG = 1;
     private static String packageName;
     private static Activity me = null;
-
+    
     private static native void nativeSetPaths(String apkPath);
 
     @Override
@@ -77,12 +77,12 @@ public class Cocos2dxActivity extends Activity{
         	}
         };
     }
-    
+   
     public static void openURL(String url) {
-    	Intent i = new Intent(Intent.ACTION_VIEW);
-    	i.setData(Uri.parse(url));
-    	me.startActivity(i);
-    }
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        me.startActivity(i);
+       }
     
     public static String getCurrentLanguage() {
     	String languageName = java.util.Locale.getDefault().getLanguage();
@@ -151,6 +151,14 @@ public class Cocos2dxActivity extends Activity{
     	soundPlayer.stopEffect(soundId);
     }
     
+    public static void pauseEffect(int soundId){
+    	soundPlayer.pauseEffect(soundId);
+    }
+    
+    public static void resumeEffect(int soundId){
+    	soundPlayer.resumeEffect(soundId);
+    }
+    
     public static float getEffectsVolume(){
     	return soundPlayer.getEffectsVolume();
     }
@@ -167,13 +175,15 @@ public class Cocos2dxActivity extends Activity{
     	soundPlayer.unloadEffect(path);
     }
     
-    public static void pauseAllEffects()
-    {
+    public static void stopAllEffects(){
+    	soundPlayer.stopAllEffects();
+    }
+    
+    public static void pauseAllEffects(){
     	soundPlayer.pauseAllEffects();
     }
     
-    public static void resumeAllEffects()
-    {
+    public static void resumeAllEffects(){
     	soundPlayer.resumeAllEffects();
     }
     
@@ -196,11 +206,6 @@ public class Cocos2dxActivity extends Activity{
     	if (accelerometerEnabled) {
     	    accelerometer.enable();
     	}
-    	
-    	// resume background music
-    	resumeBackgroundMusic();
-    	
-    	soundPlayer.resumeAllEffects();
     }
 
     @Override
@@ -209,11 +214,18 @@ public class Cocos2dxActivity extends Activity{
     	if (accelerometerEnabled) {
     	    accelerometer.disable();
     	}
-    	
-    	// pause background music
-    	pauseBackgroundMusic();
-  
-    	soundPlayer.pauseAllEffects();
+    }
+    
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        // your stuff or nothing
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // your stuff or nothing
     }
 
     protected void setPackageName(String packageName) {

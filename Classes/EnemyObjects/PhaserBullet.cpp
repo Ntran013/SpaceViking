@@ -20,6 +20,8 @@ void PhaserBullet::changeState(CharacterStates newState)
 	CCFiniteTimeAction *action = NULL;
 	characterState = newState;
 
+	CCSize levelSize = GameManager::sharedGameManager()->getDimensionsOfCurrentScene();
+
 	switch (newState)
 	{
 	case kStateSpawning:
@@ -38,7 +40,7 @@ void PhaserBullet::changeState(CharacterStates newState)
 		else 
 		{
 			//CCLOG("Phaser direction RIGHT");
-			endLocation = ccp(screenSize.width+24.0f, this->getPosition().y);
+			endLocation = ccp(levelSize.width+24.0f, this->getPosition().y);
 		}
 		this->runAction(CCMoveTo::actionWithDuration(2.0f, endLocation));
 		action = CCRepeatForever::actionWithAction(CCAnimate::actionWithAnimation(travelingAnim, false));
@@ -61,8 +63,10 @@ void PhaserBullet::changeState(CharacterStates newState)
 
 bool PhaserBullet::isOutsideOfScreen()
 {
+	CCSize levelSize = GameManager::sharedGameManager()->getDimensionsOfCurrentScene();
+
 	CCPoint currentSpritePosition = this->getPosition();
-	if ((currentSpritePosition.x < 0.0f) || (currentSpritePosition.x > screenSize.width)) 
+	if ((currentSpritePosition.x < 0.0f) || (currentSpritePosition.x > levelSize.width)) 
 	{
 		this->changeState(kStateDead);
 		return true;

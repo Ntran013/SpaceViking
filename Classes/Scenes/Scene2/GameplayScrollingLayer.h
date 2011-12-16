@@ -4,9 +4,15 @@
 #include "cocos2d.h"
 #include "Constants\Constants.h"
 #include "GameObjects\Viking.h"
+#include "EnemyObjects\RadarDish.h"
+#include "PowerUps\Mallet.h"
+#include "PowerUps\Health.h"
+#include "GameObjects\SpaceCargoShip.h"
+#include "EnemyObjects\EnemyRobot.h"
+#include "EnemyObjects\PhaserBullet.h"
 #include "GameControlLayer.h"
 
-class GameplayScrollingLayer : public cocos2d::CCLayer
+class GameplayScrollingLayer : public cocos2d::CCLayer, public GameplayLayerDelegate
 {
 protected:
 	cocos2d::CCSpriteBatchNode *sceneSpriteBatchNode;
@@ -24,6 +30,11 @@ public:
 	void addScrollingBackgroundWithParallax();
 	void addScrollingBackgroundWithTileMap();
 	void addScrollingBackgroundWithTileMapInsideParallax();
+	virtual void createObjectOfType(GameObjectType objectType, int initialHealth, CCPoint spawnLocation, int zValue);
+	virtual void createPhaserWithDirection(PhaserDirection phaserDirection, CCPoint spawnPosition);
+	void addEnemy(cocos2d::ccTime deltaTime);
+	void displayLevelCleared();
+	void showLevelComplete();
 };
 
 #endif

@@ -1,5 +1,5 @@
 # set params
-ANDROID_NDK_ROOT=/cygdrive/c/android-ndk-r6b
+ANDROID_NDK_ROOT=/cygdrive/c/android-ndk-r7
 COCOS2DX_ROOT=/cygdrive/c/cocos2d-x
 GAME_ROOT=$COCOS2DX_ROOT/SpaceViking
 GAME_ANDROID_ROOT=$GAME_ROOT/android

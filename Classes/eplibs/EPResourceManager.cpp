@@ -302,7 +302,7 @@ void EPResourceManager::loadResourceAsync(void)
         
         unit->setState(kEPUnitStateLoading, NULL);
         CCTextureCache::sharedTextureCache()->addImageAsync(unit->getTexPath().c_str(), 
-                                                            this, 
+															_sharedResourceManager, 
                                                             callfuncO_selector(EPResourceManager::textureLoadedCallback));
         break;
     }
