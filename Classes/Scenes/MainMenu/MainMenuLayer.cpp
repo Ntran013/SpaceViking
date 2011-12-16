@@ -189,7 +189,7 @@ bool MainMenuLayer::init()
 
 		this->loadResourcesAync();
 
-		//GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_MAIN_MENU);
+		GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_MAIN_MENU);
 
 		pRet = true;
 	}

@@ -52,6 +52,7 @@ EPResourceManager::EPResourceManager()
     
     m_asyncLoadCount = 0;
     m_asyncTotalCount = 0;
+	m_loadingTime = 0;
 }
 
 EPResourceManager::~EPResourceManager()
@@ -288,10 +289,12 @@ void EPResourceManager::loadResourceAsync(void)
     }
   
     m_loadingTime = getTime();
+	/*
     CCScheduler::sharedScheduler()->scheduleSelector(schedule_selector(EPResourceManager::timeoutSelector),
                                                      this, 
                                                      3.0f,
                                                      false);
+	*/
     CCARRAY_FOREACH(m_resources, obj)
     {
         EPResourceManagerUnit* unit = (EPResourceManagerUnit*) obj;

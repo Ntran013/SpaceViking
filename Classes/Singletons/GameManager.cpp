@@ -126,7 +126,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 	}
 
 	//Load audio
-	//this->loadAudioForSceneWithID(currentScene);
+	this->loadAudioForSceneWithID(currentScene);
 
 	if (CCDirector::sharedDirector()->getRunningScene() == NULL)
 		CCDirector::sharedDirector()->runWithScene(sceneToRun);
@@ -134,7 +134,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 		CCDirector::sharedDirector()->replaceScene(sceneToRun);
 
 	//Unload old scene's audio
-	//this->unloadAudioForSceneWithID(oldScene);
+	this->unloadAudioForSceneWithID(oldScene);
 
 	currentScene = sceneID;
 }
