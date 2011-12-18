@@ -32,6 +32,12 @@ EPNotificationCenter *EPNotificationCenter::sharedNotifCenter(void)
     return s_sharedNotifCenter;
 }
 
+
+void EPNotificationCenter::purgeSharedNotifCenter()
+{
+	CC_SAFE_RELEASE_NULL(s_sharedNotifCenter);
+}
+
 //
 // internal functions
 //

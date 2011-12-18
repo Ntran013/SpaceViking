@@ -118,7 +118,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 		return;
 	}
 
-	if (sceneID < 100)
+	if (sceneID < 100 && sceneID != kIntroScene)
 	{
 		//If is not an iPad
 		sceneToRun->setScaleX(SCREEN_SIZE_PX.width/1024);

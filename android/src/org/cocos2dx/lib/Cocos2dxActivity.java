@@ -199,7 +199,11 @@ public class Cocos2dxActivity extends Activity{
     public static void terminateProcess(){
     	android.os.Process.killProcess(android.os.Process.myPid());
     }
-
+    
+    public void onBackPressed() {
+    	Cocos2dxActivity.this.finish();
+    }
+    
     @Override
     protected void onResume() {
     	super.onResume();
@@ -214,6 +218,16 @@ public class Cocos2dxActivity extends Activity{
     	if (accelerometerEnabled) {
     	    accelerometer.disable();
     	}
+    }
+    
+    @Override
+    protected void onStop() {
+    	super.onStop();
+    }
+    
+    @Override
+    protected void onRestart() {
+    	super.onRestart();
     }
     
     @Override

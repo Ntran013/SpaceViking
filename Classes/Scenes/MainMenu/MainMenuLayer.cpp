@@ -191,8 +191,18 @@ bool MainMenuLayer::init()
 
 		GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_MAIN_MENU);
 
+		this->setIsKeypadEnabled(true);
+
 		pRet = true;
 	}
 
 	return pRet;
+}
+
+void MainMenuLayer::keyBackClicked()
+{
+	EPResourceManager::purgeSharedResourceManager();
+	EPNotificationCenter::purgeSharedNotifCenter();
+	GameManager::purgeSharedGameManager();
+	CCDirector::sharedDirector()->end();
 }

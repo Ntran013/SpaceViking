@@ -46,7 +46,7 @@ public:
 
 	//shared ResourceManager
 	static EPResourceManager *sharedResourceManager();
-	void purgeSharedResourceManager();
+	static void purgeSharedResourceManager();
 private:
     //
     // internal functions

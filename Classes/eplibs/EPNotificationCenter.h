@@ -17,6 +17,7 @@ public:
     ~EPNotificationCenter();
     
     static EPNotificationCenter *sharedNotifCenter(void);
+	static void purgeSharedNotifCenter();
     
     void addObserver(cocos2d::SelectorProtocol *target, 
                      cocos2d::SEL_CallFuncO selector,

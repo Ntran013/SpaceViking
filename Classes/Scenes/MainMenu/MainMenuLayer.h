@@ -19,6 +19,7 @@ public:
 	void loadResourcesAync();
 	bool init();
 	MainMenuLayer();
+	virtual void keyBackClicked();
 private:
 	void displayMainMenu(cocos2d::CCObject* pSender);
 	void displaySceneSelection(cocos2d::CCObject* pSender);

@@ -40,7 +40,7 @@ protected:
 	void runSceneWithID(SceneTypes sceneID);
 	void openSiteWithLinkType(LinkTypes linkTypeToOpen);
 	bool init();
-	void purgeSharedGameManager();
+	static void purgeSharedGameManager();
 	
 	// Added for Audio
 	void initAudioAsync();

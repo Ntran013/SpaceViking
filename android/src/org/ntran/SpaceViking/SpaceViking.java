@@ -42,7 +42,7 @@ public class SpaceViking extends Cocos2dxActivity{
         mGLView = (Cocos2dxGLSurfaceView) findViewById(R.id.game_gl_surfaceview);
         mGLView.setTextField((EditText)findViewById(R.id.textField));
 	}
-	
+    
 	 @Override
 	 protected void onPause() {
 	     super.onPause();
