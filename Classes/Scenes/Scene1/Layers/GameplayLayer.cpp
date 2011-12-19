@@ -76,6 +76,7 @@ void GameplayLayer::initJoystickAndButtons()
 	joystickBase->setThumbSprite(CCSprite::spriteWithFile("joystickDown.png"));
 	SneakyJoystick *aJoystick = new SneakyJoystick();
 	aJoystick->initWithRect(joystickBaseDimensions);
+	aJoystick->autorelease();
 
 	joystickBase->setJoystick(aJoystick);
 	/* IMPORTANT: do not need to retain here like in the book, because the setJoystick method does retain as well
@@ -94,6 +95,7 @@ void GameplayLayer::initJoystickAndButtons()
 	jumpButtonBase->setPressSprite(CCSprite::spriteWithFile("jumpDown.png")); // 16
 	SneakyButton *aButton = new SneakyButton();
 	aButton->initWithRect(jumpButtonDimensions);
+	aButton->autorelease();
 
 	jumpButtonBase->setButton(aButton); // 17
 	//jumpButtonBase->getButton()->retain(); // 18
@@ -108,7 +110,8 @@ void GameplayLayer::initJoystickAndButtons()
 	attackButtonBase->setActivatedSprite(CCSprite::spriteWithFile("handDown.png")); // 15
 	attackButtonBase->setPressSprite(CCSprite::spriteWithFile("handDown.png")); // 16
 	SneakyButton *aButton1 = new SneakyButton();
-	aButton1 && aButton1->initWithRect(attackButtonDimensions);
+	aButton1->initWithRect(attackButtonDimensions);
+	aButton1->autorelease();
 
 	attackButtonBase->setButton(aButton1); // 17
 	//attackButtonBase->getButton()->retain(); // 18

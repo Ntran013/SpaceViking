@@ -2,6 +2,9 @@
 #define __APP_DELEGATE_H__
 
 #include "CCApplication.h"
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+	#include "vld.h"
+#endif
 
 /**
 @brief	The cocos2d Application.

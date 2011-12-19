@@ -200,10 +200,6 @@ public class Cocos2dxActivity extends Activity{
     	android.os.Process.killProcess(android.os.Process.myPid());
     }
     
-    public void onBackPressed() {
-    	Cocos2dxActivity.this.finish();
-    }
-    
     @Override
     protected void onResume() {
     	super.onResume();
@@ -218,28 +214,6 @@ public class Cocos2dxActivity extends Activity{
     	if (accelerometerEnabled) {
     	    accelerometer.disable();
     	}
-    }
-    
-    @Override
-    protected void onStop() {
-    	super.onStop();
-    }
-    
-    @Override
-    protected void onRestart() {
-    	super.onRestart();
-    }
-    
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        // your stuff or nothing
-    }
-
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        // your stuff or nothing
     }
 
     protected void setPackageName(String packageName) {

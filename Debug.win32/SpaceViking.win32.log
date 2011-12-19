@@ -1,45 +1,11 @@
-﻿Build started 12/19/2011 12:11:18 AM.
+﻿Build started 12/19/2011 7:02:18 PM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\EnemyObjects\EnemyRobot.cpp Classes\EnemyObjects\PhaserBullet.cpp Classes\EnemyObjects\RadarDish.cpp Classes\GameObjects\GameCharacter.cpp Classes\GameObjects\GameObject.cpp Classes\GameObjects\SpaceCargoShip.cpp Classes\GameObjects\Viking.cpp Classes\PowerUps\Health.cpp Classes\PowerUps\Mallet.cpp Classes\Scenes\CutSceneForLevel2\PlatformScrollingLayer.cpp Classes\Scenes\Intro\IntroLayer.cpp Classes\Scenes\Intro\IntroScene.cpp Classes\Scenes\LevelComplete\LevelCompleteLayer.cpp Classes\Scenes\LevelComplete\LevelCompleteScene.cpp Classes\Scenes\MainMenu\MainMenuLayer.cpp Classes\Scenes\MainMenu\MainMenuScene.cpp Classes\Scenes\Options\OptionsLayer.cpp Classes\Scenes\Options\OptionsScene.cpp Classes\Scenes\Scene1\GameScene.cpp Classes\Scenes\Scene1\Layers\GameplayLayer.cpp Classes\Scenes\Scene2\GameScene2.cpp Classes\Scenes\Scene2\GameplayScrollingLayer.cpp Classes\Singletons\AppDelegate.cpp Classes\Singletons\GameManager.cpp
-         MainMenuLayer.cpp
-         Generating Code...
-         Compiling...
-         GameManager.cpp
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(363): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(400): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(415): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\cocos2d-x\spaceviking\classes\singletons\gamemanager.cpp(440): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         AppDelegate.cpp
-         GameplayScrollingLayer.cpp
-         GameScene2.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Scene1\Layers\GameplayLayer.cpp
          GameplayLayer.cpp
-         GameScene.cpp
-         OptionsScene.cpp
-         OptionsLayer.cpp
-         MainMenuScene.cpp
-         LevelCompleteScene.cpp
-         LevelCompleteLayer.cpp
-         IntroScene.cpp
-         IntroLayer.cpp
-         PlatformScrollingLayer.cpp
-         Mallet.cpp
-         Health.cpp
-         Viking.cpp
-         SpaceCargoShip.cpp
-         GameObject.cpp
-         GameCharacter.cpp
-         RadarDish.cpp
-         PhaserBullet.cpp
-         EnemyRobot.cpp
+     1>c:\cocos2d-x\spaceviking\classes\scenes\scene1\layers\gameplaylayer.cpp(12): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -239,4 +205,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:07.85
+Time Elapsed 00:00:03.95

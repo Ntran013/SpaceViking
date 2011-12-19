@@ -305,9 +305,9 @@ CCDictionary<std::string, CCString*> * GameManager::getSoundEffectsListForSceneW
 			}
 
 			val->end();			
-
-			listOfSoundEffectFiles->retain();
 		}
+
+		//listOfSoundEffectFiles->retain();
 
 		plistDictionary->end();
 
@@ -362,7 +362,6 @@ void GameManager::loadAudioForSceneWithID(SceneTypes sceneID)
 		char effectName[100] = {0};
 		sprintf(effectName, "Sounds/22k_SFX/%s", val->toStdString().c_str());
 		soundEngine->preloadEffect(effectName);
-		CCString *loaded = new CCString("1");
 		if (soundEffectsState->insert(pair<std::string, bool> (keyString, SFX_LOADED)).second != true)
 		{
 			soundEffectsState->erase(keyString);

@@ -202,7 +202,9 @@ bool MainMenuLayer::init()
 void MainMenuLayer::keyBackClicked()
 {
 	EPResourceManager::purgeSharedResourceManager();
+	//EPNotificationCenter::sharedNotifCenter()->removeObserver(this, kResourceLoadedNotif);
 	EPNotificationCenter::purgeSharedNotifCenter();
 	GameManager::purgeSharedGameManager();
+	//CocosDenshion::SimpleAudioEngine::end();
 	CCDirector::sharedDirector()->end();
 }

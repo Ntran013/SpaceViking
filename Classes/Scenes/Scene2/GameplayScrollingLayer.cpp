@@ -43,7 +43,7 @@ bool GameplayScrollingLayer::init()
 		viking->setPosition(ccp(SCREEN_WIDTH * 0.35f, SCREEN_HEIGHT * 0.14f));
 		viking->setCharacterHealth(100);
 		sceneSpriteBatchNode->addChild(viking, 1000, kVikingSpriteTagValue);
-
+		viking->release();
 		//this->addScrollingBackground();
 		//this->addScrollingBackgroundWithParallax();
 		//this->addScrollingBackgroundWithTileMap();

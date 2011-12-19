@@ -23,11 +23,11 @@
 #define W320Scale 0.5
 
 // SCreen Resolutions for AppDelegate
-#define WVGA 480,800
-#define HVGA 320,480
-#define RETINA 640,960
-#define GALAXYNEXUS 720,1280
-#define IPAD 768,1024
+#define WVGA 800,480
+#define HVGA 480,320
+#define RETINA 960,640
+#define GALAXYNEXUS 1280,720
+#define IPAD 1024,768
 
 // Game Manager
 #define kMainMenuTagValue 10

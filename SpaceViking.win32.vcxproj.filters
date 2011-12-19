@@ -342,9 +342,6 @@
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\Singletons\AppDelegate.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\GameObjects\GameObject.cpp">
       <Filter>source</Filter>
     </ClCompile>
@@ -460,6 +457,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\eplibs\EPSpriteButton.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Singletons\AppDelegate.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
