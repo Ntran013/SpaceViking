@@ -283,7 +283,7 @@ obj/local/armeabi/objs-debug/game_logic/Scenes/MainMenu/MainMenuLayer.o: \
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
  jni/../../Classes/eplibs\EPResourceManager.h \
- jni/../../Classes/EPlibs\EPNotificationCenter.h
+ jni/../../Classes/eplibs\EPNotificationCenter.h
 
 jni/../../Classes/Scenes/MainMenu/MainMenuLayer.h:
 
@@ -851,4 +851,4 @@ jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
 
-jni/../../Classes/EPlibs\EPNotificationCenter.h:
+jni/../../Classes/eplibs\EPNotificationCenter.h:

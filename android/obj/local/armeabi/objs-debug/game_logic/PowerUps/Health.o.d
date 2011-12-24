@@ -288,7 +288,8 @@ obj/local/armeabi/objs-debug/game_logic/PowerUps/Health.o: \
  jni/../../Classes/Singletons\GameManager.h \
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
- jni/../../Classes/eplibs\EPResourceManager.h
+ jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h
 
 jni/../../Classes/PowerUps/Health.h:
 
@@ -867,3 +868,5 @@ jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h:
 jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
+
+jni/../../Classes/eplibs\EPNotificationCenter.h:

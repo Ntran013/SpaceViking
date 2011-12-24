@@ -282,7 +282,8 @@ obj/local/armeabi/objs-debug/game_logic/Singletons/AppDelegate.o: \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
  jni/../../Classes/Singletons\GameManager.h \
  jni/../../Classes/Constants\Constants.h \
- jni/../../Classes/eplibs\EPResourceManager.h
+ jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h
 
 jni/../../Classes/Singletons/AppDelegate.h:
 
@@ -849,3 +850,5 @@ jni/../../Classes/Singletons\GameManager.h:
 jni/../../Classes/Constants\Constants.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
+
+jni/../../Classes/eplibs\EPNotificationCenter.h:

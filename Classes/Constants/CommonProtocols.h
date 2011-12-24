@@ -6,46 +6,46 @@
 #include "cocos2d.h"
 
 enum PhaserDirection {
-kDirectionLeft,
-kDirectionRight
+	kDirectionLeft,
+	kDirectionRight
 };
 
 enum CharacterStates {
-kStateSpawning,
-kStateIdle,
-kStateCrouching,
-kStateStandingUp,
-kStateWalking,
-kStateAttacking,
-kStateJumping,
-kStateBreathing,
-kStateTakingDamage,
-kStateDead,
-kStateTraveling,
-kStateRotating,
-kStateDrilling,
-kStateAfterJumping
+	kStateSpawning,
+	kStateIdle,
+	kStateCrouching,
+	kStateStandingUp,
+	kStateWalking,
+	kStateAttacking,
+	kStateJumping,
+	kStateBreathing,
+	kStateTakingDamage,
+	kStateDead,
+	kStateTraveling,
+	kStateRotating,
+	kStateDrilling,
+	kStateAfterJumping
 }; // 1
 
 enum GameObjectType {
-kObjectTypeNone,
-kPowerUpTypeHealth,
-kPowerUpTypeMallet,
-kEnemyTypeRadarDish,
-kEnemyTypeSpaceCargoShip,
-kEnemyTypeAlienRobot,
-kEnemyTypePhaser,
-kVikingType,
-kSkullType,
-kRockType,
-kMeteorType,
-kFrozenVikingType,
-kIceType,
-kLongBlockType,
-kCartType,
-kSpikesType,
-kDiggerType,
-kGroundType
+	kObjectTypeNone,
+	kPowerUpTypeHealth,
+	kPowerUpTypeMallet,
+	kEnemyTypeRadarDish,
+	kEnemyTypeSpaceCargoShip,
+	kEnemyTypeAlienRobot,
+	kEnemyTypePhaser,
+	kVikingType,
+	kSkullType,
+	kRockType,
+	kMeteorType,
+	kFrozenVikingType,
+	kIceType,
+	kLongBlockType,
+	kCartType,
+	kSpikesType,
+	kDiggerType,
+	kGroundType
 };
 
 class GameplayLayerDelegate 

@@ -58,6 +58,7 @@ public class SpaceViking extends Cocos2dxActivity{
      static {
     	 System.loadLibrary("cocos2d");
     	 System.loadLibrary("cocosdenshion");
+    	 System.loadLibrary("box2d");
     	 System.loadLibrary("game_logic");
          System.loadLibrary("game");
      }

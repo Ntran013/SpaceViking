@@ -7,6 +7,7 @@
 #include <string>
 #include <map>
 #include "eplibs\EPResourceManager.h"
+#include "eplibs\EPNotificationCenter.h"
 
 class GameManager :	public cocos2d::CCObject 
 {

@@ -290,6 +290,7 @@ obj/local/armeabi/objs-debug/game_logic/GameObjects/Viking.o: \
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
  jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h \
  jni/../../Classes/JoystickClasses\SneakyButton.h \
  jni/../../Classes/JoystickClasses\SneakyJoystick.h
 
@@ -872,6 +873,8 @@ jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h:
 jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
+
+jni/../../Classes/eplibs\EPNotificationCenter.h:
 
 jni/../../Classes/JoystickClasses\SneakyButton.h:
 

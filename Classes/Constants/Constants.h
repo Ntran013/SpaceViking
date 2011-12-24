@@ -18,10 +18,6 @@
 
 #define SCREEN_SIZE_PX cocos2d::CCDirector::sharedDirector()->getWinSizeInPixels()
 
-// Screen Resolution Scales
-#define W480Scale 0.75
-#define W320Scale 0.5
-
 // SCreen Resolutions for AppDelegate
 #define WVGA 800,480
 #define HVGA 480,320
@@ -33,27 +29,27 @@
 #define kMainMenuTagValue 10
 #define kSceneMenuTagValue 20
 
- enum SceneTypes{
-kNoSceneUninitialized=0,
-kMainMenuScene=1,
-kOptionsScene=2,
-kCreditsScene=3,
-kIntroScene=4,
-kLevelCompleteScene=5,
-kGameLevel1=101,
-kGameLevel2=102,
-kGameLevel3=103,
-kGameLevel4=104,
-kGameLevel5=105,
-kCutSceneForLevel2=201
+enum SceneTypes{
+	kNoSceneUninitialized=0,
+	kMainMenuScene=1,
+	kOptionsScene=2,
+	kCreditsScene=3,
+	kIntroScene=4,
+	kLevelCompleteScene=5,
+	kGameLevel1=101,
+	kGameLevel2=102,
+	kGameLevel3=103,
+	kGameLevel4=104,
+	kGameLevel5=105,
+	kCutSceneForLevel2=201
 };
 
 enum LinkTypes{
-kLinkTypeBookSite,
-kLinkTypeDeveloperSiteRod,
-kLinkTypeDeveloperSiteRay,
-kLinkTypeArtistSite,
-kLinkTypeMusicianSite
+	kLinkTypeBookSite,
+	kLinkTypeDeveloperSiteRod,
+	kLinkTypeDeveloperSiteRay,
+	kLinkTypeArtistSite,
+	kLinkTypeMusicianSite
 };
 
 // Debug Enemy States with Labels
@@ -92,8 +88,11 @@ enum GameManagerSoundState{
 #define BACKGROUND_TRACK_MINECART "DrillBitV2.mp3"
 // Physics Escape Level
 #define BACKGROUND_TRACK_ESCAPE "EscapeTheFutureV3.mp3"
-#endif
 
 // Defines for Cloud Scrolling Scene
 #define kMaxCloudMoveDuration 10
 #define kMinCloudMoveDuration 1
+
+#define PTM_RATIO 50.0
+
+#endif

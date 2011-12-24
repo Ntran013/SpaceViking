@@ -1,5 +1,4 @@
 #include "MainMenuLayer.h"
-#include "EPlibs\EPNotificationCenter.h"
 
 using namespace cocos2d;
 
@@ -137,26 +136,17 @@ void MainMenuLayer::displaySceneSelection(CCObject* pSender)
 	this->addChild(sceneSelectMenu, 1, kSceneMenuTagValue);
 }
 
-// IMPORTANT: Fix up this function
 void MainMenuLayer::loadResourcesAync()
 {
 	if (GameManager::sharedGameManager()->getHasFinishedLoading() == false)
 	{
-		/*
-		CCTextureCache::sharedTextureCache()->addImageAsync("scene1atlasiPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
-		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/ScrollingCloudsTextureAtlases/ScrollingCloudsTextureAtlasiPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
-		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
-		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
-		CCTextureCache::sharedTextureCache()->addImageAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd.png", this, callfuncO_selector(MainMenuLayer::loadingCallBack));
-			*/	
-		
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/ScrollingCloudsTextureAtlases/ScrollingCloudsTextureAtlasiPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("scene1atlasiPhone-hd",false);
+		EPResourceManager::sharedResourceManager()->addPngResourceAsync("scene3atlas-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->loadResourceAsync();    
-		
 	}
 }
 
@@ -202,9 +192,7 @@ bool MainMenuLayer::init()
 void MainMenuLayer::keyBackClicked()
 {
 	EPResourceManager::purgeSharedResourceManager();
-	//EPNotificationCenter::sharedNotifCenter()->removeObserver(this, kResourceLoadedNotif);
 	EPNotificationCenter::purgeSharedNotifCenter();
 	GameManager::purgeSharedGameManager();
-	//CocosDenshion::SimpleAudioEngine::end();
 	CCDirector::sharedDirector()->end();
 }

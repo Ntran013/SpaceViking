@@ -291,6 +291,7 @@ obj/local/armeabi/objs-debug/game_logic/Scenes/Scene2/GameplayScrollingLayer.o: 
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
  jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h \
  jni/../../Classes/JoystickClasses\SneakyButton.h \
  jni/../../Classes/JoystickClasses\SneakyJoystick.h \
  jni/../../Classes/EnemyObjects\RadarDish.h \
@@ -887,6 +888,8 @@ jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h:
 jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
+
+jni/../../Classes/eplibs\EPNotificationCenter.h:
 
 jni/../../Classes/JoystickClasses\SneakyButton.h:
 

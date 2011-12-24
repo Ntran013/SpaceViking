@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\CocosDenshion\Include;..\cocos2dx\platform\third_party\win32\pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\CocosDenshion\Include;..\cocos2dx\platform\third_party\win32\pthread;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -63,7 +63,7 @@
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libcocos2d.lib;libgles_cm.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcocos2d.lib;libgles_cm.lib;libCocosDenshion.lib;libBox2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -179,12 +179,15 @@
     <None Include="Resources\Plists\PhaserBullet.plist" />
     <None Include="Resources\Plists\RadarDish.plist" />
     <None Include="Resources\Plists\Viking.plist" />
+    <None Include="Resources\puzzle_level_bkgrnd-hd.png" />
     <None Include="Resources\scene1atlas.plist" />
     <None Include="Resources\scene1atlas.png" />
     <None Include="Resources\scene1atlasiPhone-hd.plist" />
     <None Include="Resources\scene1atlasiPhone-hd.png" />
     <None Include="Resources\scene1atlasiPhone.plist" />
     <None Include="Resources\scene1atlasiPhone.png" />
+    <None Include="Resources\scene3atlas-hd.plist" />
+    <None Include="Resources\scene3atlas-hd.png" />
     <None Include="Resources\SpaceVikingFont.fnt" />
     <None Include="Resources\SpaceVikingFont.png" />
     <None Include="Resources\sv_anim_1.png" />
@@ -212,10 +215,18 @@
     <ClInclude Include="Classes\eplibs\GestureRecognizer\PinchGestureRecognizer.h" />
     <ClInclude Include="Classes\eplibs\GestureRecognizer\RotationGestureRecognizer.h" />
     <ClInclude Include="Classes\eplibs\GestureRecognizer\TapGestureRecognizer.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Box2DSprite.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\FrozenOle.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\IceBlock.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\LongBlock.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Meteor.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Rock.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Skull.h" />
     <ClInclude Include="Classes\GameObjects\GameCharacter.h" />
     <ClInclude Include="Classes\GameObjects\GameObject.h" />
     <ClInclude Include="Classes\GameObjects\SpaceCargoShip.h" />
     <ClInclude Include="Classes\GameObjects\Viking.h" />
+    <ClInclude Include="Classes\GLES-Render.h" />
     <ClInclude Include="Classes\PowerUps\Health.h" />
     <ClInclude Include="Classes\PowerUps\Mallet.h" />
     <ClInclude Include="Classes\Scenes\CutSceneForLevel2\PlatformScene.h" />
@@ -232,6 +243,7 @@
     <ClInclude Include="Classes\Scenes\Scene2\GameplayScrollingLayer.h" />
     <ClInclude Include="Classes\Scenes\Scene2\GameScene2.h" />
     <ClInclude Include="Classes\Scenes\Scene2\StaticBackgroundLayer.h" />
+    <ClInclude Include="Classes\Scenes\Scene3\PuzzleLayer.h" />
     <ClInclude Include="Classes\Singletons\AppDelegate.h" />
     <ClInclude Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.h" />
     <ClInclude Include="Classes\Scenes\Scene1\Layers\GameplayLayer.h" />
@@ -241,6 +253,7 @@
     <ClInclude Include="Classes\JoystickClasses\SneakyJoystick.h" />
     <ClInclude Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.h" />
     <ClInclude Include="Classes\Singletons\GameManager.h" />
+    <ClInclude Include="Classes\SimpleQueryCallback.h" />
     <ClInclude Include="win32\main.h" />
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
@@ -260,10 +273,18 @@
     <ClCompile Include="Classes\eplibs\GestureRecognizer\PinchGestureRecognizer.cpp" />
     <ClCompile Include="Classes\eplibs\GestureRecognizer\RotationGestureRecognizer.cpp" />
     <ClCompile Include="Classes\eplibs\GestureRecognizer\TapGestureRecognizer.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Box2DSprite.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\FrozenOle.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\IceBlock.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\LongBlock.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Meteor.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Rock.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Skull.cpp" />
     <ClCompile Include="Classes\GameObjects\GameCharacter.cpp" />
     <ClCompile Include="Classes\GameObjects\GameObject.cpp" />
     <ClCompile Include="Classes\GameObjects\SpaceCargoShip.cpp" />
     <ClCompile Include="Classes\GameObjects\Viking.cpp" />
+    <ClCompile Include="Classes\GLES-Render.cpp" />
     <ClCompile Include="Classes\PowerUps\Health.cpp" />
     <ClCompile Include="Classes\PowerUps\Mallet.cpp" />
     <ClCompile Include="Classes\Scenes\CutSceneForLevel2\PlatformScene.cpp" />
@@ -280,6 +301,7 @@
     <ClCompile Include="Classes\Scenes\Scene2\GameplayScrollingLayer.cpp" />
     <ClCompile Include="Classes\Scenes\Scene2\GameScene2.cpp" />
     <ClCompile Include="Classes\Scenes\Scene2\StaticBackgroundLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\Scene3\PuzzleLayer.cpp" />
     <ClCompile Include="Classes\Singletons\AppDelegate.cpp" />
     <ClCompile Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.cpp" />
     <ClCompile Include="Classes\Scenes\Scene1\Layers\GameplayLayer.cpp" />
@@ -289,6 +311,7 @@
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystick.cpp" />
     <ClCompile Include="Classes\JoystickClasses\SneakyJoystickSkinnedBase.cpp" />
     <ClCompile Include="Classes\Singletons\GameManager.cpp" />
+    <ClCompile Include="Classes\SimpleQueryCallback.cpp" />
     <ClCompile Include="win32\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

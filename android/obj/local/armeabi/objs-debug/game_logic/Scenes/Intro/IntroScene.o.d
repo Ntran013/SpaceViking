@@ -283,7 +283,8 @@ obj/local/armeabi/objs-debug/game_logic/Scenes/Intro/IntroScene.o: \
  jni/../../Classes/Singletons\GameManager.h \
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
- jni/../../Classes/eplibs\EPResourceManager.h
+ jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h
 
 jni/../../Classes/Scenes/Intro/IntroScene.h:
 
@@ -852,3 +853,5 @@ jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h:
 jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
+
+jni/../../Classes/eplibs\EPNotificationCenter.h:

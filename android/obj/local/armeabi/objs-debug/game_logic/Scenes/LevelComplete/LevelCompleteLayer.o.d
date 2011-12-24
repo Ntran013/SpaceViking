@@ -282,7 +282,8 @@ obj/local/armeabi/objs-debug/game_logic/Scenes/LevelComplete/LevelCompleteLayer.
  jni/../../Classes/Singletons\GameManager.h \
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
- jni/../../Classes/eplibs\EPResourceManager.h
+ jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h
 
 jni/../../Classes/Scenes/LevelComplete/LevelCompleteLayer.h:
 
@@ -849,3 +850,5 @@ jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h:
 jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
+
+jni/../../Classes/eplibs\EPNotificationCenter.h:

@@ -297,6 +297,7 @@ obj/local/armeabi/objs-debug/game_logic/Scenes/Scene1/Layers/GameplayLayer.o: \
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
  jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h \
  jni/../../Classes/GameObjects\Viking.h \
  jni/../../Classes/PowerUps\Mallet.h \
  jni/../../Classes/GameObjects\GameObject.h \
@@ -898,6 +899,8 @@ jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h:
 jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
+
+jni/../../Classes/eplibs\EPNotificationCenter.h:
 
 jni/../../Classes/GameObjects\Viking.h:
 

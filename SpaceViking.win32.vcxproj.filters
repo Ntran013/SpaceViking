@@ -171,6 +171,13 @@
     <None Include="Resources\Menus\LevelComplete\LevelCompleteDead.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="Resources\puzzle_level_bkgrnd-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\scene3atlas-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\scene3atlas-hd.plist" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\SpaceViking.rc">
@@ -325,6 +332,36 @@
     <ClInclude Include="Classes\eplibs\EPSpriteButton.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene3\PuzzleLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GLES-Render.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SimpleQueryCallback.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Box2DSprite.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Meteor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Skull.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Rock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\IceBlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\LongBlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\FrozenOle.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -460,6 +497,36 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Singletons\AppDelegate.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene3\PuzzleLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GLES-Render.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Box2DSprite.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Meteor.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Skull.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Rock.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\IceBlock.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\LongBlock.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\FrozenOle.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SimpleQueryCallback.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

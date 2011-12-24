@@ -35,6 +35,7 @@ public:
 	void addEnemy(cocos2d::ccTime deltaTime);
 	void displayLevelCleared();
 	void showLevelComplete();
+	void keyBackClicked();
 };
 
 #endif

@@ -282,6 +282,7 @@ obj/local/armeabi/objs-debug/game_logic/Singletons/GameManager.o: \
  jni/../../Classes/../../CocosDenshion/include/SimpleAudioEngine.h \
  jni/../../Classes/../../CocosDenshion/include/Export.h \
  jni/../../Classes/eplibs\EPResourceManager.h \
+ jni/../../Classes/eplibs\EPNotificationCenter.h \
  jni/../../Classes/Scenes\Scene1\GameScene.h \
  jni/../../Classes/Scenes\Scene1\/Layers\BackgroundLayer.h \
  jni/../../Classes/Scenes\Scene1\/Layers\GameplayLayer.h \
@@ -322,7 +323,68 @@ obj/local/armeabi/objs-debug/game_logic/Singletons/GameManager.o: \
  jni/../../Classes/Scenes\Scene2\/StaticBackgroundLayer.h \
  jni/../../Classes/Constants/Constants.h \
  jni/../../Classes/Scenes\CutSceneForLevel2\PlatformScene.h \
- jni/../../Classes/Scenes\CutSceneForLevel2\/PlatformScrollingLayer.h
+ jni/../../Classes/Scenes\CutSceneForLevel2\/PlatformScrollingLayer.h \
+ jni/../../Classes/Scenes\Scene3\PuzzleLayer.h \
+ jni/../../Classes/../../Box2D\Box2D.h \
+ jni/../../Classes/../../Box2D/Common/b2Settings.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/cassert \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/cmath \
+ jni/../../Classes/../../Box2D/Common/b2Draw.h \
+ jni/../../Classes/../../Box2D/Common/b2Math.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/limits \
+ jni/../../Classes/../../Box2D/Common/b2Timer.h \
+ jni/../../Classes/../../Box2D/Collision/Shapes/b2CircleShape.h \
+ jni/../../Classes/../../Box2D/Collision/Shapes/b2Shape.h \
+ jni/../../Classes/../../Box2D/Common/b2BlockAllocator.h \
+ jni/../../Classes/../../Box2D/Collision/b2Collision.h \
+ jni/../../Classes/../../Box2D/Collision/Shapes/b2EdgeShape.h \
+ jni/../../Classes/../../Box2D/Collision/Shapes/b2ChainShape.h \
+ jni/../../Classes/../../Box2D/Collision/Shapes/b2PolygonShape.h \
+ jni/../../Classes/../../Box2D/Collision/b2BroadPhase.h \
+ jni/../../Classes/../../Box2D/Collision/b2DynamicTree.h \
+ jni/../../Classes/../../Box2D/Common/b2GrowableStack.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/cstring \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/algorithm \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_algo.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_heap.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_heap.c \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_algo.c \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_tempbuf.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c \
+ jni/../../Classes/../../Box2D/Collision/b2Distance.h \
+ jni/../../Classes/../../Box2D/Collision/b2TimeOfImpact.h \
+ jni/../../Classes/../../Box2D/Dynamics/b2Body.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/memory \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_raw_storage_iter.h \
+ /cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h \
+ jni/../../Classes/../../Box2D/Dynamics/b2Fixture.h \
+ jni/../../Classes/../../Box2D/Dynamics/b2WorldCallbacks.h \
+ jni/../../Classes/../../Box2D/Dynamics/b2TimeStep.h \
+ jni/../../Classes/../../Box2D/Dynamics/b2World.h \
+ jni/../../Classes/../../Box2D/Common/b2StackAllocator.h \
+ jni/../../Classes/../../Box2D/Dynamics/b2ContactManager.h \
+ jni/../../Classes/../../Box2D/Dynamics/Contacts/b2Contact.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2DistanceJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2Joint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2FrictionJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2GearJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2WheelJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2MouseJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2PulleyJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2RopeJoint.h \
+ jni/../../Classes/../../Box2D/Dynamics/Joints/b2WeldJoint.h \
+ jni/../../Classes/GLES-Render.h jni/../../Classes/../../Box2D/Box2D.h \
+ jni/../../Classes/SimpleQueryCallback.h \
+ jni/../../Classes/GameObjects\Box2DObjects\Box2DSprite.h \
+ jni/../../Classes/GameObjects\Box2DObjects\Meteor.h \
+ jni/../../Classes/GameObjects\Box2DObjects\/Box2DSprite.h \
+ jni/../../Classes/GameObjects\Box2DObjects\Skull.h \
+ jni/../../Classes/GameObjects\Box2DObjects\Rock.h \
+ jni/../../Classes/GameObjects\Box2DObjects\IceBlock.h \
+ jni/../../Classes/GameObjects\Box2DObjects\LongBlock.h \
+ jni/../../Classes/GameObjects\Box2DObjects\FrozenOle.h
 
 jni/../../Classes/Singletons/GameManager.h:
 
@@ -888,6 +950,8 @@ jni/../../Classes/../../CocosDenshion/include/Export.h:
 
 jni/../../Classes/eplibs\EPResourceManager.h:
 
+jni/../../Classes/eplibs\EPNotificationCenter.h:
+
 jni/../../Classes/Scenes\Scene1\GameScene.h:
 
 jni/../../Classes/Scenes\Scene1\/Layers\BackgroundLayer.h:
@@ -969,3 +1033,127 @@ jni/../../Classes/Constants/Constants.h:
 jni/../../Classes/Scenes\CutSceneForLevel2\PlatformScene.h:
 
 jni/../../Classes/Scenes\CutSceneForLevel2\/PlatformScrollingLayer.h:
+
+jni/../../Classes/Scenes\Scene3\PuzzleLayer.h:
+
+jni/../../Classes/../../Box2D\Box2D.h:
+
+jni/../../Classes/../../Box2D/Common/b2Settings.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/cassert:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/cmath:
+
+jni/../../Classes/../../Box2D/Common/b2Draw.h:
+
+jni/../../Classes/../../Box2D/Common/b2Math.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/limits:
+
+jni/../../Classes/../../Box2D/Common/b2Timer.h:
+
+jni/../../Classes/../../Box2D/Collision/Shapes/b2CircleShape.h:
+
+jni/../../Classes/../../Box2D/Collision/Shapes/b2Shape.h:
+
+jni/../../Classes/../../Box2D/Common/b2BlockAllocator.h:
+
+jni/../../Classes/../../Box2D/Collision/b2Collision.h:
+
+jni/../../Classes/../../Box2D/Collision/Shapes/b2EdgeShape.h:
+
+jni/../../Classes/../../Box2D/Collision/Shapes/b2ChainShape.h:
+
+jni/../../Classes/../../Box2D/Collision/Shapes/b2PolygonShape.h:
+
+jni/../../Classes/../../Box2D/Collision/b2BroadPhase.h:
+
+jni/../../Classes/../../Box2D/Collision/b2DynamicTree.h:
+
+jni/../../Classes/../../Box2D/Common/b2GrowableStack.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/cstring:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/algorithm:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_algo.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_heap.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_heap.c:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_algo.c:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_tempbuf.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c:
+
+jni/../../Classes/../../Box2D/Collision/b2Distance.h:
+
+jni/../../Classes/../../Box2D/Collision/b2TimeOfImpact.h:
+
+jni/../../Classes/../../Box2D/Dynamics/b2Body.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/memory:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_raw_storage_iter.h:
+
+/cygdrive/c/android-ndk-r7/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h:
+
+jni/../../Classes/../../Box2D/Dynamics/b2Fixture.h:
+
+jni/../../Classes/../../Box2D/Dynamics/b2WorldCallbacks.h:
+
+jni/../../Classes/../../Box2D/Dynamics/b2TimeStep.h:
+
+jni/../../Classes/../../Box2D/Dynamics/b2World.h:
+
+jni/../../Classes/../../Box2D/Common/b2StackAllocator.h:
+
+jni/../../Classes/../../Box2D/Dynamics/b2ContactManager.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Contacts/b2Contact.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2DistanceJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2Joint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2FrictionJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2GearJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2WheelJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2MouseJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2PrismaticJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2PulleyJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2RevoluteJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2RopeJoint.h:
+
+jni/../../Classes/../../Box2D/Dynamics/Joints/b2WeldJoint.h:
+
+jni/../../Classes/GLES-Render.h:
+
+jni/../../Classes/../../Box2D/Box2D.h:
+
+jni/../../Classes/SimpleQueryCallback.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\Box2DSprite.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\Meteor.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\/Box2DSprite.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\Skull.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\Rock.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\IceBlock.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\LongBlock.h:
+
+jni/../../Classes/GameObjects\Box2DObjects\FrozenOle.h:

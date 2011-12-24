@@ -55,6 +55,8 @@ bool GameplayScrollingLayer::init()
 
 		this->schedule(schedule_selector(GameplayScrollingLayer::addEnemy), 6.0f);
 
+		this->setIsKeypadEnabled(true);
+
 		this->scheduleUpdate();
 		pRet = true;
 	}
@@ -289,4 +291,11 @@ void GameplayScrollingLayer::addEnemy(ccTime deltaTime)
 		else 		
 			this->unschedule(schedule_selector(GameplayScrollingLayer::addEnemy));	
 	}
+}
+
+void GameplayScrollingLayer::keyBackClicked()
+{
+	CCSpriteFrameCache::purgeSharedSpriteFrameCache();
+	GameManager::sharedGameManager()->setHasPlayerDied(false);
+	GameManager::sharedGameManager()->runSceneWithID(kMainMenuScene);
 }

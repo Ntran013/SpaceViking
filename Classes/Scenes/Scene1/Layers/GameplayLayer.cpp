@@ -47,6 +47,8 @@ bool GameplayLayer::init()
 		this->schedule(schedule_selector(GameplayLayer::addEnemy), 10.0f);
 		this->createObjectOfType(kEnemyTypeSpaceCargoShip, 0, ccp(screenSize.width * -0.5f, screenSize.height * 0.74f), 50);
 
+		this->setIsKeypadEnabled(true);
+
 		GameManager::sharedGameManager()->playBackgroundTrack(BACKGROUND_TRACK_OLE_AWAKES);
 	}
 	return true;
@@ -249,4 +251,11 @@ void GameplayLayer::addEnemy(ccTime deltaTime)
 		else 		
 			this->unschedule(schedule_selector(GameplayLayer::addEnemy));	
 	}
+}
+
+void GameplayLayer::keyBackClicked()
+{
+	CCSpriteFrameCache::purgeSharedSpriteFrameCache();
+	GameManager::sharedGameManager()->setHasPlayerDied(false);
+	GameManager::sharedGameManager()->runSceneWithID(kMainMenuScene);
 }
