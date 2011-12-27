@@ -8,6 +8,10 @@
 #include "Scene4UILayer.h"
 #include "GameObjects\Box2DObjects\Cart.h"
 #include "SimpleQueryCallback.h"
+#include "Box2DHelpers.h"
+
+#include "JoystickClasses\SneakyButton.h"
+#include "JoystickClasses\SneakyButtonSkinnedBase.h"
 
 class Scene4ActionLayer : public cocos2d::CCLayer
 {
@@ -19,6 +23,11 @@ protected:
 	b2MouseJoint *mouseJoint;
 	Cart *cart;
 	Scene4UILayer *uiLayer;
+	cocos2d::CCSpriteBatchNode *groundSpriteBatchNode;
+	float32 groundMaxX;
+
+	CC_SYNTHESIZE(SneakyButton *, leftButton, LeftButton);
+	CC_SYNTHESIZE(SneakyButton *, rightButton, RightButton);
 public:
 	~Scene4ActionLayer();
 	void setUpWorld();
@@ -29,11 +38,16 @@ public:
 	bool initWithScene4UILayer(Scene4UILayer *scene4UILayer);
 	void update(cocos2d::ccTime dt);
 	virtual void draw();
-	bool ccTouchBegan(cocos2d::CCTouch *touch, cocos2d::CCEvent *event);
-	void ccTouchMoved(cocos2d::CCTouch *touch, cocos2d::CCEvent *event);
-	void ccTouchEnded(cocos2d::CCTouch *touch, cocos2d::CCEvent *event);
+	void ccTouchesBegan(cocos2d::CCSet *touches, cocos2d::CCEvent *event);
 	void keyBackClicked();
 	void accelerometer(cocos2d::CCAccelerometer *accelerometer, cocos2d::CCAcceleration *acceleration);
+	void createGroundEdgesWithVerts(b2Vec2 *verts, int num, const char *spriteFrameName);
+	void createGround1();
+	void createGround2();
+	void createGround3();
+	void createBackground();
+	void createLevel();
+	void followCart();
 };
 
 #endif

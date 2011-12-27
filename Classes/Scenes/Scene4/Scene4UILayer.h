@@ -10,8 +10,8 @@ class Scene4UILayer : public cocos2d::CCLayer
 {
 protected:
 	cocos2d::CCLabelTTF *label;
-	CC_SYNTHESIZE(SneakyButton *, jumpButton, JumpButton);
-	CC_SYNTHESIZE(SneakyButton *, attackButton, AttackButton);
+	CC_SYNTHESIZE(SneakyButton *, leftButton, LeftButton);
+	CC_SYNTHESIZE(SneakyButton *, rightButton, RightButton);
 public:
 	LAYER_NODE_FUNC(Scene4UILayer);
 	bool init();

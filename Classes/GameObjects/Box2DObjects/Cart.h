@@ -19,6 +19,10 @@ public:
 	b2Body * createWheelWithSprite(Box2DSprite *sprite, b2Vec2 offset);
 	void createWheels();
 	void setMotorSpeed(float32 motorSpeed);
+	void updateStateWithDeltaTime(cocos2d::ccTime deltaTime, cocos2d::CCArray *listOfGameObjects);
+	void playJumpEffect();
+	float32 fullMass();
+	void jump();
 };
 
 #endif

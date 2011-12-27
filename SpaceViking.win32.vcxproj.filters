@@ -374,6 +374,9 @@
     <ClInclude Include="Classes\GameObjects\Box2DObjects\Cart.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Box2DHelpers.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -551,6 +554,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\GameObjects\Box2DObjects\Cart.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Box2DHelpers.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

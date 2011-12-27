@@ -46,46 +46,46 @@ bool Scene4UILayer::displayText(const char *text, SelectorProtocol *target, SEL_
 void Scene4UILayer::initButtons()
 {
 	CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
-	CCRect jumpButtonDimensions = CCRectMake(0, 0, 64.0f, 64.0f); 
+	CCRect leftButtonDimensions = CCRectMake(0, 0, 64.0f, 64.0f); 
 	CCRect attackButtonDimensions = CCRectMake(0, 0, 64.0f, 64.0f);
 
-	CCPoint jumpButtonPosition;
-	CCPoint attackButtonPosition;
+	CCPoint leftButtonPosition;
+	CCPoint rightButtonPosition;
 
-	jumpButtonPosition = ccp(screenSize.width*0.93f, screenSize.height*0.11f);
+	leftButtonPosition = ccp(screenSize.width*0.07f, screenSize.height/2);
 	// Set the attackButtonPosition to be 80 points above the jump button
 	// So that their positions are fixed and do not change because of different screen resolutions
-	attackButtonPosition = ccp(screenSize.width*0.93f, screenSize.height*0.11f + 80.0f);
+	rightButtonPosition = ccp(screenSize.width*0.93f, screenSize.height/2);
 
 	//Jump button
-	SneakyButtonSkinnedBase *jumpButtonBase = SneakyButtonSkinnedBase::node(); 
-	jumpButtonBase->setPosition(jumpButtonPosition); // 13
-	jumpButtonBase->setDefaultSprite(CCSprite::spriteWithFile("jumpUp.png")); // 14
-	jumpButtonBase->setActivatedSprite(CCSprite::spriteWithFile("jumpDown.png")); // 15
-	jumpButtonBase->setPressSprite(CCSprite::spriteWithFile("jumpDown.png")); // 16
+	SneakyButtonSkinnedBase *leftButtonBase = SneakyButtonSkinnedBase::node(); 
+	leftButtonBase->setPosition(leftButtonPosition); // 13
+	leftButtonBase->setDefaultSprite(CCSprite::spriteWithFile("jumpUp.png")); // 14
+	leftButtonBase->setActivatedSprite(CCSprite::spriteWithFile("jumpDown.png")); // 15
+	leftButtonBase->setPressSprite(CCSprite::spriteWithFile("jumpDown.png")); // 16
 	SneakyButton *aButton = new SneakyButton();
-	aButton->initWithRect(jumpButtonDimensions);
+	aButton->initWithRect(leftButtonDimensions);
 	aButton->autorelease();
 
-	jumpButtonBase->setButton(aButton); // 17
+	leftButtonBase->setButton(aButton); // 17
 	//jumpButtonBase->getButton()->retain(); // 18
-	jumpButton = jumpButtonBase->getButton();
-	jumpButton->setIsToggleable(false); // 19
-	this->addChild(jumpButtonBase); // 20
+	leftButton = leftButtonBase->getButton();
+	leftButton->setIsToggleable(false); // 19
+	this->addChild(leftButtonBase); // 20
 
 	//Attack button
-	SneakyButtonSkinnedBase *attackButtonBase = SneakyButtonSkinnedBase::node(); 
-	attackButtonBase->setPosition(attackButtonPosition); // 13
-	attackButtonBase->setDefaultSprite(CCSprite::spriteWithFile("handUp.png")); // 14
-	attackButtonBase->setActivatedSprite(CCSprite::spriteWithFile("handDown.png")); // 15
-	attackButtonBase->setPressSprite(CCSprite::spriteWithFile("handDown.png")); // 16
+	SneakyButtonSkinnedBase *rightButtonBase = SneakyButtonSkinnedBase::node(); 
+	rightButtonBase->setPosition(rightButtonPosition); // 13
+	rightButtonBase->setDefaultSprite(CCSprite::spriteWithFile("handUp.png")); // 14
+	rightButtonBase->setActivatedSprite(CCSprite::spriteWithFile("handDown.png")); // 15
+	rightButtonBase->setPressSprite(CCSprite::spriteWithFile("handDown.png")); // 16
 	SneakyButton *aButton1 = new SneakyButton();
 	aButton1->initWithRect(attackButtonDimensions);
 	aButton1->autorelease();
 
-	attackButtonBase->setButton(aButton1); // 17
+	rightButtonBase->setButton(aButton1); // 17
 	//attackButtonBase->getButton()->retain(); // 18
-	attackButton = attackButtonBase->getButton();
-	attackButton->setIsToggleable(false); // 19
-	this->addChild(attackButtonBase); // 20
+	rightButton = rightButtonBase->getButton();
+	rightButton->setIsToggleable(false); // 19
+	this->addChild(rightButtonBase); // 20
 }

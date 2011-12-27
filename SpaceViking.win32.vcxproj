@@ -197,6 +197,7 @@
     <ResourceCompile Include="win32\SpaceViking.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Box2DHelpers.h" />
     <ClInclude Include="Classes\Constants\CommonProtocols.h" />
     <ClInclude Include="Classes\Constants\Constants.h" />
     <ClInclude Include="Classes\Constants\StringSplit.h" />
@@ -262,6 +263,7 @@
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Box2DHelpers.cpp" />
     <ClCompile Include="Classes\Constants\StringSplit.cpp" />
     <ClCompile Include="Classes\EnemyObjects\EnemyRobot.cpp" />
     <ClCompile Include="Classes\EnemyObjects\PhaserBullet.cpp" />

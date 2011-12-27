@@ -27,7 +27,14 @@ void Cart::createBodyAtLocation(CCPoint location)
 	fixtureDef.friction = 0.5;
 	fixtureDef.restitution = 0.5;
 	
-	body->CreateFixture(&fixtureDef); //body->SetAngularDamping(10000000000000000);
+	body->CreateFixture(&fixtureDef); //body->SetAngularDamping(100000);
+
+	b2PolygonShape sensorShape;
+	sensorShape.SetAsBox(this->boundingBox().size.width/2/PTM_RATIO,this->boundingBox().size.height/4/PTM_RATIO, b2Vec2(0, -this->boundingBox().size.height/PTM_RATIO), 0);
+	fixtureDef.shape = &sensorShape;
+	fixtureDef.density = 0.0;
+	fixtureDef.isSensor = true;
+	body->CreateFixture(&fixtureDef);
 }
 
 bool Cart::initWithWorld(b2World *theWorld, CCPoint location)
@@ -114,3 +121,57 @@ void Cart::setMotorSpeed( float32 motorSpeed )
 	}
 }
 
+void Cart::updateStateWithDeltaTime( cocos2d::ccTime deltaTime, cocos2d::CCArray *listOfGameObjects )
+{
+	float32 minAngle = CC_DEGREES_TO_RADIANS(-20);
+	float32 maxAngle = CC_DEGREES_TO_RADIANS(20); 
+	float32 desiredAngle = this->getBody()->GetAngle();
+	if (this->getBody()->GetAngle() > maxAngle)
+		desiredAngle = maxAngle;
+	else if (this->getBody()->GetAngle() < minAngle)
+		desiredAngle = minAngle;
+
+	float32 diff = desiredAngle - this->getBody()->GetAngle();
+	if (diff != 0)
+	{
+		body->SetAngularVelocity(0);
+		float32 diff = desiredAngle - this->getBody()->GetAngle();
+		float angimp = this->getBody()->GetInertia() * diff;
+		this->getBody()->ApplyAngularImpulse(angimp * 2);
+	}
+}
+
+void Cart::playJumpEffect()
+{
+	int soundToPlay = rand() % 4;
+	if (soundToPlay == 0) 
+	{
+		PLAYSOUNDEFFECT(VIKING_JUMPING_1);
+	} 
+	else if (soundToPlay == 1) 
+	{
+		PLAYSOUNDEFFECT(VIKING_JUMPING_2);
+	} 
+	else if (soundToPlay == 2) 
+	{
+		PLAYSOUNDEFFECT(VIKING_JUMPING_3);
+	} 
+	else 
+	{
+		PLAYSOUNDEFFECT(VIKING_JUMPING_4);
+	}
+}
+
+float32 Cart::fullMass()
+{
+	return body->GetMass() + wheelLBody->GetMass() + wheelRBody->GetMass();
+}
+
+void Cart::jump()
+{
+	this->playJumpEffect();
+	b2Vec2 impulse = b2Vec2(this->fullMass()*1.0, this->fullMass()*5.0);
+	b2Vec2 impulsePoint = body->GetWorldPoint(b2Vec2(5.0/100.0, -15.0/100.0));
+	body->ApplyLinearImpulse(impulse, impulsePoint);
+
+}

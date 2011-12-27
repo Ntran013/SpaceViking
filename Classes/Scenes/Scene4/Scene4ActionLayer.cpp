@@ -19,30 +19,36 @@ void Scene4ActionLayer::setUpDebugDraw()
 
 void Scene4ActionLayer::createGround()
 {
-	float32 margin = 10.0f;
-	b2Vec2 lowerLeft = b2Vec2(margin/PTM_RATIO, margin/PTM_RATIO);
-	b2Vec2 lowerRight = b2Vec2((SCREEN_WIDTH - margin)/PTM_RATIO, margin/PTM_RATIO);
-	b2Vec2 upperRight = b2Vec2((SCREEN_WIDTH - margin)/PTM_RATIO, (SCREEN_HEIGHT - margin)/PTM_RATIO);
-	b2Vec2 upperLeft = b2Vec2(margin/PTM_RATIO, (SCREEN_HEIGHT - margin)/PTM_RATIO);
-
 	b2BodyDef groundBodyDef;
 	groundBodyDef.type = b2_staticBody;
 	groundBodyDef.position.Set(0, 0);
 	groundBody = world->CreateBody(&groundBodyDef);
+	groundMaxX = 0;
+}
+
+void Scene4ActionLayer::createGroundEdgesWithVerts(b2Vec2 *verts, int num, const char *spriteFrameName)
+{
+	CCSprite *ground = CCSprite::spriteWithSpriteFrameName(spriteFrameName);
+	ground->setScaleY(SCREEN_SIZE_PX.height/640);
+	ground->setScaleX(SCREEN_SIZE_PX.height/640);
+	ground->setPosition(ccp(groundMaxX + ground->boundingBox().size.width/2, ground->boundingBox().size.height/2));
+	groundSpriteBatchNode->addChild(ground);
 
 	b2EdgeShape groundShape;
 	b2FixtureDef groundFixtureDef;
 	groundFixtureDef.shape = &groundShape;
 	groundFixtureDef.density = 0.0;
 
-	groundShape.Set(lowerLeft, lowerRight);
-	groundBody->CreateFixture(&groundFixtureDef);
-	groundShape.Set(lowerRight, upperRight);
-	groundBody->CreateFixture(&groundFixtureDef);
-	groundShape.Set(upperRight, upperLeft);
-	groundBody->CreateFixture(&groundFixtureDef);
-	groundShape.Set(upperLeft, lowerLeft);
-	groundBody->CreateFixture(&groundFixtureDef);
+	for (int i = 0; i < num - 1; i++)
+	{
+		b2Vec2 offset = b2Vec2(groundMaxX/PTM_RATIO + ground->boundingBox().size.width/2/PTM_RATIO, ground->boundingBox().size.height/2/PTM_RATIO);
+		b2Vec2 left = verts[i] + offset;
+		b2Vec2 right = verts[i + 1] + offset;
+		groundShape.Set(left, right);
+		groundBody->CreateFixture(&groundFixtureDef);
+	}
+
+	groundMaxX += ground->boundingBox().size.width;
 }
 
 void Scene4ActionLayer::createCartAtLocation(CCPoint location)
@@ -57,7 +63,7 @@ void Scene4ActionLayer::createCartAtLocation(CCPoint location)
 
 void Scene4ActionLayer::registerWithTouchDispatcher()
 {
-	CCTouchDispatcher::sharedDispatcher()->addTargetedDelegate(this, 0, true);
+	CCTouchDispatcher::sharedDispatcher()->addStandardDelegate(this, 0);
 }
 
 bool Scene4ActionLayer::initWithScene4UILayer(Scene4UILayer *scene4UILayer)
@@ -84,8 +90,21 @@ bool Scene4ActionLayer::initWithScene4UILayer(Scene4UILayer *scene4UILayer)
 		this->createCartAtLocation(ccp(SCREEN_WIDTH/4, SCREEN_WIDTH*0.3));
 		uiLayer->displayText("Go!", NULL, NULL);
 
+		leftButton = uiLayer->getLeftButton();
+		rightButton = uiLayer->getRightButton();
+
 		this->setIsKeypadEnabled(true);
 		this->setIsAccelerometerEnabled(true);
+
+		CCTexture2D::setDefaultAlphaPixelFormat(kCCTexture2DPixelFormat_RGB5A1);
+		CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("groundAtlas-hd.plist");
+		groundSpriteBatchNode = CCSpriteBatchNode::batchNodeWithFile("groundAtlas-hd.png");
+
+		CCTexture2D::setDefaultAlphaPixelFormat(kCCTexture2DPixelFormat_Default);
+		this->addChild(groundSpriteBatchNode, -2);
+
+		this->createLevel();
+		srand(time(NULL));
 
 		pRet = true;
 	}
@@ -117,6 +136,21 @@ void Scene4ActionLayer::update(ccTime dt)
 		GameCharacter *tempChar = (GameCharacter *) object; 
 		tempChar->updateStateWithDeltaTime(dt, listOfGameObjects);
 	}
+
+	if (leftButton->getIsActive())
+	{
+		cart->setMotorSpeed((M_PI*2) * 7.0 * 1);
+		b2Vec2 impulse = b2Vec2(-1 * 1 * cart->fullMass() * 3.5, 0);
+		cart->getBody()->ApplyLinearImpulse(impulse, cart->getBody()->GetWorldCenter());
+	}
+	else if (rightButton->getIsActive())
+	{
+		cart->setMotorSpeed((M_PI*2) * 7.0 * -1);
+		b2Vec2 impulse = b2Vec2(-1 * -1 * cart->fullMass() * 3.5, 0);
+		cart->getBody()->ApplyLinearImpulse(impulse, cart->getBody()->GetWorldCenter());
+	}
+
+	this->followCart();
 }
 
 void Scene4ActionLayer::draw()
@@ -133,53 +167,15 @@ void Scene4ActionLayer::draw()
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 }
 
-bool Scene4ActionLayer::ccTouchBegan(CCTouch *touch, CCEvent *event)
+void Scene4ActionLayer::ccTouchesBegan(CCSet *touches, CCEvent *event)
 {
-	CCPoint touchLocation = touch->locationInView(touch->view());
-	touchLocation = CCDirector::sharedDirector()->convertToGL(touchLocation);
-	touchLocation = this->convertToNodeSpace(touchLocation);
-	b2Vec2 locationWorld = b2Vec2(touchLocation.x/PTM_RATIO, touchLocation.y/PTM_RATIO);
-
-	b2AABB aabb;
-	b2Vec2 delta = b2Vec2(1.0/PTM_RATIO, 1.0/PTM_RATIO);
-	aabb.lowerBound = locationWorld - delta;
-	aabb.upperBound = locationWorld + delta;
-	SimpleQueryCallback callback(locationWorld);
-	world->QueryAABB(&callback, aabb);
-
-	if (callback.fixtureFound)
+	CCTouch *touch = (CCTouch *) touches->anyObject();
+	if (touch)
 	{
-		b2Body *body = callback.fixtureFound->GetBody();
-		b2MouseJointDef mouseJointDef;
-		mouseJointDef.bodyA = groundBody;
-		mouseJointDef.bodyB = body;
-		mouseJointDef.target = locationWorld;
-		mouseJointDef.maxForce = 50 * body->GetMass();
-		mouseJointDef.collideConnected = true;
-		mouseJoint = (b2MouseJoint *) world->CreateJoint(&mouseJointDef);
-		body->SetAwake(true);
-		return true;
-	}
-	return true;
-}
-
-void Scene4ActionLayer::ccTouchMoved(CCTouch *touch, CCEvent *event)
-{
-	CCPoint touchLocation = touch->locationInView(touch->view());
-	touchLocation = CCDirector::sharedDirector()->convertToGL(touchLocation);
-	touchLocation = this->convertToNodeSpace(touchLocation);
-	b2Vec2 locationWorld = b2Vec2(touchLocation.x/PTM_RATIO, touchLocation.y/PTM_RATIO);
-
-	if (mouseJoint)
-		mouseJoint->SetTarget(locationWorld);
-}
-
-void Scene4ActionLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)
-{
-	if (mouseJoint)
-	{
-		world->DestroyJoint(mouseJoint);
-		mouseJoint = NULL;
+		if (isBodyCollidingWithObjectType(cart->getBody(), kGroundType) || isBodyCollidingWithObjectType(groundBody, kCartType)) 
+		{
+			cart->jump();
+		}
 	}
 }
 
@@ -207,5 +203,118 @@ void Scene4ActionLayer::accelerometer(CCAccelerometer *accelerometer, CCAccelera
 
 	float32 motorSpeed = (M_PI*2) * maxRevsPerSecond * accelerationFraction;
 	cart->setMotorSpeed(motorSpeed);
+
+	if (abs(cart->getBody()->GetLinearVelocity().x) < 5.0) 
+	{
+	b2Vec2 impulse = b2Vec2(-1 * -1 * cart->fullMass() * 2, 0);
+	cart->getBody()->ApplyLinearImpulse(impulse, cart->getBody()->GetWorldCenter());
+	}
+}
+
+void Scene4ActionLayer::createGround1()
+{
+	int num = 23;
+	b2Vec2 verts[] = {
+		b2Vec2(-1022.5f / PTM_RATIO * SCREEN_HEIGHT/640, -20.2f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-966.6f / PTM_RATIO * SCREEN_HEIGHT/640, -18.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-893.8f / PTM_RATIO * SCREEN_HEIGHT/640, -10.3f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-888.8f / PTM_RATIO * SCREEN_HEIGHT/640, 1.1f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-804.0f / PTM_RATIO * SCREEN_HEIGHT/640, 10.3f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-799.7f / PTM_RATIO * SCREEN_HEIGHT/640, 5.3f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-795.5f / PTM_RATIO * SCREEN_HEIGHT/640, 8.1f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-755.2f / PTM_RATIO * SCREEN_HEIGHT/640, -1.8f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-755.2f / PTM_RATIO * SCREEN_HEIGHT/640, -9.5f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-632.2f / PTM_RATIO * SCREEN_HEIGHT/640, 5.3f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-603.9f / PTM_RATIO * SCREEN_HEIGHT/640, 17.3f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-536.0f / PTM_RATIO * SCREEN_HEIGHT/640, 18.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-518.3f / PTM_RATIO * SCREEN_HEIGHT/640, 28.6f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-282.1f / PTM_RATIO * SCREEN_HEIGHT/640, 13.1f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-258.1f / PTM_RATIO * SCREEN_HEIGHT/640, 27.2f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-135.1f / PTM_RATIO * SCREEN_HEIGHT/640, 18.7f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(9.2f / PTM_RATIO * SCREEN_HEIGHT/640, -19.4f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(483.0f / PTM_RATIO * SCREEN_HEIGHT/640, -18.7f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(578.4f / PTM_RATIO * SCREEN_HEIGHT/640, 11.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(733.3f / PTM_RATIO * SCREEN_HEIGHT/640, -7.4f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(827.3f / PTM_RATIO * SCREEN_HEIGHT/640, -1.1f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(1006.9f / PTM_RATIO * SCREEN_HEIGHT/640, -20.2f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(1023.2f / PTM_RATIO * SCREEN_HEIGHT/640, -20.2f / PTM_RATIO * SCREEN_HEIGHT/640)
+	};
+	this->createGroundEdgesWithVerts(verts, num, "ground1.png");
+}
+
+void Scene4ActionLayer::createGround2()
+{
+	int num = 24;
+	b2Vec2 verts[] = {
+		b2Vec2(-1022.0f / PTM_RATIO * SCREEN_HEIGHT/640, -20.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-963.0f / PTM_RATIO * SCREEN_HEIGHT/640, -23.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-902.0f / PTM_RATIO * SCREEN_HEIGHT/640, -4.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-762.0f / PTM_RATIO * SCREEN_HEIGHT/640, -7.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-674.0f / PTM_RATIO * SCREEN_HEIGHT/640, 26.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-435.0f / PTM_RATIO * SCREEN_HEIGHT/640, 22.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-258.0f / PTM_RATIO * SCREEN_HEIGHT/640, -1.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-242.0f / PTM_RATIO * SCREEN_HEIGHT/640, 19.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-170.0f / PTM_RATIO * SCREEN_HEIGHT/640, 43.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(-58.0f / PTM_RATIO * SCREEN_HEIGHT/640, 45.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(98.0f / PTM_RATIO * SCREEN_HEIGHT/640, -20.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(472.0f / PTM_RATIO * SCREEN_HEIGHT/640, -20.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(471.0f / PTM_RATIO * SCREEN_HEIGHT/640, -7.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(503.0f / PTM_RATIO * SCREEN_HEIGHT/640, 4.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(614.0f / PTM_RATIO * SCREEN_HEIGHT/640, 66.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(679.0f / PTM_RATIO * SCREEN_HEIGHT/640, 59.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(681.0f / PTM_RATIO * SCREEN_HEIGHT/640, 46.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(735.0f / PTM_RATIO * SCREEN_HEIGHT/640, 31.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(822.0f / PTM_RATIO * SCREEN_HEIGHT/640, 24.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(827.0f / PTM_RATIO * SCREEN_HEIGHT/640, 12.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(934.0f / PTM_RATIO * SCREEN_HEIGHT/640, 14.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(975.0f / PTM_RATIO * SCREEN_HEIGHT/640, 1.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(982.0f / PTM_RATIO * SCREEN_HEIGHT/640, -19.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(1023.0f / PTM_RATIO * SCREEN_HEIGHT/640, -20.0f / PTM_RATIO * SCREEN_HEIGHT/640)
+	};
+	this->createGroundEdgesWithVerts(verts, num, "ground2.png");
+}
+
+void Scene4ActionLayer::createGround3()
+{
+	int num = 2;
+	b2Vec2 verts[] = {
+		b2Vec2(-1021.0f / PTM_RATIO * SCREEN_HEIGHT/640, -22.0f / PTM_RATIO * SCREEN_HEIGHT/640),
+		b2Vec2(1021.0f / PTM_RATIO * SCREEN_HEIGHT/640, -20.0f / PTM_RATIO * SCREEN_HEIGHT/640)
+	};
+	this->createGroundEdgesWithVerts(verts, num, "ground3.png");
+}
+
+void Scene4ActionLayer::createBackground()
+{
+	CCParallaxNode *parallax = CCParallaxNode::node();
+	CCTexture2D::setDefaultAlphaPixelFormat(kCCTexture2DPixelFormat_RGB565);
+	CCSprite *background;
+	background = CCSprite::spriteWithFile("scene_4_background-hd.png");
+	background->setScaleY(SCREEN_SIZE_PX.height/640);
+	background->setScaleX(SCREEN_SIZE_PX.width/960);
+	background->setAnchorPoint(ccp(0,0));
+	CCTexture2D::setDefaultAlphaPixelFormat(kCCTexture2DPixelFormat_Default);
+	parallax->addChild(background, -10, ccp(0.05f, 0.05f), ccp(0,0));
+	this->addChild(parallax, -10);
+}
+
+void Scene4ActionLayer::createLevel()
+{
+	this->createBackground();
+	this->createGround3();
+	this->createGround1();
+	this->createGround3();
+	this->createGround2();
+	this->createGround3();
+}
+
+void Scene4ActionLayer::followCart()
+{
+	float fixedPosition = SCREEN_WIDTH/4;
+	float newX = fixedPosition - cart->getPosition().x;
+	newX = min(newX, fixedPosition);
+	newX = max(newX, -groundMaxX-fixedPosition);
+	CCPoint newPos = ccp(newX, this->getPosition().y);
+	this->setPosition(newPos);
 }
 

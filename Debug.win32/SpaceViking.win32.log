@@ -1,11 +1,36 @@
-﻿Build started 12/27/2011 7:00:42 PM.
+﻿Build started 12/28/2011 12:25:01 AM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /I..\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Scene2\GameplayScrollingLayer.cpp
-         GameplayScrollingLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\scenes\scene2\gameplayscrollinglayer.cpp(29): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /I..\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\GameObjects\Box2DObjects\Cart.cpp
+         Cart.cpp
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(10): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(10): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(19): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(19): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(20): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(20): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(21): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(21): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(33): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(33): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(33): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(49): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(70): warning C4244: '=' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(75): warning C4305: '=' : truncation from 'double' to 'float32'
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(88): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(88): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(94): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(94): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(119): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(120): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(173): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(173): warning C4244: 'argument' : conversion from 'double' to 'float32', possible loss of data
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(174): warning C4305: 'argument' : truncation from 'double' to 'float32'
+     1>c:\cocos2d-x\spaceviking\classes\gameobjects\box2dobjects\cart.cpp(174): warning C4305: 'argument' : truncation from 'double' to 'float32'
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -13,6 +38,7 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\cocos2d-x\Debug.win32\SpaceViking.win32.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\cocos2d-x\Debug.win32\\" libcocos2d.lib libgles_cm.lib libCocosDenshion.lib libBox2d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug.win32\SpaceViking.win32.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\cocos2d-x\Debug.win32\SpaceViking.win32.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\cocos2d-x\Debug.win32\SpaceViking.win32.lib" /MACHINE:X86 Debug.win32\SpaceViking.res
          Debug.win32\SpaceViking.win32.exe.embed.manifest.res
+         Debug.win32\Box2DHelpers.obj
          Debug.win32\StringSplit.obj
          Debug.win32\EnemyRobot.obj
          Debug.win32\PhaserBullet.obj
@@ -229,4 +255,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.95
+Time Elapsed 00:00:06.06
