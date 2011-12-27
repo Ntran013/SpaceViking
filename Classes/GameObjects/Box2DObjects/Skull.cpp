@@ -35,8 +35,8 @@ void Skull::changeState( CharacterStates newState )
 			PLAYSOUNDEFFECT(PUZZLE_SKULL);
 			body->GetWorld()->DestroyBody(body);
 			body = NULL;
-			CCScaleTo *growAction = CCScaleTo::actionWithDuration(0.1, 1.2);
-			CCScaleTo *shrinkAction = CCScaleTo::actionWithDuration(0.1, 0.1);
+			CCScaleTo *growAction = CCScaleBy::actionWithDuration(0.1, 1.5);
+			CCScaleTo *shrinkAction = CCScaleBy::actionWithDuration(0.1, 0.1);
 			CCCallFuncN *doneAction = CCCallFuncN::actionWithTarget(this, callfuncN_selector(Skull::shrinkDone));
 			CCFiniteTimeAction *sequence = CCSequence::actions(growAction, shrinkAction, doneAction, NULL);
 			this->runAction(sequence);

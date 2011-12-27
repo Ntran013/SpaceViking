@@ -1,14 +1,11 @@
-﻿Build started 12/25/2011 12:57:33 AM.
+﻿Build started 12/27/2011 7:00:42 PM.
      1>Project "C:\cocos2d-x\SpaceViking\SpaceViking.win32.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug.win32\SpaceViking.win32.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /I..\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Scene1\Layers\GameplayLayer.cpp Classes\Scenes\Scene2\GameplayScrollingLayer.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /I.\win32 /I.\Classes /I..\cocos2dx /I..\cocos2dx\include /I..\cocos2dx\platform /I..\cocos2dx\platform\third_party\win32\OGLES /I..\CocosDenshion\Include /I..\cocos2dx\platform\third_party\win32\pthread /I..\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt Classes\Scenes\Scene2\GameplayScrollingLayer.cpp
          GameplayScrollingLayer.cpp
      1>c:\cocos2d-x\spaceviking\classes\scenes\scene2\gameplayscrollinglayer.cpp(29): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         GameplayLayer.cpp
-     1>c:\cocos2d-x\spaceviking\classes\scenes\scene1\layers\gameplaylayer.cpp(12): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Generating Code...
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -60,6 +57,10 @@
          Debug.win32\GameScene2.obj
          Debug.win32\StaticBackgroundLayer.obj
          Debug.win32\PuzzleLayer.obj
+         Debug.win32\Cart.obj
+         Debug.win32\Scene4.obj
+         Debug.win32\Scene4ActionLayer.obj
+         Debug.win32\Scene4UILayer.obj
          Debug.win32\AppDelegate.obj
          Debug.win32\BackgroundLayer.obj
          Debug.win32\GameplayLayer.obj
@@ -86,6 +87,8 @@
          .\Resources\CloseNormal.png
          .\Resources\CloseSelected.png
          .\Resources\dpadDown.png
+         .\Resources\groundAtlas-hd.plist
+         .\Resources\groundAtlas-hd.png
          .\Resources\handDown.png
          .\Resources\handUp.png
          .\Resources\HelloWorld.png
@@ -98,6 +101,9 @@
          .\Resources\scene1atlasiPhone-hd.png
          .\Resources\scene3atlas-hd.plist
          .\Resources\scene3atlas-hd.png
+         .\Resources\scene4atlas-hd.plist
+         .\Resources\scene4atlas-hd.png
+         .\Resources\scene_4_background-hd.png
          .\Resources\Fonts\SpaceVikingFont.fnt
          .\Resources\Fonts\SpaceVikingFont.png
          .\Resources\Fonts\VikingSpeechFont64.fnt
@@ -130,7 +136,9 @@
          .\Resources\ParallaxBackgrounds\ScrollingCloudsBackgrounds\tiles_grad_bkgrndiPhone-hd.png
          .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlasiPhone-hd.plist
          .\Resources\ParallaxBackgrounds\ScrollingCloudsTextureAtlases\ScrollingCloudsTextureAtlasiPhone-hd.png
+         .\Resources\Plists\Digger.plist
          .\Resources\Plists\EnemyRobot.plist
+         .\Resources\Plists\fire.plist
          .\Resources\Plists\Health.plist
          .\Resources\Plists\Mallet.plist
          .\Resources\Plists\PhaserBullet.plist
@@ -213,7 +221,7 @@
          .\Resources\TileMaps\Level2TileMapiPhone-hd.tmx
          .\Resources\TileMaps\Level2TileMapiPhone.tmx
          .\Resources\TileMaps\TilesTextureAtlas.png
-         133 File(s) copied
+         140 File(s) copied
        FinalizeBuildStatus:
          Deleting file "Debug.win32\SpaceViking.win32.unsuccessfulbuild".
          Touching "Debug.win32\SpaceViking.win32.lastbuildstate".
@@ -221,4 +229,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.97
+Time Elapsed 00:00:04.95

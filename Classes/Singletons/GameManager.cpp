@@ -7,6 +7,7 @@
 #include "Scenes\Scene2\GameScene2.h"
 #include "Scenes\CutSceneForLevel2\PlatformScene.h"
 #include "Scenes\Scene3\PuzzleLayer.h"
+#include "Scenes\Scene4\Scene4.h"
 
 using namespace cocos2d;
 using namespace std;
@@ -99,7 +100,7 @@ void GameManager::runSceneWithID(SceneTypes sceneID)
 		sceneToRun = PuzzleLayer::scene();
 		break;
 	case kGameLevel4:
-		// Placeholder for Level 4
+		sceneToRun = Scene4::node();
 		break;
 	case kGameLevel5:
 		// Placeholder for Level 5

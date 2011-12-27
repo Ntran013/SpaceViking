@@ -109,10 +109,17 @@ void GameplayScrollingLayer::addScrollingBackgroundWithParallax()
 	CCSprite *BGLayer1;
 	CCSprite *BGLayer2;
 	CCSprite *BGLayer3;
-
+	// IMPORTANT: instead of scaling the whole parallax node, scale individual layers to prevent backward scrolling on
+	// higher resolutions
 	BGLayer1 = CCSprite::spriteWithFile("ParallaxBackgrounds/chap9_scrolling4iPhone-hd.png");
+	BGLayer1->setScaleY(SCREEN_SIZE_PX.height/640);
+	BGLayer1->setScaleX(SCREEN_SIZE_PX.width/960);
 	BGLayer2 = CCSprite::spriteWithFile("ParallaxBackgrounds/chap9_scrolling2iPhone-hd.png");
+	BGLayer2->setScaleY(SCREEN_SIZE_PX.height/640);
+	BGLayer2->setScaleX(SCREEN_SIZE_PX.width/960);
 	BGLayer3 = CCSprite::spriteWithFile("ParallaxBackgrounds/chap9_scrolling3iPhone-hd.png");
+	BGLayer3->setScaleY(SCREEN_SIZE_PX.height/640);
+	BGLayer3->setScaleX(SCREEN_SIZE_PX.width/960);
 
 	parallaxNode = CCParallaxNode::node();
 	parallaxNode->setPosition(ccp(levelSize.width/2.0f, SCREEN_HEIGHT/2.0f));
@@ -126,8 +133,8 @@ void GameplayScrollingLayer::addScrollingBackgroundWithParallax()
 	xOffset = (levelSize.width/2) * 0.8f;
 	parallaxNode->addChild(BGLayer3, 30, ccp(0.7f, 1.0f), ccp(xOffset, 0));
 
-	parallaxNode->setScaleY(SCREEN_SIZE_PX.height/640);
-	parallaxNode->setScaleX(SCREEN_SIZE_PX.width/960);
+	//parallaxNode->setScaleY(SCREEN_SIZE_PX.height/640);
+	//parallaxNode->setScaleX(SCREEN_SIZE_PX.width/960);
 
 	this->addChild(parallaxNode, 10);
 }
@@ -163,6 +170,8 @@ void GameplayScrollingLayer::addScrollingBackgroundWithTileMapInsideParallax()
 	groundLayer->setAnchorPoint(ccp(0.5f, 0.5f));
 	parallaxNode->addChild(groundLayer, 30, ccp(1,1), ccp(xOffset,0));
 	groundLayer->release();
+	groundLayer->setScaleY(SCREEN_SIZE_PX.height/640);
+	groundLayer->setScaleX(SCREEN_SIZE_PX.width/960);
 
 	xOffset = (levelSize.width / 2) * 0.8f;
 	rockColumnsLayer->retain();
@@ -170,6 +179,8 @@ void GameplayScrollingLayer::addScrollingBackgroundWithTileMapInsideParallax()
 	rockColumnsLayer->setAnchorPoint(ccp(0.5f, 0.5f));
 	parallaxNode->addChild(rockColumnsLayer, 20, ccp(0.2,1), ccp(xOffset,0));
 	rockColumnsLayer->release();
+	rockColumnsLayer->setScaleY(SCREEN_SIZE_PX.height/640);
+	rockColumnsLayer->setScaleX(SCREEN_SIZE_PX.width/960);
 
 	xOffset = (levelSize.width / 2) * 0.3f;
 	rockBoulderLayer->retain();
@@ -177,9 +188,11 @@ void GameplayScrollingLayer::addScrollingBackgroundWithTileMapInsideParallax()
 	rockBoulderLayer->setAnchorPoint(ccp(0.5f, 0.5f));
 	parallaxNode->addChild(rockBoulderLayer, 30, ccp(0.7,1), ccp(xOffset,0));
 	rockBoulderLayer->release();
+	rockBoulderLayer->setScaleY(SCREEN_SIZE_PX.height/640);
+	rockBoulderLayer->setScaleX(SCREEN_SIZE_PX.width/960);
 
-	parallaxNode->setScaleY(SCREEN_SIZE_PX.height/640);
-	parallaxNode->setScaleX(SCREEN_SIZE_PX.width/960);
+	//parallaxNode->setScaleY(SCREEN_SIZE_PX.height/640);
+	//parallaxNode->setScaleX(SCREEN_SIZE_PX.width/960);
 
 	this->addChild(parallaxNode, 1);
 }

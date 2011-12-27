@@ -85,7 +85,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     // run
     //pDirector->runWithScene(pScene);
 
-	GameManager::sharedGameManager()->runSceneWithID(kMainMenuScene);
+	GameManager::sharedGameManager()->runSceneWithID(kGameLevel4);
     return true;
 }
 

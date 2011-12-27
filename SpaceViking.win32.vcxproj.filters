@@ -362,6 +362,18 @@
     <ClInclude Include="Classes\GameObjects\Box2DObjects\FrozenOle.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene4\Scene4UILayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene4\Scene4ActionLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\Scene4\Scene4.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Cart.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -527,6 +539,18 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\SimpleQueryCallback.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene4\Scene4UILayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene4\Scene4ActionLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\Scene4\Scene4.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Cart.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

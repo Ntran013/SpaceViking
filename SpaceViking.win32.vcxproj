@@ -244,6 +244,10 @@
     <ClInclude Include="Classes\Scenes\Scene2\GameScene2.h" />
     <ClInclude Include="Classes\Scenes\Scene2\StaticBackgroundLayer.h" />
     <ClInclude Include="Classes\Scenes\Scene3\PuzzleLayer.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Cart.h" />
+    <ClInclude Include="Classes\Scenes\Scene4\Scene4.h" />
+    <ClInclude Include="Classes\Scenes\Scene4\Scene4ActionLayer.h" />
+    <ClInclude Include="Classes\Scenes\Scene4\Scene4UILayer.h" />
     <ClInclude Include="Classes\Singletons\AppDelegate.h" />
     <ClInclude Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.h" />
     <ClInclude Include="Classes\Scenes\Scene1\Layers\GameplayLayer.h" />
@@ -302,6 +306,10 @@
     <ClCompile Include="Classes\Scenes\Scene2\GameScene2.cpp" />
     <ClCompile Include="Classes\Scenes\Scene2\StaticBackgroundLayer.cpp" />
     <ClCompile Include="Classes\Scenes\Scene3\PuzzleLayer.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Cart.cpp" />
+    <ClCompile Include="Classes\Scenes\Scene4\Scene4.cpp" />
+    <ClCompile Include="Classes\Scenes\Scene4\Scene4ActionLayer.cpp" />
+    <ClCompile Include="Classes\Scenes\Scene4\Scene4UILayer.cpp" />
     <ClCompile Include="Classes\Singletons\AppDelegate.cpp" />
     <ClCompile Include="Classes\Scenes\Scene1\Layers\BackgroundLayer.cpp" />
     <ClCompile Include="Classes\Scenes\Scene1\Layers\GameplayLayer.cpp" />

@@ -423,7 +423,7 @@ void PuzzleLayer::createObjectAtLocation(GameObjectType type, cocos2d::CCPoint l
 
 void PuzzleLayer::createSensor()
 {
-	CCSize sensorSize = CCSizeMake(SCREEN_WIDTH/9.6, SCREEN_WIDTH/12.8);
+	CCSize sensorSize = CCSizeMake(SCREEN_HEIGHT/6.4, SCREEN_HEIGHT/12.8);
 
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_staticBody;
