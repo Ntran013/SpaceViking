@@ -15,4 +15,3 @@ bool MainMenuScene::init()
 
 	return pRet;
 }
-

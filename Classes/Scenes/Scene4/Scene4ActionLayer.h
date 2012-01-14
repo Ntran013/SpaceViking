@@ -9,6 +9,8 @@
 #include "GameObjects\Box2DObjects\Cart.h"
 #include "SimpleQueryCallback.h"
 #include "Box2DHelpers.h"
+#include "GameObjects\Box2DObjects\Spikes.h"
+#include "GameObjects\Box2DObjects\Digger.h"
 
 #include "JoystickClasses\SneakyButton.h"
 #include "JoystickClasses\SneakyButtonSkinnedBase.h"
@@ -25,6 +27,12 @@ protected:
 	Scene4UILayer *uiLayer;
 	cocos2d::CCSpriteBatchNode *groundSpriteBatchNode;
 	float32 groundMaxX;
+	b2Joint * lastBridgeStartJoint;
+	b2Joint * lastBridgeEndJoint;
+
+	Digger *digger;
+	bool isGameOver;
+	b2Body *offscreenSensorBody;
 
 	CC_SYNTHESIZE(SneakyButton *, leftButton, LeftButton);
 	CC_SYNTHESIZE(SneakyButton *, rightButton, RightButton);
@@ -40,14 +48,19 @@ public:
 	virtual void draw();
 	void ccTouchesBegan(cocos2d::CCSet *touches, cocos2d::CCEvent *event);
 	void keyBackClicked();
-	void accelerometer(cocos2d::CCAccelerometer *accelerometer, cocos2d::CCAcceleration *acceleration);
+	void didAccelerate(cocos2d::CCAcceleration *acceleration);
 	void createGroundEdgesWithVerts(b2Vec2 *verts, int num, const char *spriteFrameName);
 	void createGround1();
 	void createGround2();
 	void createGround3();
 	void createBackground();
+	void createBridge();
 	void createLevel();
 	void followCart();
+	void createSpikesWithOffset(int offset);
+	void createDigger();
+	void createOffscreenSensorBody();
+	void gameOver(cocos2d::CCNode *pSender);
 };
 
 #endif

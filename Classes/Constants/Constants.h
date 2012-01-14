@@ -11,12 +11,14 @@
 #define kVikingMalletDamage 40
 #define kRadarDishTagValue 10
 
-// Screen size marcros
+// Screen size macros
 #define SCREEN_SIZE cocos2d::CCDirector::sharedDirector()->getWinSize()
 #define SCREEN_WIDTH cocos2d::CCDirector::sharedDirector()->getWinSize().width
 #define SCREEN_HEIGHT cocos2d::CCDirector::sharedDirector()->getWinSize().height
 
 #define SCREEN_SIZE_PX cocos2d::CCDirector::sharedDirector()->getWinSizeInPixels()
+#define SCREEN_WIDTH_PX cocos2d::CCDirector::sharedDirector()->getWinSizeInPixels().width
+#define SCREEN_HEIGHT_PX cocos2d::CCDirector::sharedDirector()->getWinSizeInPixels().height
 
 // SCreen Resolutions for AppDelegate
 #define WVGA 800,480

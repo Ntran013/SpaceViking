@@ -197,7 +197,7 @@
     <ResourceCompile Include="win32\SpaceViking.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Box2DHelpers.h" />
+    <ClInclude Include="Classes\Box2DHelpers.h" />
     <ClInclude Include="Classes\Constants\CommonProtocols.h" />
     <ClInclude Include="Classes\Constants\Constants.h" />
     <ClInclude Include="Classes\Constants\StringSplit.h" />
@@ -217,12 +217,14 @@
     <ClInclude Include="Classes\eplibs\GestureRecognizer\RotationGestureRecognizer.h" />
     <ClInclude Include="Classes\eplibs\GestureRecognizer\TapGestureRecognizer.h" />
     <ClInclude Include="Classes\GameObjects\Box2DObjects\Box2DSprite.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Digger.h" />
     <ClInclude Include="Classes\GameObjects\Box2DObjects\FrozenOle.h" />
     <ClInclude Include="Classes\GameObjects\Box2DObjects\IceBlock.h" />
     <ClInclude Include="Classes\GameObjects\Box2DObjects\LongBlock.h" />
     <ClInclude Include="Classes\GameObjects\Box2DObjects\Meteor.h" />
     <ClInclude Include="Classes\GameObjects\Box2DObjects\Rock.h" />
     <ClInclude Include="Classes\GameObjects\Box2DObjects\Skull.h" />
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Spikes.h" />
     <ClInclude Include="Classes\GameObjects\GameCharacter.h" />
     <ClInclude Include="Classes\GameObjects\GameObject.h" />
     <ClInclude Include="Classes\GameObjects\SpaceCargoShip.h" />
@@ -263,7 +265,7 @@
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Box2DHelpers.cpp" />
+    <ClCompile Include="Classes\Box2DHelpers.cpp" />
     <ClCompile Include="Classes\Constants\StringSplit.cpp" />
     <ClCompile Include="Classes\EnemyObjects\EnemyRobot.cpp" />
     <ClCompile Include="Classes\EnemyObjects\PhaserBullet.cpp" />
@@ -280,12 +282,14 @@
     <ClCompile Include="Classes\eplibs\GestureRecognizer\RotationGestureRecognizer.cpp" />
     <ClCompile Include="Classes\eplibs\GestureRecognizer\TapGestureRecognizer.cpp" />
     <ClCompile Include="Classes\GameObjects\Box2DObjects\Box2DSprite.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Digger.cpp" />
     <ClCompile Include="Classes\GameObjects\Box2DObjects\FrozenOle.cpp" />
     <ClCompile Include="Classes\GameObjects\Box2DObjects\IceBlock.cpp" />
     <ClCompile Include="Classes\GameObjects\Box2DObjects\LongBlock.cpp" />
     <ClCompile Include="Classes\GameObjects\Box2DObjects\Meteor.cpp" />
     <ClCompile Include="Classes\GameObjects\Box2DObjects\Rock.cpp" />
     <ClCompile Include="Classes\GameObjects\Box2DObjects\Skull.cpp" />
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Spikes.cpp" />
     <ClCompile Include="Classes\GameObjects\GameCharacter.cpp" />
     <ClCompile Include="Classes\GameObjects\GameObject.cpp" />
     <ClCompile Include="Classes\GameObjects\SpaceCargoShip.cpp" />

@@ -6,6 +6,7 @@ LOCAL_SRC_FILES := Singletons/AppDelegate.cpp \
 Singletons/GameManager.cpp \
 GLES-Render.cpp \
 SimpleQueryCallback.cpp \
+Box2DHelpers.cpp \
 Scenes/Scene1/Layers/GameplayLayer.cpp \
 Scenes/Scene1/Layers/BackgroundLayer.cpp \
 Scenes/Scene1/GameScene.cpp \
@@ -16,6 +17,9 @@ GameObjects/GameObject.cpp \
 GameObjects/Viking.cpp \
 GameObjects/SpaceCargoShip.cpp \
 GameObjects/Box2DObjects/Box2DSprite.cpp \
+GameObjects/Box2DObjects/Cart.cpp \
+GameObjects/Box2DObjects/Spikes.cpp \
+GameObjects/Box2DObjects/Digger.cpp \
 GameObjects/Box2DObjects/FrozenOle.cpp \
 GameObjects/Box2DObjects/IceBlock.cpp \
 GameObjects/Box2DObjects/LongBlock.cpp \
@@ -41,6 +45,9 @@ Scenes/Scene2/StaticBackgroundLayer.cpp \
 Scenes/CutSceneForLevel2/PlatformScene.cpp \
 Scenes/CutSceneForLevel2/PlatformScrollingLayer.cpp \
 Scenes/Scene3/PuzzleLayer.cpp \
+Scenes/Scene4/Scene4.cpp \
+Scenes/Scene4/Scene4ActionLayer.cpp \
+Scenes/Scene4/Scene4UILayer.cpp \
 JoystickClasses/SneakyButton.cpp \
 JoystickClasses/SneakyJoystick.cpp \
 JoystickClasses/SneakyButtonSkinnedBase.cpp \

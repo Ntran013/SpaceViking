@@ -24,27 +24,27 @@ void MainMenuLayer::playScene(CCObject *pSender)
 	if (GameManager::sharedGameManager()->getHasFinishedLoading() == true)
 	{
 		CCMenuItemFont * itemPassedIn = (CCMenuItemFont *) pSender;
-		if (itemPassedIn->getTag() == 1) 
+		if (itemPassedIn->getTag() == 1)
 		{
 			CCLOG("Tag 1 found, Scene 1");
 			GameManager::sharedGameManager()->runSceneWithID(kIntroScene);
-		} 
-		else if (itemPassedIn->getTag() == 2) 
+		}
+		else if (itemPassedIn->getTag() == 2)
 		{
 			CCLOG("Tag 2 found, Scene 2");
 			GameManager::sharedGameManager()->runSceneWithID(kCutSceneForLevel2);
 		}
-		else if (itemPassedIn->getTag() == 3) 
+		else if (itemPassedIn->getTag() == 3)
 		{
 			CCLOG("Tag 3 found, Scene 3");
 			GameManager::sharedGameManager()->runSceneWithID(kGameLevel3);
 		}
-		else if (itemPassedIn->getTag() == 4) 
+		else if (itemPassedIn->getTag() == 4)
 		{
 			CCLOG("Tag 4 found, Scene 4");
 			GameManager::sharedGameManager()->runSceneWithID(kGameLevel4);
 		}
-		else if (itemPassedIn->getTag() == 5) 
+		else if (itemPassedIn->getTag() == 5)
 		{
 			CCLOG("Tag 5 found, Scene 5");
 			GameManager::sharedGameManager()->runSceneWithID(kGameLevel5);
@@ -146,7 +146,7 @@ void MainMenuLayer::loadResourcesAync()
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling4iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling2iPhone-hd",false);
 		EPResourceManager::sharedResourceManager()->addPngResourceAsync("ParallaxBackgrounds/chap9_scrolling3iPhone-hd",false);
-		EPResourceManager::sharedResourceManager()->loadResourceAsync();    
+		EPResourceManager::sharedResourceManager()->loadResourceAsync();
 	}
 }
 

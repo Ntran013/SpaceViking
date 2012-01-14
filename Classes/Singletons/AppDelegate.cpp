@@ -28,7 +28,7 @@ bool AppDelegate::initInstance()
         // The HelloWorld is designed as HVGA.
         CCEGLView * pMainWnd = new CCEGLView();
         CC_BREAK_IF(! pMainWnd
-            || ! pMainWnd->Create(TEXT("SpaceViking"), WVGA));
+            || ! pMainWnd->Create(TEXT("SpaceViking"), GALAXYNEXUS));
 #endif  // CC_PLATFORM_WIN32
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
@@ -85,8 +85,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     // run
     //pDirector->runWithScene(pScene);
 
-	GameManager::sharedGameManager()->runSceneWithID(kGameLevel4);
-    return true;
+	GameManager::sharedGameManager()->runSceneWithID(kMainMenuScene);
+	return true;
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too

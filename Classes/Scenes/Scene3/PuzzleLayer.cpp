@@ -15,7 +15,7 @@ CCScene * PuzzleLayer::scene()
 bool PuzzleLayer::init()
 {
 	bool pRet = false;
-	
+
 	if(CCLayer::init())
 	{
 		this->setUpWorld();
@@ -225,7 +225,7 @@ void PuzzleLayer::update( cocos2d::ccTime dt )
 		{
 			Box2DSprite *sprite = (Box2DSprite *) b->GetUserData();
 			sprite->setPosition(ccp(b->GetPosition().x * PTM_RATIO, b->GetPosition().y * PTM_RATIO));
-			sprite->setRotation(CC_RADIANS_TO_DEGREES(b->GetAngle() *  -1));
+			sprite->setRotation(CC_RADIANS_TO_DEGREES(b->GetAngle() * -1));
 		}
 	}
 
@@ -240,7 +240,7 @@ void PuzzleLayer::update( cocos2d::ccTime dt )
 			b2Body *bodyA = fixtureA->GetBody();
 			b2Body *bodyB = fixtureB->GetBody();
 
-			if (bodyA == sensorBody	|| bodyB == sensorBody)
+			if (bodyA == sensorBody || bodyB == sensorBody)
 			{
 				hasWon = true;
 				this->win();
@@ -288,10 +288,10 @@ bool PuzzleLayer::ccTouchBegan(CCTouch *touch, CCEvent *event)
 		return true;
 	}
 
-	else 
+	else
 		//this->createBoxAtLocation(touchLocation, CCSizeMake(50, 50), 0.0, 0.0, 0.0);
 
-	return true;
+		return true;
 }
 
 void PuzzleLayer::ccTouchMoved( cocos2d::CCTouch *touch, cocos2d::CCEvent *event )
@@ -331,7 +331,7 @@ void PuzzleLayer::createGround()
 	b2FixtureDef groundFixtureDef;
 	groundFixtureDef.shape = &groundShape;
 	groundFixtureDef.density = 0.0;
-	
+
 	groundShape.Set(lowerLeft, lowerRight);
 	groundBody->CreateFixture(&groundFixtureDef);
 	groundShape.Set(lowerRight, upperRight);

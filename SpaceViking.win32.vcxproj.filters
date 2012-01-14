@@ -251,12 +251,6 @@
     <ClInclude Include="Classes\Scenes\Scene1\Layers\GameplayLayer.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuScene.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuLayer.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Scenes\Intro\IntroScene.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -374,7 +368,19 @@
     <ClInclude Include="Classes\GameObjects\Box2DObjects\Cart.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Box2DHelpers.h">
+    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Scenes\MainMenu\MainMenuScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Spikes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Box2DHelpers.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameObjects\Box2DObjects\Digger.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
@@ -431,12 +437,6 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Scenes\Scene1\Layers\GameplayLayer.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuScene.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuLayer.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Scenes\Intro\IntroScene.cpp">
@@ -556,7 +556,19 @@
     <ClCompile Include="Classes\GameObjects\Box2DObjects\Cart.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="Box2DHelpers.cpp">
+    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Scenes\MainMenu\MainMenuScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Spikes.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Box2DHelpers.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameObjects\Box2DObjects\Digger.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
